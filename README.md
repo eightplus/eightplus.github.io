@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+Welcome to GitHub Pages
+===========
 
-You can use the [editor on GitHub](https://github.com/eightplus/eightplus.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Jekyll官方网站: https://jekyllrb.com/
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Jekyll官方中文网站: http://jekyllcn.com/
 
-### Markdown
+博客的模板使用的是Hux大神的模板，在此表示感谢，他的博客地址为
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+https://huangxuan.me/
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+Reference
+===========
 
-- Bulleted
-- List
+https://github.com/Huxpro/huxpro.github.io
 
-1. Numbered
-2. List
+https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll
 
-**Bold** and _Italic_ and `Code` text
+https://github.com/tsai1993/tsai1993.github.io
 
-[Link](url) and ![Image](src)
-```
+https://tsai1993.github.io/
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+https://github.com/i2000s/i2000s.github.io
 
-### Jekyll Themes
+https://www.qixiaodong.tk/
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/eightplus/eightplus.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+https://github.com/nicolewhite/nicolewhite.github.io
 
-### Support or Contact
+https://nicolewhite.github.io/
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+https://segmentfault.com/a/1190000007709682
+
+https://www.appinn.com/markdown/
+
+http://jekyllcn.com/docs/configuration/
+
+https://github.com/tianshan/tianshan.github.io
+
+https://github.com/galian123/galian123.github.io
+
+
+Test
+============
+
+rm -rf .sass-cache/ _site/
+jekyll serve
