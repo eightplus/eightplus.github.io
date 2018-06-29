@@ -43,6 +43,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+#  - jekyll-seo-tag
 
 
 # Analytics settings
