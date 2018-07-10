@@ -1,0 +1,111 @@
+---
+layout:     post
+title:      "Hexo"
+subtitle:   ""
+date:       2018-07-10 16:25:16 +0800
+author:     "lixiang"
+header-img: "img/bg-01.png"
+header-mask: 0.3
+catalog:     true
+tags:
+    - Hexo
+---
+
+> hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在github上。<br><br>
+
+---
+
+## 依赖包和工具安装
+
+- Git
+    - `sudo apt-get install git`  (git-core)
+    - `git --version`
+    - 生成 SSH key : `ssh-keygen -t rsa -C "349098792@qq.com"`
+![](/img/2018/hexo/01.png)
+
+> 默认情况下连续按下三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub。如果是想一台电脑配置两个或多个github帐号，则此处不能够一直回车，要注意在提示输入文件名称时输入一个和默认名称不一样的名称，否则会发生覆盖，比如这里我电脑上使用两个github帐号，新建的一个名为yudianr，则可以给文件取名叫id_rsa_yudianr，则会在当前文件夹中生成id_rsa_yudianr和id_rsa_yudianr.pub两个文件。<br><br>
+> 在GitHub帐号设置那里添加SSH Key，打开公钥文件id_rsa_yudianr.pub，复制里面的所有字符粘贴到github的SSH设置处，可使用ssh -T git@github.com来测试是否关联成功。<br><br>
+
+![](/img/2018/hexo/02.png)
+![](/img/2018/hexo/03.png)
+    - 配置~/.ssh/config文件
+```
+    #老帐号
+    Host github.com
+        HostName github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_rsa
+
+    #新帐号
+    Host yudianr.github.com
+        HostName github.com
+        PreferredAuthentications publickey
+        IdentityFile ~/.ssh/id_rsa_yudianr
+
+注意：此时提交代码后log中记录的用户名和邮箱信息都为全局配置的git帐号的信息，如果希望修改显示的信息，可以在项目目录中使用以下命令进行配置：
+git config --global user.name "你的昵称"
+git config --global user.email "你的邮箱地址"
+或者vim .gitconfig直接进行修改
+
+[user]
+    name = eightplus
+    email = kobe24_lixiang@126.com
+或者
+[user]
+    name = yudianr
+    email = 349098792@qq.com
+
+```
+
+- npm
+    - sudo apt-get install npm
+    - npm -v
+
+- Nodejs
+    - sudo apt-get install nodejs
+    - node -v
+
+- Hexo
+    - sudo npm install -g hexo-cli
+    - hexo -v
+
+- 自动部署发布工具 hexo-deployer-git
+    - sudo npm install hexo-deployer-git --save
+
+## 初始化Hexo
+```
+hexo init <folder>
+cd <folder>
+npm install
+```
+![](/img/2018/hexo/04.png)
+
+## 生成静态文件
+- hexo generate
+![](/img/2018/hexo/05.png)
+
+## 生成静态文件查看默认博客效果
+- hexo server  （如果默认的4000端口被占用，可以使用-p参数指定其他端口，如：hexo server -p 5000）
+![](/img/2018/hexo/06.png)
+
+## 修改配置
+- 在站点的配置文件_config.yml中设置部署信息(注意：type repo branch message前有两个空格)
+```
+    deploy:
+      type: git
+      repo: https://github.com/eightplus/eightplus.github.io.git
+      branch: master
+      message: '站点更新:{{now("YYYY-MM-DD HH:mm:ss")}}'
+```
+
+## 部署到GitHub上
+```
+    hexo clean    #清空
+    hexo generate #生成静态网页
+    hexo deploy   #部署
+
+    浏览器中输入 http://eightplus.github.io
+```
+
+## 绑定域名
+- 在hexo的工作空间下的source目录下新建一个CNAME的文件，不要后缀。打开CNAME写上购买的域名，如： [eightplus.info](eightplus.info)
