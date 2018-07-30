@@ -46,6 +46,11 @@ http://threehao.com/ <br><br>
 http://litten.me/ <br><br>
 http://zhufanjia.com/ <br><br>
 https://wblearn.github.io/ <br><br>
+https://hexo.io/ <br><br>
+https://github.com/hexojs/hexo <br><br>
+http://tc9011.com/ <br><br>
+http://zbk1nger.github.io/ <br><br>
+
 
 Test
 ============

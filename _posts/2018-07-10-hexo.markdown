@@ -69,8 +69,6 @@ git config --global user.email "你的邮箱地址"
     - sudo npm install -g hexo-cli
     - hexo -v
 
-- 自动部署发布工具 hexo-deployer-git
-    - sudo npm install hexo-deployer-git --save
 
 ## 初始化Hexo
 ```
@@ -79,6 +77,42 @@ cd <folder>
 npm install
 ```
 ![](/img/2018/hexo/04.png)
+
+## 自动部署发布工具 hexo-deployer-git
+- npm i hexo-generator-json-content --save (在上面初始化后的folder目录下打开终端执行，执行后会写入package.json文件中)
+
+- 其他插件安装
+
+```
+npm i hexo-helper-qrcode --save
+npm i hexo-generator-sitemap --save
+npm i hexo-generator-json-feed --save
+npm i hexo-generator-feed --save
+npm i hexo-generator-baidu-sitemap --save
+npm i hexo-deployer-rsync --save
+
+```
+
+- 提交搜素引擎
+> 站点地图是一种文件，您可以通过该文件列出您网站上的网页，从而将您网站内容的组织架构告知Google和其他搜索引擎。Googlebot等搜索引擎网页抓取工具会读取此文件，以便更加智能地抓取您的网站。<br><br>
+> 百度站长平台为未使用百度统计的站点提供三种验证方式：文件验证、html标签验证、CNAME验证，如果选择文件验证，下载文件后将文件放在source跟目录下。<br><br>
+> 验证完成后，我们将会认为您是网站的拥有者。为使您的网站一直保持验证通过的状态，请保留验证的文件、html标签或CNAME记录，我们会去定期检查验证记录。<br><br>
+
+    - 对谷歌和百度的插举例->打开博客根目录，在这个目录下打开终端执行执行如下两个安装插件：
+`npm install hexo-generator-sitemap --save`
+`npm install hexo-generator-baidu-sitemap --save`
+
+    - 在博客根目录的_config.yml中添加如下代码
+```
+# 自动生成sitemap
+sitemap:
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xml
+```
+
+    - 执行hexo generate编译博客后，如果博客根目录的public下生成了sitemap.xml以及baidusitemap.xml就表示成功了。
+
 
 ## 生成静态文件
 - hexo generate
@@ -109,3 +143,39 @@ npm install
 
 ## 绑定域名
 - 在hexo的工作空间下的source目录下新建一个CNAME的文件，不要后缀。打开CNAME写上购买的域名，如： [eightplus.info](eightplus.info)
+
+## 扩展
+- 网站访问量显示
+    - 使用第三方的统计插件[不蒜子](http://ibruce.info/2015/04/04/busuanzi/), 在themes\yilia\layout\_partial下的footer.ejs中加入如下代码即可
+```
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+  总访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+```
+
+- 实现单篇文章浏览统计和评论统计(从网易云跟帖中获取评论数) [参考文档](http://lawlite.me/2017/04/10/Hexo-Github%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/)
+    - 修改themes\yilia\layout\_partial文件夹下的article.ejs文件，在<%- partial('post/title', {class_name: 'article-title'}) %>节点下加入(注意这里网易云跟帖还没设置，而评论数中使用到了，这里运行会有问题)
+```<!-- 显示阅读和评论数 -->
+        <% if (!index && post.comments && config.wangYi){ %>
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+            阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:#ef7522;font-size:14px;">
+            <span class="icon-comment"></span>
+            <span class="join-text" style="color:#ef7522;font-size:14px;">评论数:</span>
+            <span class="join-count">0</span>次
+        </a>
+        <% } %>
+```
+
+
+
