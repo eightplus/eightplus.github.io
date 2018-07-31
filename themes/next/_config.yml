@@ -378,6 +378,8 @@ changyan:
 # Share
 #duoshuo_share: true
 
+baidu_site_verification: true
+
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 #google_site_verification:
