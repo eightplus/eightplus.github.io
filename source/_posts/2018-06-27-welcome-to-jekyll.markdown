@@ -101,7 +101,7 @@ categories: jekyll update
 
 至此，在浏览器中输入https://yourname.github.io，比如：https://eightplus.github.io/，即可看到下图，博客搭建完成
 <p id = "build"></p>
-![](2018-06-27-welcome-to-jekyll/08.png)
+![博客效果图](2018-06-27-welcome-to-jekyll/08.png)
 *网页浏览效果图*
 
 [1]: https://atom.io/

@@ -17,13 +17,13 @@ tags:
     - `sudo apt-get install git`  (git-core)
     - `git --version`
     - 生成 SSH key : `ssh-keygen -t rsa -C "349098792@qq.com"`
-![](img/2018/hexo/01.png)
+![](2018-07-10-hexo/01.png)
 
 > 默认情况下连续按下三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub。如果是想一台电脑配置两个或多个github帐号，则此处不能够一直回车，要注意在提示输入文件名称时输入一个和默认名称不一样的名称，否则会发生覆盖，比如这里我电脑上使用两个github帐号，新建的一个名为yudianr，则可以给文件取名叫id_rsa_yudianr，则会在当前文件夹中生成id_rsa_yudianr和id_rsa_yudianr.pub两个文件。<br><br>
 > 在GitHub帐号设置那里添加SSH Key，打开公钥文件id_rsa_yudianr.pub，复制里面的所有字符粘贴到github的SSH设置处，可使用ssh -T git@github.com来测试是否关联成功。<br><br>
 
-![](img/2018/hexo/02.png)
-![](img/2018/hexo/03.png)
+![](2018-07-10-hexo/02.png)
+![](2018-07-10-hexo/03.png)
     - 配置~/.ssh/config文件
 ```
     #老帐号
@@ -72,7 +72,7 @@ hexo init <folder>
 cd <folder>
 npm install
 ```
-![](img/2018/hexo/04.png)
+![](2018-07-10-hexo/04.png)
 
 ## 自动部署发布工具 hexo-deployer-git
 - npm i hexo-generator-json-content --save (在上面初始化后的folder目录下打开终端执行，执行后会写入package.json文件中)
@@ -112,11 +112,11 @@ baidusitemap:
 
 ## 生成静态文件
 - hexo generate
-![](img/2018/hexo/05.png)
+![](2018-07-10-hexo/05.png)
 
 ## 生成静态文件查看默认博客效果
 - hexo server  （如果默认的4000端口被占用，可以使用-p参数指定其他端口，如：hexo server -p 5000）
-![](img/2018/hexo/06.png)
+![](2018-07-10-hexo/06.png)
 
 ## 修改配置
 - 在站点的配置文件_config.yml中设置部署信息(注意：type repo branch message前有两个空格)

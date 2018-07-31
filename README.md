@@ -120,6 +120,12 @@ Hexo源文件
 - db.json文件，不需要拷贝
 
 
+Create md file
+============
+
+$ npm install hexo-asset-image --save
+$ hexo n "2018-07-31-test" (在/source/_posts文件夹内除了生成2018-07-31-test.md文件外，还有一个同名的文件夹存放图片)
+
 
 Git
 ============

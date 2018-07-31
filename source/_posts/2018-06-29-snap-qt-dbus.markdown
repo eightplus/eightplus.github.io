@@ -49,12 +49,12 @@ tags:
 - 4、安装snap包：$sudo snap install system-tool_1.0.2_amd64.snap --devmode --dangerous
 
 - 5、安装完成后，终端运行 $snap interfaces 可以查看到plug和slot。有资料显示，如果要让我的dbus服务程序和图形程序进行通信，还需要终端执行：$sudo snap connect system-tool:daemon-plug system-tool:daemon-slot ，对应的disconnect操作是：$sudo snap disconnect system-tool:daemon-plug system-tool:daemon-slot。此处不执行上述操作仍可以，有些不知所依然？？？可能是我这里在snap容器中关于dbus的使用方法没找到正解的原因。
-![](img/2018/snap/01.png)
+![](2018-06-29-snap-qt-dbus/01.png)
 
 - 6、手动启动dbus服务，打开终端执行：$sudo system-tool.system-tool-daemon
 
 - 7、启动图形程序：$system-tool
-![](img/2018/snap/02.png)
+![](2018-06-29-snap-qt-dbus/02.png)
 *图形程序运行结果图*
 
 - 8、如果想将自己开发的snap发布到snap商店，首先注册一个Ubuntu One帐号，[注册地址][2]
@@ -67,8 +67,8 @@ tags:
     - snapcraft logout
 
 - 10、上传后，你可以在邮箱等着snapcraft系统给你回邮件啦！很遗憾，由于我使用了自定义的plug和slot，自动审核失败了，需要人工审核（之前验证过没有自定义slot和plug时，上传可以自动审核成功）。
-![](img/2018/snap/03.png)
-![](img/2018/snap/04.png)
+![](2018-06-29-snap-qt-dbus/03.png)
+![](2018-06-29-snap-qt-dbus/04.png)
 
 ## 参考文档
 

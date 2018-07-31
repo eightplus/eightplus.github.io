@@ -94,10 +94,10 @@ scheme: Mist
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   #LinkLabel: Link
-  GitHub: https://github.com/eightplus || github
-  知乎: https://www.zhihu.com/people/eightplus/activities || zhihu
-  微博: https://weibo.com/kylinkobe || weibo
-  邮箱: mailto:kobe24_lixiang@126.com || envelope
+  GitHub: https://github.com/eightplus
+  知乎: https://www.zhihu.com/people/eightplus/activities
+  微博: https://weibo.com/kylinkobe
+  邮箱: mailto:kobe24_lixiang@126.com
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -118,8 +118,9 @@ social_icons:
   transition: false
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-#  GitHub: github
-#  E-Mail: envelope
+  GitHub: github
+  邮箱: envelope
+  微博: weibo
 #  Google: google
 #  Twitter: twitter
 #  FB Page: facebook
@@ -128,7 +129,6 @@ social_icons:
 #  YouTube: youtube
 #  Instagram: instagram
 #  StackOverflow: stack-overflow
-#  Weibo: weibo
 
 # Blog rolls
 links_title: 友情链接
