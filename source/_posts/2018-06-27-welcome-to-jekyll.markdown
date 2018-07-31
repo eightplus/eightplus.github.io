@@ -39,14 +39,14 @@ tags:
 ## 安装ruby环境
 
 `sudo apt-get install ruby-all-dev`
-![](img/2018/jekyll/01.png)
+![](2018-06-27-welcome-to-jekyll/01.png)
 我的系统为Ubuntu 16.04，使用的软件源里面存在ruby2.3-dev，则此种方式会将ruby2.3-dev一并安装，当然，上述操作也可以替换成安装ruby2.3-dev，(`sudo apt-get install ruby2.3-dev`)
 
 安装完成后，在终端中输入`ruby -v`，查看版本信息，如下图：
-![](img/2018/jekyll/02.png)
+![](2018-06-27-welcome-to-jekyll/02.png)
 
 完成ruby环境后，在终端中输入`gem -v`，出现如下结果，则说明ruby环境已经完全配置成功了，如果出现了报错信息，可能需要安装nodejs (sudo apt-get install nodejs)。
-![](img/2018/jekyll/03.png)
+![](2018-06-27-welcome-to-jekyll/03.png)
 
 
 ## 安装JeKyll环境
@@ -56,7 +56,7 @@ tags:
 - 再安装安装jekyll：
     - `sudo gem install jekyll`
 - 安装完成后，在终端中输入`jekyll --version`，出现如下结果，则说明安装成功
-![](img/2018/jekyll/04.png)
+![](2018-06-27-welcome-to-jekyll/04.png)
 
 
 ## 工程创建
@@ -66,7 +66,7 @@ tags:
 在你打算存放工程代码的目录下打开一个终端后使用jekyll创建一个项目，这里我的目录为：~/work/git/：
 `jekyll new blog`
 操作之后会生成很多文件/文件夹，详细说明如下：
-![](img/2018/jekyll/05.png)
+![](2018-06-27-welcome-to-jekyll/05.png)
 - _config.yml：Jekyll配置文件，存储配置数据
 - _drafts：草稿目录，可手动创建
 - _includes：包含一些模板，可以重复利用
@@ -86,8 +86,8 @@ categories: jekyll update
 上述操作会生成个默认文章，位于_posts目录下，名字类似为：`2018-06-27-welcome-to-jekyll.markdown`
 
 可以复制2018-06-27-welcome-to-jekyll.markdown后进行修改来进行新的博客编写，这里推荐使用 [git的atom编辑器][1] 来编辑.markdown文件，可以在atom官网进行deb包的下载，新页面生成和编辑完成后，重启jekyll内置服务器（终端执行：jekyll serve），打开或刷新页面：[http://localhost:4000](http://localhost:4000)，这样就可以在页面看到自己添加的博文了。
-![](img/2018/jekyll/06.png)
-![](img/2018/jekyll/07.png)
+![](2018-06-27-welcome-to-jekyll/06.png)
+![](2018-06-27-welcome-to-jekyll/07.png)
 
 
 ## Git同步
@@ -101,7 +101,7 @@ categories: jekyll update
 
 至此，在浏览器中输入https://yourname.github.io，比如：https://eightplus.github.io/，即可看到下图，博客搭建完成
 <p id = "build"></p>
-![](img/2018/jekyll/08.png)
+![](2018-06-27-welcome-to-jekyll/08.png)
 *网页浏览效果图*
 
 [1]: https://atom.io/
