@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Eight Plus</title>
+  
+  <subtitle>菜鸟的点滴记录</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://eightplus.github.io/"/>
+  <updated>2018-07-31T02:28:12.060Z</updated>
+  <id>https://eightplus.github.io/</id>
+  
+  <author>
+    <name>李翔</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo</title>
+    <link href="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/"/>
+    <id>https://eightplus.github.io/2018/07/10/2018-07-10-hexo/</id>
+    <published>2018-07-10T08:25:16.000Z</published>
+    <updated>2018-07-31T02:28:12.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在github上。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;依赖包和工具安装&quot;&gt;&lt;a href=&quot;#依赖包和工具安装&quot; class=&quot;h
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Hexo" scheme="https://eightplus.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android 源码编译</title>
+    <link href="https://eightplus.github.io/2018/07/03/2018-07-03-build-android/"/>
+    <id>https://eightplus.github.io/2018/07/03/2018-07-03-build-android/</id>
+    <published>2018-07-03T03:01:16.000Z</published>
+    <updated>2018-07-31T02:28:12.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这里使用Ubuntu 16.04的64位系统上进行Android源码的编译。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;依赖包和工具安装&quot;&gt;&lt;a href=&quot;#依赖包和工具安装&quot; class=&quot;headerlin
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu snap 应用</title>
+    <link href="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/"/>
+    <id>https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/</id>
+    <published>2018-06-29T02:58:12.000Z</published>
+    <updated>2018-07-31T02:28:12.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Ubuntu 从 16.04开始，支持两种格式的安装包：debian 和 snap，其中 snap 不依赖于操作系统及其发布版本， 其可以安装同样一个软件的不同版本且不造成任何的干扰。&lt;br&gt;&lt;br&gt;&lt;br&gt;snap 是一种全新的软件包管理方式，它
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Snap" scheme="https://eightplus.github.io/tags/Snap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Jekyll + Github搭建博客</title>
+    <link href="https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/"/>
+    <id>https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/</id>
+    <published>2018-06-27T07:33:17.000Z</published>
+    <updated>2018-07-31T02:28:12.060Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;一直想把自己学习linux的过程记录下来，又不想总是依托那些现成的博客网站，在WordPress和Github中，我选择了Github，原因只有一个，穷，哈哈哈。&lt;br&gt;&lt;br&gt;&lt;br&gt;这里先简要接收博客搭建的初期准备工作！&lt;/p&gt;
+&lt;/block
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Jekyll" scheme="https://eightplus.github.io/tags/Jekyll/"/>
+    
+  </entry>
+  
+</feed>
