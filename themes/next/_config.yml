@@ -96,7 +96,7 @@ social:
   #LinkLabel: Link
   GitHub: https://github.com/eightplus
   知乎: https://www.zhihu.com/people/eightplus/activities
-  微博: https://weibo.com/kylinkobe
+  #微博: https://weibo.com/kylinkobe
   邮箱: mailto:kobe24_lixiang@126.com
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
@@ -120,7 +120,7 @@ social_icons:
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   邮箱: envelope
-  微博: weibo
+  #微博: weibo
 #  Google: google
 #  Twitter: twitter
 #  FB Page: facebook
