@@ -106,17 +106,17 @@
 <meta property="og:site_name" content="Eight Plus">
 <meta property="og:description" content="hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在github上。   依赖包和工具安装 Git sudo apt-get install git  (git-core) git --version 生成 SSH key : ssh-keygen -t rsa -C &amp;quot;349098792@qq.com&amp;quot;     默认情况下连续按下三个回车，生成密钥，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/01.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/02.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/03.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/04.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/05.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/06.png">
-<meta property="og:updated_time" content="2018-07-31T02:28:12.060Z">
+<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/01.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/02.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/03.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/04.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/05.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/06.png">
+<meta property="og:updated_time" content="2018-07-31T09:54:19.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在github上。   依赖包和工具安装 Git sudo apt-get install git  (git-core) git --version 生成 SSH key : ssh-keygen -t rsa -C &amp;quot;349098792@qq.com&amp;quot;     默认情况下连续按下三个回车，生成密钥，">
-<meta name="twitter:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/img/2018/hexo/01.png">
+<meta name="twitter:image" content="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/01.png">
 
 
 
@@ -452,14 +452,14 @@
 <li>Git<ul>
 <li><code>sudo apt-get install git</code>  (git-core)</li>
 <li><code>git --version</code></li>
-<li>生成 SSH key : <code>ssh-keygen -t rsa -C &quot;349098792@qq.com&quot;</code><br><img src="img/2018/hexo/01.png" alt=""></li>
+<li>生成 SSH key : <code>ssh-keygen -t rsa -C &quot;349098792@qq.com&quot;</code><br><img src="/2018/07/10/2018-07-10-hexo/01.png" alt=""></li>
 </ul>
 </li>
 </ul>
 <blockquote>
 <p>默认情况下连续按下三个回车，生成密钥，最后得到了两个文件：id_rsa和id_rsa.pub。如果是想一台电脑配置两个或多个github帐号，则此处不能够一直回车，要注意在提示输入文件名称时输入一个和默认名称不一样的名称，否则会发生覆盖，比如这里我电脑上使用两个github帐号，新建的一个名为yudianr，则可以给文件取名叫id_rsa_yudianr，则会在当前文件夹中生成id_rsa_yudianr和id_rsa_yudianr.pub两个文件。<br><br><br>在GitHub帐号设置那里添加SSH Key，打开公钥文件id_rsa_yudianr.pub，复制里面的所有字符粘贴到github的SSH设置处，可使用ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>来测试是否关联成功。<br><br></p>
 </blockquote>
-<p><img src="img/2018/hexo/02.png" alt=""><br><img src="img/2018/hexo/03.png" alt=""></p>
+<p><img src="/2018/07/10/2018-07-10-hexo/02.png" alt=""><br><img src="/2018/07/10/2018-07-10-hexo/03.png" alt=""></p>
 <pre><code>- 配置~/.ssh/config文件
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">    #老帐号</span><br><span class="line">    Host github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        PreferredAuthentications publickey</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">    #新帐号</span><br><span class="line">    Host yudianr.github.com</span><br><span class="line">        HostName github.com</span><br><span class="line">        PreferredAuthentications publickey</span><br><span class="line">        IdentityFile ~/.ssh/id_rsa_yudianr</span><br><span class="line"></span><br><span class="line">注意：此时提交代码后log中记录的用户名和邮箱信息都为全局配置的git帐号的信息，如果希望修改显示的信息，可以在项目目录中使用以下命令进行配置：</span><br><span class="line">git config --global user.name &quot;你的昵称&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱地址&quot;</span><br><span class="line">或者vim .gitconfig直接进行修改</span><br><span class="line"></span><br><span class="line">[user]</span><br><span class="line">    name = eightplus</span><br><span class="line">    email = kobe24_lixiang@126.com</span><br><span class="line">或者</span><br><span class="line">[user]</span><br><span class="line">    name = yudianr</span><br><span class="line">    email = 349098792@qq.com</span><br></pre></td></tr></table></figure>
 <ul>
@@ -483,7 +483,7 @@
 </li>
 </ul>
 <h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<p><img src="img/2018/hexo/04.png" alt=""></p>
+<p><img src="/2018/07/10/2018-07-10-hexo/04.png" alt=""></p>
 <h2 id="自动部署发布工具-hexo-deployer-git"><a href="#自动部署发布工具-hexo-deployer-git" class="headerlink" title="自动部署发布工具 hexo-deployer-git"></a>自动部署发布工具 hexo-deployer-git</h2><ul>
 <li><p>npm i hexo-generator-json-content –save (在上面初始化后的folder目录下打开终端执行，执行后会写入package.json文件中)</p>
 </li>
@@ -508,10 +508,10 @@
 </li>
 </ul>
 <h2 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h2><ul>
-<li>hexo generate<br><img src="img/2018/hexo/05.png" alt=""></li>
+<li>hexo generate<br><img src="/2018/07/10/2018-07-10-hexo/05.png" alt=""></li>
 </ul>
 <h2 id="生成静态文件查看默认博客效果"><a href="#生成静态文件查看默认博客效果" class="headerlink" title="生成静态文件查看默认博客效果"></a>生成静态文件查看默认博客效果</h2><ul>
-<li>hexo server  （如果默认的4000端口被占用，可以使用-p参数指定其他端口，如：hexo server -p 5000）<br><img src="img/2018/hexo/06.png" alt=""></li>
+<li>hexo server  （如果默认的4000端口被占用，可以使用-p参数指定其他端口，如：hexo server -p 5000）<br><img src="/2018/07/10/2018-07-10-hexo/06.png" alt=""></li>
 </ul>
 <h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><ul>
 <li>在站点的配置文件_config.yml中设置部署信息(注意：type repo branch message前有两个空格)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/eightplus/eightplus.github.io.git</span><br><span class="line">  branch: master</span><br><span class="line">  message: &apos;站点更新:&#123;&#123;now(&quot;YYYY-MM-DD HH:mm:ss&quot;)&#125;&#125;&apos;</span><br></pre></td></tr></table></figure>
@@ -749,9 +749,9 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/eightplus || github" target="_blank" title="GitHub">
+                <a href="https://github.com/eightplus" target="_blank" title="GitHub">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-github"></i>
                   
                     
                       GitHub
@@ -760,7 +760,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/eightplus/activities || zhihu" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/eightplus/activities" target="_blank" title="知乎">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -771,9 +771,9 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/kylinkobe || weibo" target="_blank" title="微博">
+                <a href="https://weibo.com/kylinkobe" target="_blank" title="微博">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
                     
                       微博
@@ -782,9 +782,9 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:kobe24_lixiang@126.com || envelope" target="_blank" title="邮箱">
+                <a href="mailto:kobe24_lixiang@126.com" target="_blank" title="邮箱">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-envelope"></i>
                   
                     
                       邮箱
@@ -917,6 +917,8 @@
           <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
+    
+
     
 
   </div>
@@ -1363,6 +1365,7 @@
 </script>
 
 
+  
   
 
   

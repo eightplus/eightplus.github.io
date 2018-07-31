@@ -106,15 +106,15 @@
 <meta property="og:site_name" content="Eight Plus">
 <meta property="og:description" content="Ubuntu 从 16.04开始，支持两种格式的安装包：debian 和 snap，其中 snap 不依赖于操作系统及其发布版本， 其可以安装同样一个软件的不同版本且不造成任何的干扰。snap 是一种全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立，解决了应用程序之间的依赖问题，但因其包含应用需要的文件和库，导致snap包过大，占用更多的磁盘空间（sn">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/img/2018/snap/01.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/img/2018/snap/02.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/img/2018/snap/03.png">
-<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/img/2018/snap/04.png">
-<meta property="og:updated_time" content="2018-07-31T02:28:12.060Z">
+<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/01.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/02.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/03.png">
+<meta property="og:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/04.png">
+<meta property="og:updated_time" content="2018-07-31T09:54:47.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu snap 应用">
 <meta name="twitter:description" content="Ubuntu 从 16.04开始，支持两种格式的安装包：debian 和 snap，其中 snap 不依赖于操作系统及其发布版本， 其可以安装同样一个软件的不同版本且不造成任何的干扰。snap 是一种全新的软件包管理方式，它类似一个容器拥有一个应用程序所有的文件和库，各个应用程序之间完全独立，解决了应用程序之间的依赖问题，但因其包含应用需要的文件和库，导致snap包过大，占用更多的磁盘空间（sn">
-<meta name="twitter:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/img/2018/snap/01.png">
+<meta name="twitter:image" content="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/01.png">
 
 
 
@@ -496,11 +496,11 @@
 </li>
 <li><p>4、安装snap包：$sudo snap install system-tool_1.0.2_amd64.snap –devmode –dangerous</p>
 </li>
-<li><p>5、安装完成后，终端运行 $snap interfaces 可以查看到plug和slot。有资料显示，如果要让我的dbus服务程序和图形程序进行通信，还需要终端执行：$sudo snap connect system-tool:daemon-plug system-tool:daemon-slot ，对应的disconnect操作是：$sudo snap disconnect system-tool:daemon-plug system-tool:daemon-slot。此处不执行上述操作仍可以，有些不知所依然？？？可能是我这里在snap容器中关于dbus的使用方法没找到正解的原因。<br><img src="img/2018/snap/01.png" alt=""></p>
+<li><p>5、安装完成后，终端运行 $snap interfaces 可以查看到plug和slot。有资料显示，如果要让我的dbus服务程序和图形程序进行通信，还需要终端执行：$sudo snap connect system-tool:daemon-plug system-tool:daemon-slot ，对应的disconnect操作是：$sudo snap disconnect system-tool:daemon-plug system-tool:daemon-slot。此处不执行上述操作仍可以，有些不知所依然？？？可能是我这里在snap容器中关于dbus的使用方法没找到正解的原因。<br><img src="/2018/06/29/2018-06-29-snap-qt-dbus/01.png" alt=""></p>
 </li>
 <li><p>6、手动启动dbus服务，打开终端执行：$sudo system-tool.system-tool-daemon</p>
 </li>
-<li><p>7、启动图形程序：$system-tool<br><img src="img/2018/snap/02.png" alt=""><br><em>图形程序运行结果图</em></p>
+<li><p>7、启动图形程序：$system-tool<br><img src="/2018/06/29/2018-06-29-snap-qt-dbus/02.png" alt=""><br><em>图形程序运行结果图</em></p>
 </li>
 <li><p>8、如果想将自己开发的snap发布到snap商店，首先注册一个Ubuntu One帐号，<a href="https://dashboard.snapcraft.io/openid/login" target="_blank" rel="noopener">注册地址</a></p>
 </li>
@@ -512,7 +512,7 @@
 <li>snapcraft logout</li>
 </ul>
 </li>
-<li><p>10、上传后，你可以在邮箱等着snapcraft系统给你回邮件啦！很遗憾，由于我使用了自定义的plug和slot，自动审核失败了，需要人工审核（之前验证过没有自定义slot和plug时，上传可以自动审核成功）。<br><img src="img/2018/snap/03.png" alt=""><br><img src="img/2018/snap/04.png" alt=""></p>
+<li><p>10、上传后，你可以在邮箱等着snapcraft系统给你回邮件啦！很遗憾，由于我使用了自定义的plug和slot，自动审核失败了，需要人工审核（之前验证过没有自定义slot和plug时，上传可以自动审核成功）。<br><img src="/2018/06/29/2018-06-29-snap-qt-dbus/03.png" alt=""><br><img src="/2018/06/29/2018-06-29-snap-qt-dbus/04.png" alt=""></p>
 </li>
 </ul>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://forum.snapcraft.io/t/the-dbus-interface/2038" target="_blank" rel="noopener">https://forum.snapcraft.io/t/the-dbus-interface/2038</a></p>
@@ -744,9 +744,9 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/eightplus || github" target="_blank" title="GitHub">
+                <a href="https://github.com/eightplus" target="_blank" title="GitHub">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-github"></i>
                   
                     
                       GitHub
@@ -755,7 +755,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/eightplus/activities || zhihu" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/eightplus/activities" target="_blank" title="知乎">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -766,9 +766,9 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://weibo.com/kylinkobe || weibo" target="_blank" title="微博">
+                <a href="https://weibo.com/kylinkobe" target="_blank" title="微博">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
                     
                       微博
@@ -777,9 +777,9 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="mailto:kobe24_lixiang@126.com || envelope" target="_blank" title="邮箱">
+                <a href="mailto:kobe24_lixiang@126.com" target="_blank" title="邮箱">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-envelope"></i>
                   
                     
                       邮箱
@@ -912,6 +912,8 @@
           <span id="scrollpercent"><span>0</span>%</span>
         
       </div>
+    
+
     
 
   </div>
@@ -1358,6 +1360,7 @@
 </script>
 
 
+  
   
 
   
