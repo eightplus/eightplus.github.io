@@ -3,10 +3,29 @@
 
 
     
+  <url>
+    <loc>https://eightplus.github.io/2018/08/02/2018-08-02-android-kernel-driver/</loc>
+    <lastmod>2018-08-02T02:01:45.050Z</lastmod>
+    <data>
+        <display>
+        <title>为Android系统编写Linux内核驱动程序</title>
+        <pubTime>2018-08-02T01:04:36.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/</loc>
-    <lastmod>2018-07-31T09:55:23.027Z</lastmod>
+    <lastmod>2018-08-02T01:37:44.162Z</lastmod>
     <data>
         <display>
         <title>使用Jekyll + Github搭建博客</title>
@@ -23,6 +42,27 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>https://eightplus.github.io/2018/07/03/2018-07-03-build-android/</loc>
+    <lastmod>2018-08-02T01:00:02.033Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu下Android开发的基础知识</title>
+        <pubTime>2018-07-03T03:01:16.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/</loc>
@@ -65,24 +105,4 @@
 
     
     
-    
-  <url>
-    <loc>https://eightplus.github.io/2018/07/03/2018-07-03-build-android/</loc>
-    <lastmod>2018-07-31T02:28:12.060Z</lastmod>
-    <data>
-        <display>
-        <title>Android 源码编译</title>
-        <pubTime>2018-07-03T03:01:16.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="工具" url="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>

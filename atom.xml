@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2018-07-31T09:54:19.214Z</updated>
+  <updated>2018-08-02T02:01:45.050Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为Android系统编写Linux内核驱动程序</title>
+    <link href="https://eightplus.github.io/2018/08/02/2018-08-02-android-kernel-driver/"/>
+    <id>https://eightplus.github.io/2018/08/02/2018-08-02-android-kernel-driver/</id>
+    <published>2018-08-02T01:04:36.000Z</published>
+    <updated>2018-08-02T02:01:45.050Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这里使用一个虚拟的硬件设备，这个设备只有一个4字节的寄存器，它可读可写。这里把这个虚拟的设备命名为“mydev”，而这个内核驱动程序也命名为mydev驱动程序。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo</title>
@@ -44,11 +72,11 @@
   </entry>
   
   <entry>
-    <title>Android 源码编译</title>
+    <title>Ubuntu下Android开发的基础知识</title>
     <link href="https://eightplus.github.io/2018/07/03/2018-07-03-build-android/"/>
     <id>https://eightplus.github.io/2018/07/03/2018-07-03-build-android/</id>
     <published>2018-07-03T03:01:16.000Z</published>
-    <updated>2018-07-31T02:28:12.060Z</updated>
+    <updated>2018-08-02T01:00:02.033Z</updated>
     
     <summary type="html">
     
@@ -58,7 +86,7 @@
 &lt;p&gt;这里使用Ubuntu 16.04的64位系统上进行Android源码的编译。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&quot;依赖包和工具安装&quot;&gt;&lt;a href=&quot;#依赖包和工具安装&quot; class=&quot;headerlin
+&lt;h2 id=&quot;一、环境准备&quot;&gt;&lt;a href=&quot;#一、环境准备&quot; class=&quot;headerlink&quot; t
       
     
     </summary>
@@ -99,15 +127,14 @@
     <link href="https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/"/>
     <id>https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/</id>
     <published>2018-06-27T07:33:17.000Z</published>
-    <updated>2018-07-31T09:55:23.027Z</updated>
+    <updated>2018-08-02T01:37:44.162Z</updated>
     
     <summary type="html">
     
       
       
         &lt;blockquote&gt;
-&lt;p&gt;一直想把自己学习linux的过程记录下来，又不想总是依托那些现成的博客网站，在WordPress和Github中，我选择了Github，原因只有一个，穷，哈哈哈。&lt;br&gt;&lt;br&gt;&lt;br&gt;这里先简要接收博客搭建的初期准备工作！&lt;/p&gt;
-&lt;/block
+&lt;p&gt;一直想把自己学习linux的过程记录下来，又不想总是依托那些现成的博客网站，在WordPress和Github中，我选择了Github，原因只有一个，穷，哈哈哈。&lt;br&gt;&lt;br&gt;&lt;br&gt;这里先简要接收博客搭建的初期准备工作！&lt;br&gt;Markdown
       
     
     </summary>
