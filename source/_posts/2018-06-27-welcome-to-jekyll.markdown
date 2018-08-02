@@ -8,6 +8,21 @@ tags:
 
 > 一直想把自己学习linux的过程记录下来，又不想总是依托那些现成的博客网站，在WordPress和Github中，我选择了Github，原因只有一个，穷，哈哈哈。<br><br>
 > 这里先简要接收博客搭建的初期准备工作！
+> Markdown编辑器使用的是Atom，快捷键列表如下：
+
+快捷键 | 解释
+-------- | ---------------
+Crtl+Shift+M | 开启Markdown实时预览
+Command+Shift+P | 打开命令窗口，可以运行各种菜单功能
+Command + T | 快速多文件切换
+Command + F | 文件内查找和替换
+Command + Shift + F | 多文件查找和替换
+Command + \[ | 对选中内容向左缩进
+Command + \] | 对选中内容向右缩进
+Command + \\ | 显示或隐藏目录树
+Crtl + m | 相应括号之间，html tag之间等跳转
+Crtl + Alt + B | 格式化代码（需要安装atom-beautify）
+Crtl + \` | 调起CLI命令行界面（需要安装terminal-panel）
 
 ---
 
