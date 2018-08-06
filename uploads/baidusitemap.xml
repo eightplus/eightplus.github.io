@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/</loc>
+    <lastmod>2018-08-06T14:49:11.803Z</lastmod>
+    <data>
+        <display>
+        <title>在Android源码中编写C程序测试Linux内核驱动程序</title>
+        <pubTime>2018-08-06T14:33:11.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2018/08/02/2018-08-02-android-kernel-driver/</loc>
-    <lastmod>2018-08-02T02:01:45.050Z</lastmod>
+    <lastmod>2018-08-06T14:37:24.543Z</lastmod>
     <data>
         <display>
         <title>为Android系统编写Linux内核驱动程序</title>
