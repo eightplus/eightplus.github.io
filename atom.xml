@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2018-08-06T14:49:11.803Z</updated>
+  <updated>2018-08-09T14:18:39.241Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在Android源码中使用java编写自己的应用程序</title>
+    <link href="https://eightplus.github.io/2018/08/09/2018-08-09-android-java-app/"/>
+    <id>https://eightplus.github.io/2018/08/09/2018-08-09-android-java-app/</id>
+    <published>2018-08-09T13:49:29.000Z</published>
+    <updated>2018-08-09T14:18:39.241Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;HelloWorld&quot;&gt;&lt;a href=&quot;#HelloWorld&quot; class=&quot;headerlink&quot; title=&quot;HelloWorld&quot;&gt;&lt;/a&gt;HelloWorld&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;程序目录结构如下：&lt;/p&gt;
+&lt;figure class=&quot;
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>在Android源码中编写C程序测试Linux内核驱动程序</title>
