@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2018-08-09T14:18:39.241Z</updated>
+  <updated>2018-08-11T01:56:56.719Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android Binder</title>
+    <link href="https://eightplus.github.io/2018/08/11/2018-08-11-android-binder/"/>
+    <id>https://eightplus.github.io/2018/08/11/2018-08-11-android-binder/</id>
+    <published>2018-08-11T01:38:43.000Z</published>
+    <updated>2018-08-11T01:56:56.719Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在Binder库中，Service组件和Client组件分别使用模板类BnInterface和BpInterface来描述，前者称为Binder本地对象，后者称为Binder代理对象。Binder库中的Binder本地对象和Binder代理对象分别
+      
+    
+    </summary>
+    
+      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>在Android源码中使用java编写自己的应用程序</title>
