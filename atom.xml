@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2018-08-11T01:56:56.719Z</updated>
+  <updated>2019-08-14T14:29:49.673Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装Anbox</title>
+    <link href="https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/"/>
+    <id>https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/</id>
+    <published>2019-08-14T13:44:03.000Z</published>
+    <updated>2019-08-14T14:29:49.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Anbox是一种基于容器在常规GNU/Linux系统上启动完整Android系統的方法，如Ubuntu。&lt;br&gt;Anbox 使用 Linux 命名空间机制（user，pid，uts，net，mount，ipc），在容器中运行完整的 Android 
+      
+    
+    </summary>
+    
+      <category term="安卓开发" scheme="https://eightplus.github.io/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Android Anbox" scheme="https://eightplus.github.io/tags/Android-Anbox/"/>
+    
+  </entry>
   
   <entry>
     <title>Android Binder</title>
