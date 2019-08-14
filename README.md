@@ -124,8 +124,17 @@ Create md file
 ============
 
 $ npm install hexo-asset-image --save
+
 $ hexo n "2018-07-31-test" (在/source/_posts文件夹内除了生成2018-07-31-test.md文件外，还有一个同名的文件夹存放图片)
 
+- markdown规则
+ https://studygolang.com/markdown
+
+- Markdown编辑器atom
+
+    - `$ atom`
+
+    - 预览实时渲染(Ctrl + Shift + M)
 
 Git
 ============
