@@ -42,13 +42,19 @@ Anbox 使用 Linux 命名空间机制（user，pid，uts，net，mount，ipc）�
 
 `$ snap refresh --beta --devmode anbox`
 
-- 查看當前可用的Anbox信息
+- 查看当前可用的Anbox信息
 
 `$ snap info anbox`
 
 - 启动Anbox
 
 `$ anbox.appmgr`
+
+Anbox启动后，应用管理器界面如下所示：
+![](2019-08-14-install-anbox/01.png)
+
+点击应用管理器中的Settings的图标，启动Settings，界面如下所示：
+![](2019-08-14-install-anbox/02.png)
 
 - 安装安卓应用
 
