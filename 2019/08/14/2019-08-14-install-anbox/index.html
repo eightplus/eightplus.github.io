@@ -106,10 +106,13 @@
 <meta property="og:site_name" content="Eight Plus">
 <meta property="og:description" content="Anbox是一种基于容器在常规GNU/Linux系统上启动完整Android系統的方法，如Ubuntu。Anbox 使用 Linux 命名空间机制（user，pid，uts，net，mount，ipc），在容器中运行完整的 Android 系统，容器内的 Android 没有直接访问任何硬件的权限，所有的硬件访问通过主机上的 anbox 守护进程。Anbox复用基于 QEMU 的模拟器中为 An">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-14T14:29:49.673Z">
+<meta property="og:image" content="https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/01.png">
+<meta property="og:image" content="https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/02.png">
+<meta property="og:updated_time" content="2019-08-14T14:39:18.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装Anbox">
 <meta name="twitter:description" content="Anbox是一种基于容器在常规GNU/Linux系统上启动完整Android系統的方法，如Ubuntu。Anbox 使用 Linux 命名空间机制（user，pid，uts，net，mount，ipc），在容器中运行完整的 Android 系统，容器内的 Android 没有直接访问任何硬件的权限，所有的硬件访问通过主机上的 anbox 守护进程。Anbox复用基于 QEMU 的模拟器中为 An">
+<meta name="twitter:image" content="https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/01.png">
 
 
 
@@ -410,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  350字
+                  387字
                 </span>
               
 
@@ -459,13 +462,15 @@
 <p><code>$ sudo snap install --devmode --beta anbox</code></p>
 <p><code>$ snap refresh --beta --devmode anbox</code></p>
 <ul>
-<li>查看當前可用的Anbox信息</li>
+<li>查看当前可用的Anbox信息</li>
 </ul>
 <p><code>$ snap info anbox</code></p>
 <ul>
 <li>启动Anbox</li>
 </ul>
 <p><code>$ anbox.appmgr</code></p>
+<p>Anbox启动后，应用管理器界面如下所示：<br><img src="/2019/08/14/2019-08-14-install-anbox/01.png" alt=""></p>
+<p>点击应用管理器中的Settings的图标，启动Settings，界面如下所示：<br><img src="/2019/08/14/2019-08-14-install-anbox/02.png" alt=""></p>
 <ul>
 <li>安装安卓应用</li>
 </ul>
