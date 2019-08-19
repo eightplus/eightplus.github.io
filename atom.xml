@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-08-15T08:10:34.276Z</updated>
+  <updated>2019-08-19T07:49:44.292Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用mpv编写自己的播放器</title>
+    <link href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/"/>
+    <id>https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/</id>
+    <published>2019-08-19T07:32:08.000Z</published>
+    <updated>2019-08-19T07:49:44.292Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然M
+      
+    
+    </summary>
+    
+      <category term="Linux Qt 开发" scheme="https://eightplus.github.io/categories/Linux-Qt-%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>安装Anbox</title>
