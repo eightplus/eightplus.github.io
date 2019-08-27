@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-08-19T07:49:44.292Z</updated>
+  <updated>2019-08-27T16:06:34.716Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dbus-glib</title>
+    <link href="https://eightplus.github.io/2019/08/27/2019-08-27-dbus-glib/"/>
+    <id>https://eightplus.github.io/2019/08/27/2019-08-27-dbus-glib/</id>
+    <published>2019-08-27T00:19:31.000Z</published>
+    <updated>2019-08-27T16:06:34.716Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;如果你想在Linux系统下开发软件，且需要用到进程间通信时，我强烈建议你了解和使用Dbus。Dbus是实质上一个适用于桌面应用的进程间的通讯机制，即所谓的IPC机制。Dbus是一个进程间的通信机制，可以是应用与应用之间的通信，也可以是应用与系统之间
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Dbus" scheme="https://eightplus.github.io/tags/Dbus/"/>
+    
+  </entry>
   
   <entry>
     <title>使用mpv编写自己的播放器</title>
