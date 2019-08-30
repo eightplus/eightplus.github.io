@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/</loc>
+    
+    <lastmod>2019-08-30T14:15:05.077Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eightplus.github.io/2019/08/27/2019-08-27-dbus-glib/</loc>
     
     <lastmod>2019-08-27T16:06:34.716Z</lastmod>

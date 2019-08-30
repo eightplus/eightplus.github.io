@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-08-27T16:06:34.716Z</updated>
+  <updated>2019-08-30T14:15:05.077Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GObject 编程入门</title>
+    <link href="https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/"/>
+    <id>https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/</id>
+    <published>2019-08-30T12:50:27.000Z</published>
+    <updated>2019-08-30T14:15:05.077Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Gobject，也称Glib对象系统，是一个程序库，它可以帮助我们使用C语言编写面向对象程序，其提供了一个通用的动态类型系统（GType）、一个基本类型的实现集（如整型、枚举等）、一个基本对象类型Gobject、一个信号系统以及一个可扩展的参数/变
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Glib GObject" scheme="https://eightplus.github.io/tags/Glib-GObject/"/>
+    
+  </entry>
   
   <entry>
     <title>Dbus-glib</title>
