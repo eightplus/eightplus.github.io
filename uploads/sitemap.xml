@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eightplus.github.io/about/index.html</loc>
+    
+    <lastmod>2019-08-31T14:34:29.285Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/</loc>
     
     <lastmod>2019-08-30T14:15:05.077Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://eightplus.github.io/2018/07/03/2018-07-03-build-android/</loc>
     
     <lastmod>2018-08-02T01:00:02.033Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/about/index.html</loc>
-    
-    <lastmod>2018-07-31T11:44:44.738Z</lastmod>
     
   </url>
   
