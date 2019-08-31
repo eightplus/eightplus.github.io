@@ -19,6 +19,8 @@ npm install hexo-deployer-git
 hexo clean    #清空
 hexo generate #生成静态网页
 hexo deploy   #部署
+hexo server  #本地预览，默认端口号是4000，可指定断开，如hexo server -p 5000
+
 
 百度验证:https://ziyuan.baidu.com/https/index
 ```

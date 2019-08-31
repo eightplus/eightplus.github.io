@@ -11,7 +11,7 @@ menu:
   categories: Kategorien
   tags: Tags
   about: Über
-  feed: RSS
+#  feed: RSS
   search: Suche
 
 sidebar:
