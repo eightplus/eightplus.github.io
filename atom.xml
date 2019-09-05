@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-09-01T04:34:33.592Z</updated>
+  <updated>2019-09-05T11:36:28.220Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>回调函数</title>
+    <link href="https://eightplus.github.io/2019/09/05/2019-09-05-callback/"/>
+    <id>https://eightplus.github.io/2019/09/05/2019-09-05-callback/</id>
+    <published>2019-09-05T11:18:07.000Z</published>
+    <updated>2019-09-05T11:36:28.220Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;为什么学会写回调函数很重要？&quot;&gt;&lt;a href=&quot;#为什么学会写回调函数很重要？&quot; class=&quot;headerlink&quot; title=&quot;为什么学会写回调函数很重要？&quot;&gt;&lt;/a&gt;为什么学会写回调函数很重要？&lt;/h2&gt;&lt;p&gt;  假设有两个程序，程序A为上层应用程序，程
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="callback" scheme="https://eightplus.github.io/tags/callback/"/>
+    
+  </entry>
   
   <entry>
     <title>Gtk plugin 编程开发</title>
