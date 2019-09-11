@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-09-05T11:36:28.220Z</updated>
+  <updated>2019-09-11T13:40:15.178Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>protobuf</title>
+    <link href="https://eightplus.github.io/2019/09/11/2019-09-11-protobuf/"/>
+    <id>https://eightplus.github.io/2019/09/11/2019-09-11-protobuf/</id>
+    <published>2019-09-11T13:07:14.000Z</published>
+    <updated>2019-09-11T13:40:15.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Protobuf: Google Protocol Buffer，是 Google 公司内部的混合语言数据标准，用于 RPC 系统和持续数据存储系统。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;proto3-与-proto2-的
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="protobuf" scheme="https://eightplus.github.io/tags/protobuf/"/>
+    
+  </entry>
   
   <entry>
     <title>回调函数</title>
