@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/</loc>
+    <lastmod>2019-10-22T15:23:38.700Z</lastmod>
+    <data>
+        <display>
+        <title>通过boost.python将c++封装成动态库供python调用</title>
+        <pubTime>2019-10-22T15:10:10.000Z</pubTime>
+        
+        <tag>Boost Python C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2019/09/18/2019-09-18-boost-serialization/</loc>
     <lastmod>2019-09-18T03:37:16.703Z</lastmod>
     <data>

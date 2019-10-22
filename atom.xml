@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-09-18T03:37:16.703Z</updated>
+  <updated>2019-10-22T15:23:38.700Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>通过boost.python将c++封装成动态库供python调用</title>
+    <link href="https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/"/>
+    <id>https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/</id>
+    <published>2019-10-22T15:10:10.000Z</published>
+    <updated>2019-10-22T15:23:38.700Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;这里简要介绍如何通过boost.python将c++封装动态库，让python直接调用库中的函数，要做到这一点，我们需要让so中将要在python中直接调用的函数、类、结构体等，通过boost中特定函数暴露给python，而且so的目标名必须和BO
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Boost Python C++" scheme="https://eightplus.github.io/tags/Boost-Python-C/"/>
+    
+  </entry>
   
   <entry>
     <title>Boost 序列化</title>

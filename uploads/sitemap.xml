@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/</loc>
+    
+    <lastmod>2019-10-22T15:23:38.700Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eightplus.github.io/2019/09/18/2019-09-18-boost-serialization/</loc>
     
     <lastmod>2019-09-18T03:37:16.703Z</lastmod>

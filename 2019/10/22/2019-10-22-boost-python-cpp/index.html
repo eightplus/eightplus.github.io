@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Android,">
+  <meta name="keywords" content="Boost Python C++,">
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="在mydev的Linux内核驱动程序中，创建三个不同的文件节点来供用户空间访问，分别是传统的设备文件/dev/mydev、proc系统文件/proc/mydev和devfs系统属性文件/sys/class/mydev/mydev/val。这里通过编写的C可执行程序来访问设备文件/dev/mydev。    驱动程序目录结构如下： 12345~/Android----external    ---">
-<meta name="keywords" content="Android">
+<meta name="description" content="这里简要介绍如何通过boost.python将c++封装动态库，让python直接调用库中的函数，要做到这一点，我们需要让so中将要在python中直接调用的函数、类、结构体等，通过boost中特定函数暴露给python，而且so的目标名必须和BOOST_PYTHON_MODULE使用的module名一致（即生成的动态库命名为封装模块的名字），这样，在python就可以直接import该模块，并">
+<meta name="keywords" content="Boost Python C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Android源码中编写C程序测试Linux内核驱动程序">
-<meta property="og:url" content="https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/index.html">
+<meta property="og:title" content="通过boost.python将c++封装成动态库供python调用">
+<meta property="og:url" content="https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="在mydev的Linux内核驱动程序中，创建三个不同的文件节点来供用户空间访问，分别是传统的设备文件/dev/mydev、proc系统文件/proc/mydev和devfs系统属性文件/sys/class/mydev/mydev/val。这里通过编写的C可执行程序来访问设备文件/dev/mydev。    驱动程序目录结构如下： 12345~/Android----external    ---">
+<meta property="og:description" content="这里简要介绍如何通过boost.python将c++封装动态库，让python直接调用库中的函数，要做到这一点，我们需要让so中将要在python中直接调用的函数、类、结构体等，通过boost中特定函数暴露给python，而且so的目标名必须和BOOST_PYTHON_MODULE使用的module名一致（即生成的动态库命名为封装模块的名字），这样，在python就可以直接import该模块，并">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-06T14:49:11.803Z">
+<meta property="og:updated_time" content="2019-10-22T15:23:38.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Android源码中编写C程序测试Linux内核驱动程序">
-<meta name="twitter:description" content="在mydev的Linux内核驱动程序中，创建三个不同的文件节点来供用户空间访问，分别是传统的设备文件/dev/mydev、proc系统文件/proc/mydev和devfs系统属性文件/sys/class/mydev/mydev/val。这里通过编写的C可执行程序来访问设备文件/dev/mydev。    驱动程序目录结构如下： 12345~/Android----external    ---">
+<meta name="twitter:title" content="通过boost.python将c++封装成动态库供python调用">
+<meta name="twitter:description" content="这里简要介绍如何通过boost.python将c++封装动态库，让python直接调用库中的函数，要做到这一点，我们需要让so中将要在python中直接调用的函数、类、结构体等，通过boost中特定函数暴露给python，而且so的目标名必须和BOOST_PYTHON_MODULE使用的module名一致（即生成的动态库命名为封装模块的名字），这样，在python就可以直接import该模块，并">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/">
+  <link rel="canonical" href="https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/">
 
 
 
 
 
-  <title>在Android源码中编写C程序测试Linux内核驱动程序 | Eight Plus</title>
+  <title>通过boost.python将c++封装成动态库供python调用 | Eight Plus</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李翔">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在Android源码中编写C程序测试Linux内核驱动程序</h1>
+          <h1 class="post-title" itemprop="name headline">通过boost.python将c++封装成动态库供python调用</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T22:33:11+08:00">
-                2018-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-22T23:10:10+08:00">
+                2019-10-22
               </time>
             
 
@@ -374,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/Linux-编程/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux 编程</span>
                   </a>
                 </span>
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  582字
+                  514字
                 </span>
               
 
@@ -436,55 +436,17 @@
 
       
         <blockquote>
-<p>在mydev的Linux内核驱动程序中，创建三个不同的文件节点来供用户空间访问，分别是传统的设备文件/dev/mydev、proc系统文件/proc/mydev和devfs系统属性文件/sys/class/mydev/mydev/val。这里通过编写的C可执行程序来访问设备文件/dev/mydev。<br><br></p>
+<p>这里简要介绍如何通过boost.python将c++封装动态库，让python直接调用库中的函数，要做到这一点，我们需要让so中将要在python中直接调用的函数、类、结构体等，通过boost中特定函数暴露给python，而且so的目标名必须和BOOST_PYTHON_MODULE使用的module名一致（即生成的动态库命名为封装模块的名字），这样，在python就可以直接import该模块，并像调用其他模块的函数、类、结构体等一样，直接调用里边的函数、类、结构体……</p>
 </blockquote>
 <hr>
-<ul>
-<li><p>驱动程序目录结构如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~/Android</span><br><span class="line">----external</span><br><span class="line">    ----mydev</span><br><span class="line">        ----mydev.c</span><br><span class="line">        ----Android.mk</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用Android模拟器加载包含这个Linux驱动程序的内核文件，并且使用adb shell命令连接上模拟，验证在/dev目录中存在设备文件mydev。</p>
-</li>
-<li><p>进入到Android源代码工程的external目录，创建mydev目录</p>
-</li>
+<h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/C/boost-python-cpp" target="_blank" rel="noopener">boost-python-cpp</a></li>
 </ul>
-<ul>
-<li>~/Android$ cd external</li>
-<li>~/Android/external$ mkdir mydev</li>
-</ul>
-<ul>
-<li>在mydev目录中新建mydev.c文件<ul>
-<li>打开/dev/mydev文件，然后先读出/dev/mydev文件中的值，接着写入值5到/dev/mydev中去，最后再次读出/dev/mydev文件中的值，看看是否是我们刚才写入的值5。从/dev/mydev文件读写的值实际上就是我们虚拟的硬件的寄存器val的值。</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DEVICE_NAME <span class="meta-string">"/dev/mydev"</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> fd = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line">    fd = open(DEVICE_NAME, O_RDWR);</span><br><span class="line">    <span class="keyword">if</span>(fd == <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Failed to open device %s.\n"</span>, DEVICE_NAME);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Read original value:\n"</span>);</span><br><span class="line">    read(fd, &amp;val, <span class="keyword">sizeof</span>(val));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d.\n\n"</span>, val);</span><br><span class="line"></span><br><span class="line">    val = <span class="number">5</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Write value %d to %s.\n\n"</span>, val, DEVICE_NAME);</span><br><span class="line">    write(fd, &amp;val, <span class="keyword">sizeof</span>(val));</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Read the value again:\n"</span>);</span><br><span class="line">    read(fd, &amp;val, <span class="keyword">sizeof</span>(val));</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d.\n\n"</span>, val);</span><br><span class="line"></span><br><span class="line">    close(fd);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>在mydev目录中新建Android.mk文件，其中“BUILD_EXECUTABLE”表示编译的是可执行程序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">LOCAL_PATH := $(call my-dir)</span><br><span class="line">include $(CLEAR_VARS)</span><br><span class="line">LOCAL_MODULE_TAGS := optional</span><br><span class="line">LOCAL_MODULE := mydev</span><br><span class="line">LOCAL_SRC_FILES := $(call all-subdir-c-files)</span><br><span class="line">include $(BUILD_EXECUTABLE)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用mmm命令进行编译</p>
-</li>
-</ul>
-<ul>
-<li>~/Android$ mmm ./external/mydev<br>若编译成功，则可以在out/target/product/gerneric/system/bin目录下看到可执行文件mydev。</li>
-</ul>
-<ul>
-<li>重新打包Android系统文件system.img，重新打包后的system.img文件包含了刚才编译好的mydev可执行文件。</li>
-</ul>
-<ul>
-<li>~/Android$ make snod</li>
-</ul>
-<ul>
-<li>运行模拟器，使用/system/bin/mydev可执行程序来访问Linux内核驱动程序</li>
-</ul>
-<ul>
-<li>~/Android$ emulator -kernel ./kernel/goldfish/arch/arm/boot/zImage &amp;</li>
-<li>~/Android$ adb shell</li>
-<li>root@android:/ # cd system/bin</li>
-<li>root@android:/system/bin # ./mydev<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Read the original value:</span><br><span class="line">0.</span><br><span class="line">Write value 5 to /dev/mydev.</span><br><span class="line">Read the value again:</span><br><span class="line">5.</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install libboost-dev libboost1.58-dev libboost-python-dev gcc g++ pkg-config python-dev build-essential</code></p>
+<h2 id="示例源码的编译安装和运行"><a href="#示例源码的编译安装和运行" class="headerlink" title="示例源码的编译安装和运行"></a>示例源码的编译安装和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br><span class="line">$ python test.py</span><br></pre></td></tr></table></figure>
+<h2 id="C-封装动态库"><a href="#C-封装动态库" class="headerlink" title="C++封装动态库"></a>C++封装动态库</h2><p> 如示例代码中daemon.cc中的代码所示，我们实现了一个类Daemon，该类的构造函数有一个string类型的参数，类中有两个成员函数detect_os_info和get_os_info，而且还在Deamon类之外实现了一个普通函数get_username。如下所示的BOOST_PYTHON_MODULE代码，目的是导出类及部分成员，以及普通函数，这些导出的类和函数，将可以在python中调用。<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">BOOST_PYTHON_MODULE(boost_py_cpp_module)</span><br><span class="line">&#123;</span><br><span class="line">    class_&lt;Daemon, boost::noncopyable &gt; (&quot;Daemon&quot;, &quot;This is the test daemon for python and C++&quot;, init&lt;std::string&gt;())//构造函数</span><br><span class="line">            .def(&quot;detect_os_info&quot;, &amp;Daemon::detect_os_info)//成员函数</span><br><span class="line">            .def(&quot;get_os_info&quot;, &amp;Daemon::get_os_info)//成员函数</span><br><span class="line">            ;</span><br><span class="line">    def(&quot;get_username&quot;, &amp;get_username);//普通函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="python调用C"><a href="#python调用C" class="headerlink" title="python调用C++"></a>python调用C++</h2><p>  示例中的test.py展示了python是如何调用C++中的类和函数，具体代码如下（其中 import boost_py_cpp_module就是导入C++编写的模块，该模块的名字与C++生成的库的名字一致）：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import ctypes</span><br><span class="line">try:</span><br><span class="line">    libc = ctypes.CDLL(&apos;libc.so.6&apos;)</span><br><span class="line">    libc.prctl(15, &apos;ydaemon&apos;, 0, 0, 0)</span><br><span class="line">except: pass</span><br><span class="line">import boost_py_cpp_module</span><br><span class="line"></span><br><span class="line">def get_os():</span><br><span class="line">    iface = boost_py_cpp_module.Daemon(&quot;OS&quot;)</span><br><span class="line">    iface.detect_os_info()</span><br><span class="line">    data = iface.get_os_info()</span><br><span class="line">    return data</span><br><span class="line"></span><br><span class="line">def get_username():</span><br><span class="line">    try:</span><br><span class="line">        import boost_py_cpp_module</span><br><span class="line">        username = boost_py_cpp_module.get_username()</span><br><span class="line">        return username</span><br><span class="line">    except:</span><br><span class="line">        return &quot;root&quot;</span><br><span class="line"></span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    print &quot;OS info: &quot;, get_os()</span><br><span class="line">    print &quot;User name: &quot;, get_username()</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -542,7 +504,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/" title="在Android源码中编写C程序测试Linux内核驱动程序">https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/</a>
+    <a href="https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/" title="通过boost.python将c++封装成动态库供python调用">https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -557,8 +519,8 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i>
- Android</a>
+            <a href="/tags/Boost-Python-C/" rel="tag"><i class="fa fa-tag"></i>
+ Boost Python C++</a>
           
         </div>
       
@@ -571,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/02/2018-08-02-android-kernel-driver/" rel="next" title="为Android系统编写Linux内核驱动程序">
-                <i class="fa fa-chevron-left"></i> 为Android系统编写Linux内核驱动程序
+              <a href="/2019/09/18/2019-09-18-boost-serialization/" rel="next" title="Boost 序列化">
+                <i class="fa fa-chevron-left"></i> Boost 序列化
               </a>
             
           </div>
@@ -580,10 +542,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/09/2018-08-09-android-java-app/" rel="prev" title="在Android源码中使用java编写自己的应用程序">
-                在Android源码中使用java编写自己的应用程序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -637,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="李翔">
           <p class="site-author-name" itemprop="name">李翔</p>
@@ -745,6 +712,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译安装和运行"><span class="nav-text">示例源码的编译安装和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-封装动态库"><span class="nav-text">C++封装动态库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#python调用C"><span class="nav-text">python调用C++</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

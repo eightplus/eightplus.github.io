@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[通过boost.python将c++封装成动态库供python调用]]></title>
+    <url>%2F2019%2F10%2F22%2F2019-10-22-boost-python-cpp%2F</url>
+    <content type="text"><![CDATA[这里简要介绍如何通过boost.python将c++封装动态库，让python直接调用库中的函数，要做到这一点，我们需要让so中将要在python中直接调用的函数、类、结构体等，通过boost中特定函数暴露给python，而且so的目标名必须和BOOST_PYTHON_MODULE使用的module名一致（即生成的动态库命名为封装模块的名字），这样，在python就可以直接import该模块，并像调用其他模块的函数、类、结构体等一样，直接调用里边的函数、类、结构体…… 示例源码 boost-python-cpp 开发库的安装$ sudo apt install libboost-dev libboost1.58-dev libboost-python-dev gcc g++ pkg-config python-dev build-essential 示例源码的编译安装和运行123$ make$ sudo make install$ python test.py C++封装动态库 如示例代码中daemon.cc中的代码所示，我们实现了一个类Daemon，该类的构造函数有一个string类型的参数，类中有两个成员函数detect_os_info和get_os_info，而且还在Deamon类之外实现了一个普通函数get_username。如下所示的BOOST_PYTHON_MODULE代码，目的是导出类及部分成员，以及普通函数，这些导出的类和函数，将可以在python中调用。 12345678BOOST_PYTHON_MODULE(boost_py_cpp_module)&#123; class_&lt;Daemon, boost::noncopyable &gt; (&quot;Daemon&quot;, &quot;This is the test daemon for python and C++&quot;, init&lt;std::string&gt;())//构造函数 .def(&quot;detect_os_info&quot;, &amp;Daemon::detect_os_info)//成员函数 .def(&quot;get_os_info&quot;, &amp;Daemon::get_os_info)//成员函数 ; def(&quot;get_username&quot;, &amp;get_username);//普通函数&#125; python调用C++ 示例中的test.py展示了python是如何调用C++中的类和函数，具体代码如下（其中 import boost_py_cpp_module就是导入C++编写的模块，该模块的名字与C++生成的库的名字一致）： 1234567891011121314151617181920212223242526import osimport sysimport ctypestry: libc = ctypes.CDLL(&apos;libc.so.6&apos;) libc.prctl(15, &apos;ydaemon&apos;, 0, 0, 0)except: passimport boost_py_cpp_moduledef get_os(): iface = boost_py_cpp_module.Daemon(&quot;OS&quot;) iface.detect_os_info() data = iface.get_os_info() return datadef get_username(): try: import boost_py_cpp_module username = boost_py_cpp_module.get_username() return username except: return &quot;root&quot;if __name__ == &apos;__main__&apos;: print &quot;OS info: &quot;, get_os() print &quot;User name: &quot;, get_username()]]></content>
+      <categories>
+        <category>Linux 编程</category>
+      </categories>
+      <tags>
+        <tag>Boost Python C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Boost 序列化]]></title>
     <url>%2F2019%2F09%2F18%2F2019-09-18-boost-serialization%2F</url>
     <content type="text"><![CDATA[上一篇博客讲解过 protobuf 的序列化（将对象变成字节流的形式传出去）和反序列化（从字节流恢复成原来的对象），这篇博客将介绍另外一种序列化和反序列化的方案：Boost.Serialization。Boost.Serialization可以创建或重建程序中的等效结构，并保存为二进制数据、文本数据、XML或者有用户自定义的其他文件。 示例源码 boost-serialization protobuf 与 Boost.Serialization 的比较 protobuf:轻量级的，支持的数据类型有限，且数据对象必须预先定义，使用 protoc 编译，但其效率较高，适合要求效率，允许自定义类型的内部场合使用。 Boost.SerializationBoost 库非常庞大，功能丰富，Boost.Serialization序列化只是其中的一个小分支，但就算只使用序列化，也需要安装整个Boost库，其支持的序列化功能强大，既支持二维数组（指针），也支持STL容器，序列化使用灵活简。 Boost.Serialization 的两种模式介绍 Boost序列化可以分为两种模式：侵入式（intrusive）和非侵入式 （non-intrusive） 侵入式（intrusive） 侵入式序列化时，需要在class里面加入序列化的代码，序列化的步骤大致如下： 先引用 boost 头文件 在类的声明中, 编写序列化函数，该函数的格式如下: 12345template&lt;class Archive&gt;void serialize(Archive &amp; ar, const unsigned int version)//version是版本号&#123; ar&amp; m_str;&#125; 类的实例化和赋值 定义一个序列化的对象和数据流的写入(具体序列化和反序列化的代码见示例源码)123boost::archive::text_oarchive text_oa(text_sstream);//文本方式boost::archive::binary_oarchive binary_oa(binary_sstream);//二进制方式binary_oa &lt;&lt; info;//将对象info的序列化数据以二进制存储形式写入内存 非侵入式（non-intrusive） 如果class是早已存在的，且我们不想再改变class里面的代码时，这个时候，我们可以使用非侵入式的序列化。非侵入式序列化时，序列化函数需要访问数据成员，这就要求将class的数据成员暴露出来，即public，而不是private。其序列化的步骤和上面的侵入式序列化步骤一致。 Boost 开发库的安装$ sudo apt install libboost-dev libboost1.58-dev libboost-serialization1.58-dev]]></content>
