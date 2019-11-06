@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-10-22T15:23:38.700Z</updated>
+  <updated>2019-11-06T11:31:21.517Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt配置文件之QSettings</title>
+    <link href="https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/"/>
+    <id>https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/</id>
+    <published>2019-11-06T01:30:05.000Z</published>
+    <updated>2019-11-06T11:31:21.517Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在用Qt编程时，很多时候需要在本地保留用户的配置，方便下次启动程序的时候使用上次的配置数据，这里推荐使用QSettings读写配置文件（QSettings可重入，即可以同时在不同的线程中使用不同的QSettings对象），而不是去用数据库去记录和读
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>通过boost.python将c++封装成动态库供python调用</title>

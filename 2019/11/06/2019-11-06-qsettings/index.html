@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Qt,">
 
 
 
@@ -98,17 +98,18 @@
 
 
 
-<meta name="description" content="Linux 爱好者">
-<meta name="keywords" content="lixiang， 李翔， eightplus">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eight Plus">
-<meta property="og:url" content="https://eightplus.github.io/categories/Linux-编程/index.html">
+<meta name="description" content="在用Qt编程时，很多时候需要在本地保留用户的配置，方便下次启动程序的时候使用上次的配置数据，这里推荐使用QSettings读写配置文件（QSettings可重入，即可以同时在不同的线程中使用不同的QSettings对象），而不是去用数据库去记录和读取这些数据（如轻量级数据库sqlite）。   示例源码 qsetting-demo  开发库的安装$ sudo apt install qtbase">
+<meta name="keywords" content="Qt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qt配置文件之QSettings">
+<meta property="og:url" content="https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="Linux 爱好者">
+<meta property="og:description" content="在用Qt编程时，很多时候需要在本地保留用户的配置，方便下次启动程序的时候使用上次的配置数据，这里推荐使用QSettings读写配置文件（QSettings可重入，即可以同时在不同的线程中使用不同的QSettings对象），而不是去用数据库去记录和读取这些数据（如轻量级数据库sqlite）。   示例源码 qsetting-demo  开发库的安装$ sudo apt install qtbase">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-06T11:31:21.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eight Plus">
-<meta name="twitter:description" content="Linux 爱好者">
+<meta name="twitter:title" content="Qt配置文件之QSettings">
+<meta name="twitter:description" content="在用Qt编程时，很多时候需要在本地保留用户的配置，方便下次启动程序的时候使用上次的配置数据，这里推荐使用QSettings读写配置文件（QSettings可重入，即可以同时在不同的线程中使用不同的QSettings对象），而不是去用数据库去记录和读取这些数据（如轻量级数据库sqlite）。   示例源码 qsetting-demo  开发库的安装$ sudo apt install qtbase">
 
 
 
@@ -137,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/categories/Linux-编程/">
+  <link rel="canonical" href="https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/">
 
 
 
 
 
-  <title>分类: Linux 编程 | Eight Plus</title>
+  <title>Qt配置文件之QSettings | Eight Plus</title>
   
 
 
@@ -171,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -307,235 +308,296 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Linux 编程<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eight Plus">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/11/06/2019-11-06-qsettings/" itemprop="url">
-              
-                <span itemprop="name">Qt配置文件之QSettings</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Qt配置文件之QSettings</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-06T09:30:05+08:00" content="2019-11-06">
-          11-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-06T09:30:05+08:00">
+                2019-11-06
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux-编程/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux 编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  857字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/22/2019-10-22-boost-python-cpp/" itemprop="url">
-              
-                <span itemprop="name">通过boost.python将c++封装成动态库供python调用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-22T23:10:10+08:00" content="2019-10-22">
-          10-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
+        <blockquote>
+<p>在用Qt编程时，很多时候需要在本地保留用户的配置，方便下次启动程序的时候使用上次的配置数据，这里推荐使用QSettings读写配置文件（QSettings可重入，即可以同时在不同的线程中使用不同的QSettings对象），而不是去用数据库去记录和读取这些数据（如轻量级数据库sqlite）。</p>
+</blockquote>
+<hr>
+<h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/setttings/qsetting-demo" target="_blank" rel="noopener">qsetting-demo</a></li>
+</ul>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools</code></p>
+<h2 id="示例源码的编译安装和运行"><a href="#示例源码的编译安装和运行" class="headerlink" title="示例源码的编译安装和运行"></a>示例源码的编译安装和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qsettings-demo</span><br></pre></td></tr></table></figure>
+<h2 id="QSettings对象的创建"><a href="#QSettings对象的创建" class="headerlink" title="QSettings对象的创建"></a>QSettings对象的创建</h2><p>  QSettings对象既可以创建在栈上，也可以创建在堆上，构建和销毁也非常快。QSettings类的构造函数的重载允许我们用各种方法来初始化QSettings对象，比如可以在当创建QSettings对象时，通过指定公司或组织名称以及产品名称，也可以通过指定文件路径和Format类型，这里我们介绍用指定文件路径和Format类型的方式构造QSettings对象。</p>
+<pre><code>- 栈上的对象
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">QString filename = QDir::homePath() + &quot;/.config/eightplus/qsettings-demo.ini&quot;;</span><br><span class="line">QSettings m_settings(filename, QSettings::IniFormat);</span><br><span class="line">m_settings.setIniCodec(&quot;UTF-8&quot;);</span><br></pre></td></tr></table></figure>
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+- 堆上的对象
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">QString filename = QDir::homePath() + &quot;/.config/eightplus/qsettings-demo.ini&quot;;</span><br><span class="line">QSettings *m_settings = new QSettings(filename, QSettings::IniFormat);</span><br><span class="line">m_settings-&gt;setIniCodec(&quot;UTF-8&quot;);</span><br></pre></td></tr></table></figure>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/18/2019-09-18-boost-serialization/" itemprop="url">
-              
-                <span itemprop="name">Boost 序列化</span>
-              
-            </a>
-        
-      </h2>
+其中，枚举类型Format的定义如下：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">enum Format &#123;</span><br><span class="line">    NativeFormat,</span><br><span class="line">    IniFormat,</span><br><span class="line"></span><br><span class="line">    InvalidFormat = 16,</span><br><span class="line">    CustomFormat1,</span><br><span class="line">    CustomFormat2,</span><br><span class="line">    CustomFormat3,</span><br><span class="line">    CustomFormat4,</span><br><span class="line">    CustomFormat5,</span><br><span class="line">    CustomFormat6,</span><br><span class="line">    CustomFormat7,</span><br><span class="line">    CustomFormat8,</span><br><span class="line">    CustomFormat9,</span><br><span class="line">    CustomFormat10,</span><br><span class="line">    CustomFormat11,</span><br><span class="line">    CustomFormat12,</span><br><span class="line">    CustomFormat13,</span><br><span class="line">    CustomFormat14,</span><br><span class="line">    CustomFormat15,</span><br><span class="line">    CustomFormat16</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-18T10:58:18+08:00" content="2019-09-18">
-          09-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/11/2019-09-11-protobuf/" itemprop="url">
-              
-                <span itemprop="name">protobuf</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-11T21:07:14+08:00" content="2019-09-11">
-          09-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/05/2019-09-05-callback/" itemprop="url">
-              
-                <span itemprop="name">回调函数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-05T19:18:07+08:00" content="2019-09-05">
-          09-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/01/2019-09-01-gtk-plugins/" itemprop="url">
-              
-                <span itemprop="name">Gtk plugin 编程开发</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-01T12:02:13+08:00" content="2019-09-01">
-          09-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/30/2019-08-30-gobject-demo/" itemprop="url">
-              
-                <span itemprop="name">GObject 编程入门</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-30T20:50:27+08:00" content="2019-08-30">
-          08-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/27/2019-08-27-dbus-glib/" itemprop="url">
-              
-                <span itemprop="name">Dbus-glib</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-27T08:19:31+08:00" content="2019-08-27">
-          08-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+在Linux上编程，我们介绍NativeFormat和IniFormat，对于我个人而已，我一直使用的是IniFormat。
+</code></pre><table>
+<thead>
+<tr>
+<th>常量</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>  QSettings::NativeFormat</td>
+<td>0</td>
+<td>使用平台最合适的存储格式设置。在Unix中，使用的是INI格式的文本配置文件。</td>
+</tr>
+<tr>
+<td>  QSettings::IniFormat</td>
+<td>1</td>
+<td>存储在INI文件中的设置。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="QSettings存储"><a href="#QSettings存储" class="headerlink" title="QSettings存储"></a>QSettings存储</h2><p>  QSettings使用setValue()函数存储一系列设置，每个设置包括key（字符串）和一个与该key关联的value（QVariant），如：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">m_settings-&gt;beginGroup(&quot;General&quot;);</span><br><span class="line">m_settings-&gt;setValue(&quot;name&quot;, m_name);</span><br><span class="line">m_settings-&gt;setValue(&quot;male&quot;, m_male);</span><br><span class="line">m_settings-&gt;setValue(&quot;age&quot;, m_age);</span><br><span class="line">m_settings-&gt;endGroup();</span><br><span class="line">m_settings-&gt;sync();</span><br></pre></td></tr></table></figure></p>
+<p>  sync()：如果存在相同的key，现有的值将被新值覆盖。为了提高效率，这些变化可能不会被立即保存到永久存储（可以随时调用sync()来提交更改）。</p>
+<h2 id="QSettings读取"><a href="#QSettings读取" class="headerlink" title="QSettings读取"></a>QSettings读取</h2><p>  QSettings使用使用value()函数得到一个key的value，如：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">m_settings-&gt;beginGroup(&quot;General&quot;);</span><br><span class="line">m_name = m_settings-&gt;value(&quot;name&quot;, m_name).toString();</span><br><span class="line">if (m_name.isEmpty()) &#123;</span><br><span class="line">    m_name = &quot;lixiang&quot;;</span><br><span class="line">&#125;</span><br><span class="line">m_male = m_settings-&gt;value(&quot;male&quot;, m_male).toBool();</span><br><span class="line">m_age = m_settings-&gt;value(&quot;age&quot;, m_age).toInt();</span><br><span class="line">m_settings-&gt;endGroup();</span><br></pre></td></tr></table></figure></p>
+<h2 id="QVariant类型"><a href="#QVariant类型" class="headerlink" title="QVariant类型"></a>QVariant类型</h2><p>  QSettings的value为QVariant类型，Qvariant是一种数据类型的集合，是Qt Core模块的一部分，它支持大部分通常的Qt数据类型转换，如：toInt()，toString(), toBool()，toPoint()，toSize()等，但它不能提供Qt GUI那一部分的Qt数据类型转换，如：QColor、QImage、 QPixmap，即QVariant中没有toColor()、toImage()、toPixmap()等接口，此时可以使用QVariant::value()或qVariantValue()模板函数，如下所示：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">QColor color = m_settings-&gt;value(&quot;color&quot;).value&lt;QColor&gt;();</span><br></pre></td></tr></table></figure></p>
+<p>  既然上面说到QVariant中没有toColor()等接口，那如果是QColor等类型，是否可以直接用setValue()去存储呢？答案是可以的，包括Qt Core和Qt GUI在类的相关类型，QVariant都支持，如下所示：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QColor color = palette().background().color();</span><br><span class="line">m_settings-&gt;setValue(&quot;color&quot;, color);</span><br></pre></td></tr></table></figure></p>
+<p>  另外，使用qRegisterMetaType()和qRegisterMetaTypeStreamOperators()注册的自定义类型，也可以使用QSettings进行存储。</p>
+<h2 id="ini配置文件示范"><a href="#ini配置文件示范" class="headerlink" title="ini配置文件示范"></a>ini配置文件示范</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[%General]</span><br><span class="line">age=18</span><br><span class="line">male=true</span><br><span class="line">name=lixiang</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="李翔 wechat" style="width: 200px; max-width: 100%;">
+    <div>微信交流</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢支持</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt=" 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt=" 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    李翔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/" title="Qt配置文件之QSettings">https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Qt/" rel="tag"><i class="fa fa-tag"></i>
+ Qt</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/22/2019-10-22-boost-python-cpp/" rel="next" title="通过boost.python将c++封装成动态库供python调用">
+                <i class="fa fa-chevron-left"></i> 通过boost.python将c++封装成动态库供python调用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -543,6 +605,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzk4My8xNDUxMw=="></div>
+    
+  </div>
+
 
         </div>
         
@@ -563,8 +631,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="李翔">
           <p class="site-author-name" itemprop="name">李翔</p>
@@ -671,6 +748,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译安装和运行"><span class="nav-text">示例源码的编译安装和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QSettings对象的创建"><span class="nav-text">QSettings对象的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QSettings存储"><span class="nav-text">QSettings存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QSettings读取"><span class="nav-text">QSettings读取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QVariant类型"><span class="nav-text">QVariant类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ini配置文件示范"><span class="nav-text">ini配置文件示范</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -819,10 +912,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -851,6 +944,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
