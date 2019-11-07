@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-11-07T08:46:43.976Z</updated>
+  <updated>2019-11-07T08:50:13.650Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Qt配置文件之QSettings</title>
+    <title>Qt配置文件之QGSettings</title>
     <link href="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/"/>
     <id>https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</id>
     <published>2019-11-07T08:05:18.000Z</published>
-    <updated>2019-11-07T08:46:43.976Z</updated>
+    <updated>2019-11-07T08:50:13.650Z</updated>
     
     <summary type="html">
     
