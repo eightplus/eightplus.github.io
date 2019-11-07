@@ -1,5 +1,5 @@
 ---
-title:      "Qt配置文件之QSettings"
+title:      "Qt配置文件之QGSettings"
 date:       2019-11-07 16:05:18
 author:     "lixiang"
 categories: Linux 编程
