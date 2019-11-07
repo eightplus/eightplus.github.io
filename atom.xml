@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-11-06T11:31:21.517Z</updated>
+  <updated>2019-11-07T08:46:43.976Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt配置文件之QSettings</title>
+    <link href="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/"/>
+    <id>https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</id>
+    <published>2019-11-07T08:05:18.000Z</published>
+    <updated>2019-11-07T08:46:43.976Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;本文介绍使用dconf作为后端的GSetting用法，dconf是一个简单的底层配置存储管理系统，可以使用图形化的dconf-editor根据path来检索GSettings并管理key，而且支持在key发生改变时发出通知(changed信号)。命
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>Qt配置文件之QSettings</title>

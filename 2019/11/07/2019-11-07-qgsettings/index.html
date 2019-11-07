@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Qt,">
 
 
 
@@ -98,17 +98,18 @@
 
 
 
-<meta name="description" content="Linux 爱好者">
-<meta name="keywords" content="lixiang， 李翔， eightplus">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eight Plus">
-<meta property="og:url" content="https://eightplus.github.io/tags/Dbus/index.html">
+<meta name="description" content="本文介绍使用dconf作为后端的GSetting用法，dconf是一个简单的底层配置存储管理系统，可以使用图形化的dconf-editor根据path来检索GSettings并管理key，而且支持在key发生改变时发出通知(changed信号)。命令行工具gsettings提供了对GSetings的命令行操作，可以查询、读取和设置键值。如果你觉得glib、gio太复杂(查看GSettings的A">
+<meta name="keywords" content="Qt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qt配置文件之QSettings">
+<meta property="og:url" content="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="Linux 爱好者">
+<meta property="og:description" content="本文介绍使用dconf作为后端的GSetting用法，dconf是一个简单的底层配置存储管理系统，可以使用图形化的dconf-editor根据path来检索GSettings并管理key，而且支持在key发生改变时发出通知(changed信号)。命令行工具gsettings提供了对GSetings的命令行操作，可以查询、读取和设置键值。如果你觉得glib、gio太复杂(查看GSettings的A">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-07T08:46:43.976Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eight Plus">
-<meta name="twitter:description" content="Linux 爱好者">
+<meta name="twitter:title" content="Qt配置文件之QSettings">
+<meta name="twitter:description" content="本文介绍使用dconf作为后端的GSetting用法，dconf是一个简单的底层配置存储管理系统，可以使用图形化的dconf-editor根据path来检索GSettings并管理key，而且支持在key发生改变时发出通知(changed信号)。命令行工具gsettings提供了对GSetings的命令行操作，可以查询、读取和设置键值。如果你觉得glib、gio太复杂(查看GSettings的A">
 
 
 
@@ -137,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/tags/Dbus/">
+  <link rel="canonical" href="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/">
 
 
 
 
 
-  <title>标签: Dbus | Eight Plus</title>
+  <title>Qt配置文件之QSettings | Eight Plus</title>
   
 
 
@@ -171,7 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -307,52 +308,374 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Dbus<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eight Plus">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/27/2019-08-27-dbus-glib/" itemprop="url">
-              
-                <span itemprop="name">Dbus-glib</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Qt配置文件之QSettings</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-27T08:19:31+08:00" content="2019-08-27">
-          08-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-07T16:05:18+08:00">
+                2019-11-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux-编程/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux 编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,185字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文介绍使用dconf作为后端的GSetting用法，dconf是一个简单的底层配置存储管理系统，可以使用图形化的dconf-editor根据path来检索GSettings并管理key，而且支持在key发生改变时发出通知(changed信号)。命令行工具gsettings提供了对GSetings的命令行操作，可以查询、读取和设置键值。如果你觉得glib、gio太复杂(查看GSettings的API文档可以使用工具devhelp)，那么使用Qt的QGSettings来操作gsetting将会让你备很轻松，而且代码的可读性将提升，本文提供的demo就是使用QGSettings来操作gsetting。</p>
+</blockquote>
+<hr>
+<h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><p>  示例代码简要展示了如何使用QGSettings进行配置文件的读和写，以及监控配置文件中key的变化，并将其他途径导致的key的变化的value更新到代码中。</p>
+<ul>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/setttings/qgsetting-demo" target="_blank" rel="noopener">qgsetting-demo</a></li>
+</ul>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools libgsettings-qt-dev</code></p>
+<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><p>注意：在Qt的工程文件.pro中，需要加入如下两行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONFIG += link_pkgconfig</span><br><span class="line">PKGCONFIG += gsettings-qt</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo install -m 0644 qgsettings-demo.gschema.xml /usr/share/glib-2.0/schemas</span><br><span class="line">$ sudo glib-compile-schemas /usr/share/glib-2.0/schemas</span><br><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qsettings-demo</span><br></pre></td></tr></table></figure>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><pre><code>GSettings的配置文件是xml格式的，文件需以.gschema.xml结尾，一个配置文件里面可以包含多个schema，每个schema可由多个key组成（key是无法通过代码动态创建的）。详细说明如下：
+</code></pre><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>schema中的id在整个配置系统中是唯一的，否则在执行glib-compile-schemas时会忽略重复的id的开头通常使用与应用相关的域名。</td>
+</tr>
+<tr>
+<td>path</td>
+<td>schema中的path必须是以/开头并且以/结尾，不能包含连续的/，path用于指定在storage中存储路径，可以与id不一致。</td>
+</tr>
+<tr>
+<td>name</td>
+<td>key的名称，需要在此schema中唯一，name的值由小写字母、数字和-组成，并且开头必须是小写字母，不能以-结尾，也不能出现连续的-。</td>
+</tr>
+<tr>
+<td>type</td>
+<td>key的类型，需要是GVariant支持的类型，除了可以使用基本的类型外，也可按照GVariant的方式组合类型。</td>
+</tr>
+<tr>
+<td>default</td>
+<td>key的默认值</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>key的简单描述</td>
+</tr>
+<tr>
+<td>description</td>
+<td>key的详细描述</td>
+</tr>
+</tbody>
+</table>
+<p>  在schema文件中，通常一个id对应一个固定的path，但也可不设置path，这样就是一个可重定位的schema，path两头必须都有/，否则会验证失败。但是需要注意如果没有指定path属性，则gsettings无法被dconf-editor读取。要想schema文件被GSettings使用，还需要借助编译器<code>glib-compile-schemas</code>将schema文件编译为二进制文件。GSettings读取XDG_DATA_DIRS下的glib-2.0/schemas路径，需要将schema文件放到环境变量XDG_DATA_DIRS/glib-2.0/schemas/路径下，一般为/usr/share/glib-2.0/schemas和/usr/local/share/glib-2.0/schemas。这里我们将qgsettings-demo.gschema.xml文件拷贝到/usr/share/glib-2.0/schemas路径下，然后执行如下一条命令将其编译刷新系统的gsettings中，否则使用的时候将报错并导致程序退出（Settings schema ‘apps.eightplus.qgsettings-demo’ is not installed）：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo glib-compile-schemas /usr/share/glib-2.0/schemas</span><br></pre></td></tr></table></figure></p>
+<h2 id="gsettings命令"><a href="#gsettings命令" class="headerlink" title="gsettings命令"></a>gsettings命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gsettings list-schemas</td>
+<td>显示系统已安装的不可重定位的schema(已安装并已安装并有固定path的 schema)。</td>
+</tr>
+<tr>
+<td>gsettings list-relocatable-schemas</td>
+<td>显示已安装的可重定位的schema(已安装却没有固定path的 schema)。</td>
+</tr>
+<tr>
+<td>gsettings list-children SCHEMA</td>
+<td>显示指定schema的children，其中SCHEMA为xml文件中schema的id属性值，如示例代码中daemon的”apps.eightplus.qgsettings-demo”。</td>
+</tr>
+<tr>
+<td>gsettings list-keys SCHEMA</td>
+<td>显示指定schema的所有项(key)。</td>
+</tr>
+<tr>
+<td>gsettings range SCHEMA KEY</td>
+<td>查询指定schema的指定项KEY的有效取值范围。</td>
+</tr>
+<tr>
+<td>gsettings get SCHEMA KEY</td>
+<td>显示指定schema的指定项KEY的值。</td>
+</tr>
+<tr>
+<td>gsettings set SCHEMA KEY VALUE</td>
+<td>设置指定schema的指定项KEY的值为VALUE。</td>
+</tr>
+<tr>
+<td>gsettings reset SCHEMA KEY</td>
+<td>恢复指定schema的指定项KEY的值为默认值。</td>
+</tr>
+<tr>
+<td>gsettings reset-recursively SCHEMA</td>
+<td>恢复指定schema的所有key的值为默认值。</td>
+</tr>
+<tr>
+<td>gsettings list-recursively [SCHEMA]</td>
+<td>如果有SCHEMA参数，则递归显示指定schema的所有项(key)和值(value)，如果没有SCHEMA参数，则递归显示所有schema的所有项(key)和值(value)。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>举例</p>
+<ul>
+<li><p>查看apps.eightplus.qgsettings-demo是否已经安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lixiang@lixiang-TM1701:~$ gsettings list-schemas |grep apps.eightplus.qgsettings-demo</span><br><span class="line">apps.eightplus.qgsettings-demo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看apps.eightplus.qgsettings-demo的schema下所有项的取值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lixiang@lixiang-TM1701:~$ gsettings list-recursively  apps.eightplus.qgsettings-demo</span><br><span class="line">apps.eightplus.qgsettings-demo male false</span><br><span class="line">apps.eightplus.qgsettings-demo age 22</span><br><span class="line">apps.eightplus.qgsettings-demo name &apos;lixiang&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取name的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings get apps.eightplus.qgsettings-demo name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置name的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings set apps.eightplus.qgsettings-demo name kobe</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>恢复name的默认值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings reset apps.eightplus.qgsettings-demo name</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>恢复所有key的默认值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gsettings reset-recursively apps.eightplus.qgsettings-demo</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://developer.gnome.org/GSettings/" target="_blank" rel="noopener">https://developer.gnome.org/GSettings/</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="李翔 wechat" style="width: 200px; max-width: 100%;">
+    <div>微信交流</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢支持</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt=" 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt=" 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    李翔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/" title="Qt配置文件之QSettings">https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Qt/" rel="tag"><i class="fa fa-tag"></i>
+ Qt</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/06/2019-11-06-qsettings/" rel="next" title="Qt配置文件之QSettings">
+                <i class="fa fa-chevron-left"></i> Qt配置文件之QSettings
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -360,6 +683,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzk4My8xNDUxMw=="></div>
+    
+  </div>
+
 
         </div>
         
@@ -380,8 +709,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="李翔">
           <p class="site-author-name" itemprop="name">李翔</p>
@@ -488,6 +826,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译和运行"><span class="nav-text">示例源码的编译和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件"><span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gsettings命令"><span class="nav-text">gsettings命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-text">参考文档</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -636,10 +990,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -668,6 +1022,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
