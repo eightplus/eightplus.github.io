@@ -67,10 +67,10 @@ $ ./qsettings-demo
     };
     ```
     在Linux上编程，我们介绍NativeFormat和IniFormat，对于我个人而已，我一直使用的是IniFormat。
-  常量      | 值              | 描述
-  -------- | --------------- | ---------------
-  QSettings::NativeFormat | 0 | 使用平台最合适的存储格式设置。在Unix中，使用的是INI格式的文本配置文件。
-  QSettings::IniFormat | 1 | 存储在INI文件中的设置。
+  | 常量      | 值              | 描述 |
+  | -------- | --------------- | --------------- |
+  | QSettings::NativeFormat | 0 | 使用平台最合适的存储格式设置。在Unix中，使用的是INI格式的文本配置文件。|
+  | QSettings::IniFormat | 1 | 存储在INI文件中的设置。|
 
 ## QSettings存储
   QSettings使用setValue()函数存储一系列设置，每个设置包括key（字符串）和一个与该key关联的value（QVariant），如：
