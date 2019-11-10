@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Qt,">
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="Linux 爱好者">
-<meta name="keywords" content="lixiang， 李翔， eightplus">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://eightplus.github.io/tags/index.html">
+<meta name="description" content="Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中。本文介绍第一种方法，在使用这种方法时，构造函数还是在原来的线程中执行，run()函数才在新的线程中执行，在示例代码中，通过打印的线">
+<meta name="keywords" content="Qt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Qt多线程之子类化QThread">
+<meta property="og:url" content="https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="Linux 爱好者">
+<meta property="og:description" content="Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中。本文介绍第一种方法，在使用这种方法时，构造函数还是在原来的线程中执行，run()函数才在新的线程中执行，在示例代码中，通过打印的线">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T02:28:12.068Z">
+<meta property="og:updated_time" content="2019-11-10T07:59:48.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Linux 爱好者">
+<meta name="twitter:title" content="Qt多线程之子类化QThread">
+<meta name="twitter:description" content="Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中。本文介绍第一种方法，在使用这种方法时，构造函数还是在原来的线程中执行，run()函数才在新的线程中执行，在示例代码中，通过打印的线">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/tags/">
+  <link rel="canonical" href="https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/">
 
 
 
 
 
-  <title>tags | Eight Plus</title>
+  <title>Qt多线程之子类化QThread | Eight Plus</title>
   
 
 
@@ -310,40 +310,318 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="李翔">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eight Plus">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 13 个标签
+          <h1 class="post-title" itemprop="name headline">Qt多线程之子类化QThread</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-10T15:28:40+08:00">
+                2019-11-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux-编程/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux 编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>阅读数
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,136字
+                </span>
+              
+
+              
+
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Android/" style="font-size: 30px; color: #111">Android</a> <a href="/tags/Android-Anbox/" style="font-size: 12px; color: #ccc">Android Anbox</a> <a href="/tags/Boost/" style="font-size: 12px; color: #ccc">Boost</a> <a href="/tags/Boost-Python-C/" style="font-size: 12px; color: #ccc">Boost Python C++</a> <a href="/tags/Dbus/" style="font-size: 12px; color: #ccc">Dbus</a> <a href="/tags/Glib-GObject/" style="font-size: 12px; color: #ccc">Glib GObject</a> <a href="/tags/Gtk-GLib-GObject/" style="font-size: 12px; color: #ccc">Gtk GLib GObject</a> <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 12px; color: #ccc">Jekyll</a> <a href="/tags/Qt/" style="font-size: 21px; color: #6f6f6f">Qt</a> <a href="/tags/Snap/" style="font-size: 12px; color: #ccc">Snap</a> <a href="/tags/callback/" style="font-size: 12px; color: #ccc">callback</a> <a href="/tags/protobuf/" style="font-size: 12px; color: #ccc">protobuf</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中。本文介绍第一种方法，在使用这种方法时，构造函数还是在原来的线程中执行，run()函数才在新的线程中执行，在示例代码中，通过打印的线程ID(QThread::currentThreadId())可以看出哪些代码在原线程中执行，哪些代码在新线程中执行。</p>
+</blockquote>
+<hr>
+<h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/thread/qthread-run" target="_blank" rel="noopener">qthread-run</a></li>
+</ul>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools</code></p>
+<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qsettings-demo</span><br></pre></td></tr></table></figure>
+<h2 id="大概步骤"><a href="#大概步骤" class="headerlink" title="大概步骤"></a>大概步骤</h2><pre><code>1. 子类化QThread
+2. 重载run函数，run函数内有一个forever或while或for的死循环（模拟耗时操作）
+3. 设置一个标记为来控制死循环的退出
+</code></pre><h2 id="设置线程优先级"><a href="#设置线程优先级" class="headerlink" title="设置线程优先级"></a>设置线程优先级</h2><pre><code>- 通过start()设置，如：start(QThread::LowPriority)；
+- 通过setPriority(Priority priority)函数设置，这个函数设置正在运行线程的优先级，如果线程没有运行，此功能不执行任何操作并立即返回。
+</code></pre><table>
+<thead>
+<tr>
+<th>QThread::Priority枚举</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QThread::IdlePriority</td>
+<td>0</td>
+<td>没有其它线程运行时才调度</td>
+</tr>
+<tr>
+<td>QThread::LowestPriority</td>
+<td>1</td>
+<td>比LowPriority调度频率低</td>
+</tr>
+<tr>
+<td>QThread::LowPriority</td>
+<td>2</td>
+<td>比NormalPriority调度频率低</td>
+</tr>
+<tr>
+<td>QThread::NormalPriority</td>
+<td>3</td>
+<td>操作系统默认的默认优先级</td>
+</tr>
+<tr>
+<td>QThread::HighPriority</td>
+<td>4</td>
+<td>比NormalPriority调度频繁</td>
+</tr>
+<tr>
+<td>QThread::HighestPriority</td>
+<td>5</td>
+<td>比HighPriority调度频繁</td>
+</tr>
+<tr>
+<td>QThread::TimeCriticalPriority</td>
+<td>6</td>
+<td>尽可能频繁的调度</td>
+</tr>
+<tr>
+<td>QThread::InheritPriority</td>
+<td>7</td>
+<td>使用和创建线程同样的优先级（默认值）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="示例代码分析要点"><a href="#示例代码分析要点" class="headerlink" title="示例代码分析要点"></a>示例代码分析要点</h2><p>  示例代码主要为演示在run中执行耗时操作，如果想要耗时函数执行完成后发出通知，可以通过信号槽机制通知线程结束了，即发送一个信号。代码用到了QMutex和QWaitCondition。QMutex是强制执行互斥的基本类，一个线程锁定一个互斥量（mutex），以获得共享资源的访问权限，当互斥量已被锁定时，此时如果另一个线程试图锁定互斥量，则它将进入睡眠状态，直到第一个线程完成其任务并解锁互斥量。QWaitCondition同步线程，不通过执行互斥，而通过提供一个条件变量，QWaitCondition 使线程等待，直到满足一个特定的条件才让等待中的线程继续进行（其中QWaitCondition::wakeAll()唤醒所有在等待waitCondition的线程，这些线程被唤醒的顺序依赖于操组系统的调度策略，并且不能被控制或预知；QWaitCondition::wakeOne()唤醒一个随机的等待waitCondition的线程，线程的唤醒取决于操作系统的政策，不能被控制。）</p>
+<p>  如下函数doLongTimeWork()，里面构造了一个局部的QMutexLocker对象并锁住互斥量，当QMutexLocker被销毁的时候，互斥量将被自动解锁(因为QMutexLocker是个局部变量，当函数返回时它就被销毁)，当执行函数doLongTimeWork()时，如果线程未运行，则调用start()开启线程，如果线程已经在运行了，则调用condition.wakeOne()唤醒线程。<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">void WorkerThread::doLongTimeWork()</span><br><span class="line">&#123;</span><br><span class="line">    QMutexLocker locker(&amp;mutex);</span><br><span class="line"></span><br><span class="line">    if (!isRunning()) &#123;</span><br><span class="line">        start(QThread::LowPriority);</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        condition.wakeOne();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  run()中的condition.wait(&amp;mutex)会让mutex会被暂时释放(会自动调用unlock解锁之前锁住的资源，避免造成死锁)，并阻塞在这个地方，当线程被cond.wakeOne()等唤醒时，mutex又会被重新锁定，并继续运行。<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void WorkerThread::run()</span><br><span class="line">&#123;</span><br><span class="line">    static int count = 0;</span><br><span class="line">    forever &#123;</span><br><span class="line">        if (abort)</span><br><span class="line">            return;</span><br><span class="line">        mutex.lock();</span><br><span class="line">        //当处于wait状态时mutex会被暂时释放(会自动调用unlock解锁之前锁住的资源，避免造成死锁)，并阻塞在这个地方；当线程被cond.wakeOne()等唤醒时，mutex又会被重新锁定，并继续运行</span><br><span class="line">        this-&gt;loadDataFromFile();</span><br><span class="line">        emit sendCount(count++);</span><br><span class="line">        condition.wait(&amp;mutex);//QWaitCondition 用于多线程的同步，一个线程调用QWaitCondition::wait() 阻塞等待，直到另一个线程调用QWaitCondition::wake() 唤醒才继续往下执行</span><br><span class="line">        mutex.unlock();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  注意QMutex与QWaitCondition区别：</p>
+<ul>
+<li>QMutex::lock相当于临界区锁，让处于锁中的资源不能被别的线程访问，即自己霸着不让别人用。</li>
+<li>QWaitCondition::wait相当于互斥量锁，让线程等着，当别的线程访问完了，自己才能访问，即自己排队等着别人用完自己再用。</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="李翔 wechat" style="width: 200px; max-width: 100%;">
+    <div>微信交流</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>谢谢支持</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt=" 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt=" 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    李翔
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/" title="Qt多线程之子类化QThread">https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Qt/" rel="tag"><i class="fa fa-tag"></i>
+ Qt</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/07/2019-11-07-qgsettings/" rel="next" title="Qt配置文件之QGSettings">
+                <i class="fa fa-chevron-left"></i> Qt配置文件之QGSettings
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -352,6 +630,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNzk4My8xNDUxMw=="></div>
+    
+  </div>
+
 
         </div>
         
@@ -372,8 +656,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="李翔">
           <p class="site-author-name" itemprop="name">李翔</p>
@@ -480,6 +773,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译和运行"><span class="nav-text">示例源码的编译和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大概步骤"><span class="nav-text">大概步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置线程优先级"><span class="nav-text">设置线程优先级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码分析要点"><span class="nav-text">示例代码分析要点</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -628,10 +937,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -660,6 +969,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

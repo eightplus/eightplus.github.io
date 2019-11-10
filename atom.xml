@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-11-07T08:50:13.650Z</updated>
+  <updated>2019-11-10T07:59:48.532Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Qt多线程之子类化QThread</title>
+    <link href="https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/"/>
+    <id>https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/</id>
+    <published>2019-11-10T07:28:40.000Z</published>
+    <updated>2019-11-10T07:59:48.532Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThr
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Qt配置文件之QGSettings</title>
     <link href="https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/"/>
     <id>https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</id>
     <published>2019-11-07T08:05:18.000Z</published>
-    <updated>2019-11-07T08:50:13.650Z</updated>
+    <updated>2019-11-10T07:55:51.447Z</updated>
     
     <summary type="html">
     
@@ -45,7 +69,7 @@
     <link href="https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/"/>
     <id>https://eightplus.github.io/2019/11/06/2019-11-06-qsettings/</id>
     <published>2019-11-06T01:30:05.000Z</published>
-    <updated>2019-11-06T11:31:21.517Z</updated>
+    <updated>2019-11-10T07:55:27.043Z</updated>
     
     <summary type="html">
     
