@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-11-10T07:59:48.532Z</updated>
+  <updated>2019-11-11T08:44:36.171Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Qt多线程之子类化QObject</title>
+    <link href="https://eightplus.github.io/2019/11/11/2019-11-11-qthread-object/"/>
+    <id>https://eightplus.github.io/2019/11/11/2019-11-11-qthread-object/</id>
+    <published>2019-11-11T08:43:21.000Z</published>
+    <updated>2019-11-11T08:44:36.171Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;上一篇文章讲述了子类化QThread，并重新实现run()函数，这篇文章将讲述多线程之定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中（moveToThread(QThread * thread)函数将工作类
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Qt多线程之子类化QThread</title>
     <link href="https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/"/>
     <id>https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/</id>
     <published>2019-11-10T07:28:40.000Z</published>
-    <updated>2019-11-10T07:59:48.532Z</updated>
+    <updated>2019-11-10T08:09:32.154Z</updated>
     
     <summary type="html">
     
@@ -478,30 +502,6 @@
     
     
       <category term="Snap" scheme="https://eightplus.github.io/tags/Snap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Jekyll + Github搭建博客</title>
-    <link href="https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/"/>
-    <id>https://eightplus.github.io/2018/06/27/2018-06-27-welcome-to-jekyll/</id>
-    <published>2018-06-27T07:33:17.000Z</published>
-    <updated>2018-08-02T01:37:44.162Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;一直想把自己学习linux的过程记录下来，又不想总是依托那些现成的博客网站，在WordPress和Github中，我选择了Github，原因只有一个，穷，哈哈哈。&lt;br&gt;&lt;br&gt;&lt;br&gt;这里先简要接收博客搭建的初期准备工作！&lt;br&gt;Markdown
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Jekyll" scheme="https://eightplus.github.io/tags/Jekyll/"/>
     
   </entry>
   

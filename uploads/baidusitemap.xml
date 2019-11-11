@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2019/11/11/2019-11-11-qthread-object/</loc>
+    <lastmod>2019-11-11T08:44:36.171Z</lastmod>
+    <data>
+        <display>
+        <title>Qt多线程之子类化QObject</title>
+        <pubTime>2019-11-11T08:43:21.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2019/11/10/2019-11-10-qthread-run/</loc>
-    <lastmod>2019-11-10T07:59:48.532Z</lastmod>
+    <lastmod>2019-11-10T08:09:32.154Z</lastmod>
     <data>
         <display>
         <title>Qt多线程之子类化QThread</title>

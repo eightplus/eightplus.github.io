@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Eight Plus">
 <meta property="og:description" content="Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中。本文介绍第一种方法，在使用这种方法时，构造函数还是在原来的线程中执行，run()函数才在新的线程中执行，在示例代码中，通过打印的线">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-10T07:59:48.532Z">
+<meta property="og:updated_time" content="2019-11-10T08:09:32.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qt多线程之子类化QThread">
 <meta name="twitter:description" content="Qt中提供了对于线程的支持，它提供了一些独立于平台的线程类QThread，要使用QThread进行多线程编程，有两种方式。一是子类化QThread，并重新实现run()函数；二是定义工作对象继承自QObject，然后把这个工作对象move到QThread的一个对象中。本文介绍第一种方法，在使用这种方法时，构造函数还是在原来的线程中执行，run()函数才在新的线程中执行，在示例代码中，通过打印的线">
@@ -443,7 +443,7 @@
 <li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/thread/qthread-run" target="_blank" rel="noopener">qthread-run</a></li>
 </ul>
 <h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools</code></p>
-<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qsettings-demo</span><br></pre></td></tr></table></figure>
+<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qthread-demo</span><br></pre></td></tr></table></figure>
 <h2 id="大概步骤"><a href="#大概步骤" class="headerlink" title="大概步骤"></a>大概步骤</h2><pre><code>1. 子类化QThread
 2. 重载run函数，run函数内有一个forever或while或for的死循环（模拟耗时操作）
 3. 设置一个标记为来控制死循环的退出
@@ -604,6 +604,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/11/11/2019-11-11-qthread-object/" rel="prev" title="Qt多线程之子类化QObject">
+                Qt多线程之子类化QObject <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -679,7 +683,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
