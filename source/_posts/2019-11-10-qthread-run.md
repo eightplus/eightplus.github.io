@@ -21,7 +21,7 @@ tags:
 ```
 $ qmake
 $ make
-$ ./qsettings-demo
+$ ./qthread-demo
 ```
 
 ## 大概步骤
