@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-11-11T08:44:36.171Z</updated>
+  <updated>2019-11-13T12:27:23.802Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt多线程之QtConcurrent::run()</title>
+    <link href="https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/"/>
+    <id>https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/</id>
+    <published>2019-11-13T12:14:36.000Z</published>
+    <updated>2019-11-13T12:27:23.802Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;前面两篇文章，我们介绍了QThread多线程的使用方法，今天开始介绍QtConcurrent，QtConcurrent是一个名字空间, 包含了众多的高级API, 方便用户编写多线程程序，且不需要使用低级线程原语(如:互斥、读写锁、等待条件或信号量)
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>Qt多线程之子类化QObject</title>
@@ -478,30 +502,6 @@
     
     
       <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu snap 应用</title>
-    <link href="https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/"/>
-    <id>https://eightplus.github.io/2018/06/29/2018-06-29-snap-qt-dbus/</id>
-    <published>2018-06-29T02:58:12.000Z</published>
-    <updated>2018-07-31T09:54:47.030Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;Ubuntu 从 16.04开始，支持两种格式的安装包：debian 和 snap，其中 snap 不依赖于操作系统及其发布版本， 其可以安装同样一个软件的不同版本且不造成任何的干扰。&lt;br&gt;&lt;br&gt;&lt;br&gt;snap 是一种全新的软件包管理方式，它
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Snap" scheme="https://eightplus.github.io/tags/Snap/"/>
     
   </entry>
   

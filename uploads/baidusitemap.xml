@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/</loc>
+    <lastmod>2019-11-13T12:27:23.802Z</lastmod>
+    <data>
+        <display>
+        <title>Qt多线程之QtConcurrent::run()</title>
+        <pubTime>2019-11-13T12:14:36.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2019/11/11/2019-11-11-qthread-object/</loc>
     <lastmod>2019-11-11T08:44:36.171Z</lastmod>
     <data>
