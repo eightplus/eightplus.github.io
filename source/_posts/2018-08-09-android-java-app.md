@@ -2,7 +2,7 @@
 title:      "在Android源码中使用java编写自己的应用程序"
 date:       2018-08-09 21:49:29
 author:     "lixiang"
-categories: 工具
+categories: 安卓开发
 tags:
     - Android
 ---

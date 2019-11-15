@@ -2,7 +2,7 @@
 title:      "在Android源码中编写C程序测试Linux内核驱动程序"
 date:       2018-08-06 22:33:11
 author:     "lixiang"
-categories: 工具
+categories: 安卓开发
 tags:
     - Android
 ---

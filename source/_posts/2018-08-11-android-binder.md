@@ -2,7 +2,7 @@
 title:      "Android Binder"
 date:       2018-08-11 09:38:43
 author:     "lixiang"
-categories: 工具
+categories: 安卓开发
 tags:
     - Android
 ---

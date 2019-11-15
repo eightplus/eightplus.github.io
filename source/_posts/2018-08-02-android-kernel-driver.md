@@ -2,7 +2,7 @@
 title:      "为Android系统编写Linux内核驱动程序"
 date:       2018-08-02 09:04:36
 author:     "lixiang"
-categories: 工具
+categories: 安卓开发
 tags:
     - Android
 ---
