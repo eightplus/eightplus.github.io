@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eightplus.github.io/2019/11/15/2019-11-15-qtconcurrent-map/</loc>
+    
+    <lastmod>2019-11-15T08:10:20.597Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/</loc>
+    
+    <lastmod>2019-11-14T01:56:25.667Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eightplus.github.io/2018/08/09/2018-08-09-android-java-app/</loc>
+    
+    <lastmod>2019-11-14T01:56:22.775Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eightplus.github.io/2018/08/02/2018-08-02-android-kernel-driver/</loc>
+    
+    <lastmod>2019-11-14T01:56:04.235Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/</loc>
+    
+    <lastmod>2019-11-14T01:55:26.627Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eightplus.github.io/2018/08/11/2018-08-11-android-binder/</loc>
+    
+    <lastmod>2019-11-14T01:51:52.601Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/</loc>
     
     <lastmod>2019-11-13T12:27:23.802Z</lastmod>
@@ -96,41 +138,6 @@
     <loc>https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/</loc>
     
     <lastmod>2019-08-19T07:49:44.292Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/</loc>
-    
-    <lastmod>2019-08-15T08:10:34.276Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/2018/08/11/2018-08-11-android-binder/</loc>
-    
-    <lastmod>2018-08-11T01:56:56.719Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/2018/08/09/2018-08-09-android-java-app/</loc>
-    
-    <lastmod>2018-08-09T14:18:39.241Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/</loc>
-    
-    <lastmod>2018-08-06T14:49:11.803Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/2018/08/02/2018-08-02-android-kernel-driver/</loc>
-    
-    <lastmod>2018-08-06T14:37:24.543Z</lastmod>
     
   </url>
   

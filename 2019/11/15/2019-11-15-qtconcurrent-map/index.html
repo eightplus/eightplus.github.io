@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此">
+<meta name="description" content="QtConcurrent::map()、QtConcurrent::mapped()和QtConcurrent::mappedReduced()函数可以对一个序列中（如QList、QVector等）的项目并行地进行计算。   示例源码 qtconcurrent-map  开发库的安装$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscri">
 <meta name="keywords" content="Qt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用mpv编写自己的播放器">
-<meta property="og:url" content="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/index.html">
+<meta property="og:title" content="Qt多线程之QtConcurrent::map()">
+<meta property="og:url" content="https://eightplus.github.io/2019/11/15/2019-11-15-qtconcurrent-map/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此">
+<meta property="og:description" content="QtConcurrent::map()、QtConcurrent::mapped()和QtConcurrent::mappedReduced()函数可以对一个序列中（如QList、QVector等）的项目并行地进行计算。   示例源码 qtconcurrent-map  开发库的安装$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscri">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-19T07:49:44.292Z">
+<meta property="og:updated_time" content="2019-11-15T08:10:20.597Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用mpv编写自己的播放器">
-<meta name="twitter:description" content="MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此">
+<meta name="twitter:title" content="Qt多线程之QtConcurrent::map()">
+<meta name="twitter:description" content="QtConcurrent::map()、QtConcurrent::mapped()和QtConcurrent::mappedReduced()函数可以对一个序列中（如QList、QVector等）的项目并行地进行计算。   示例源码 qtconcurrent-map  开发库的安装$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscri">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/">
+  <link rel="canonical" href="https://eightplus.github.io/2019/11/15/2019-11-15-qtconcurrent-map/">
 
 
 
 
 
-  <title>使用mpv编写自己的播放器 | Eight Plus</title>
+  <title>Qt多线程之QtConcurrent::map() | Eight Plus</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/11/15/2019-11-15-qtconcurrent-map/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李翔">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用mpv编写自己的播放器</h1>
+          <h1 class="post-title" itemprop="name headline">Qt多线程之QtConcurrent::map()</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-19T15:32:08+08:00">
-                2019-08-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-15T15:53:10+08:00">
+                2019-11-15
               </time>
             
 
@@ -374,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux-Qt-开发/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux Qt 开发</span>
+                  <a href="/categories/Linux-编程/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux 编程</span>
                   </a>
                 </span>
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,552字
+                  2,060字
                 </span>
               
 
@@ -436,82 +436,42 @@
 
       
         <blockquote>
-<p>MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此，本文将介绍如何在Ubuntu系统上使用Qt编写带UI图形的MPV播放器，使用户对快速定制具有图形界面的MPV播放器有一个大致的了解。<br></p>
+<p>QtConcurrent::map()、QtConcurrent::mapped()和QtConcurrent::mappedReduced()函数可以对一个序列中（如QList、QVector等）的项目并行地进行计算。</p>
 </blockquote>
 <hr>
 <h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
-<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/mympvplayer" target="_blank" rel="noopener">mympvplayer</a></li>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/thread/qtconcurrent-map-demo" target="_blank" rel="noopener">qtconcurrent-map</a></li>
 </ul>
-<h2 id="开发前准备工作"><a href="#开发前准备工作" class="headerlink" title="开发前准备工作"></a>开发前准备工作</h2><ul>
-<li><p>Ubuntu上MPV的安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo install mpv</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编程开发依赖包安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo install qtbase5-dev qt5-qmake qtscript5-dev qttools5-dev-tools</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="要点分析"><a href="#要点分析" class="headerlink" title="要点分析"></a>要点分析</h2><p>  为了实现一个既可以在Qt程序中控制MPV，又可以让Qt程序得到MPV的输出信息的播放器，这里重点介绍Qt的QProcess类。QProcess类可用来调用外部程序，并与外部程序进行通信。其把外部程序的进程当作一个有序的I/O设备，通过对通过I/O设备的读写来完成进程间的通信，即：write()函数实现对进程标准输入的写操作，通过read()，readLine()和getChar()函数实现对标准输出的读操作。在正常渠道模式下，QProcess的无名管道stdinChannelpipe，stdoutChannelpipe和stderrChannelpipe分别与标准输入、标准输出和标准容错进行绑定，实现与外部程序的通信；而在融合模式下，没有容错管道，此时，标准容错端和标准输出端将共同挂接到子进程的stdoutChannelpipe的写端来实现内外进程的通信，即标准输出和标准容错绑定到同一个管道的写端。本文介绍通过QProcess类调用MPV，并设置一系列播放参数，如视频驱动、音频驱动、软解/硬解、缓存等。至于Qt图形和MPV视频窗口的关联，则是使用“–wid widget-&gt;winId()”进行绑定，通过winId()可以获得一个数字，其中widget是一个QWidget对象，这样将界面上一个窗口的句柄给了MPV，即视频输出定位到了widget窗体部件中（wid为MPV指定了输入窗口，-wid参数只在X11、directX和OpenGL中适用）。本文推荐使用融合模式，代码为：setProcessChannelMode(QProcess::MergedChannels)。</p>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools</code></p>
+<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qtconcurrent-map-demo</span><br></pre></td></tr></table></figure>
+<h2 id="示例代码分析要点"><a href="#示例代码分析要点" class="headerlink" title="示例代码分析要点"></a>示例代码分析要点</h2><h3 id="QtConcurrent-map"><a href="#QtConcurrent-map" class="headerlink" title="QtConcurrent::map()"></a>QtConcurrent::map()</h3><p>  如果想直接修改一个序列，可以使用QtConcurrent::map()。这个函数会将作为参数传入的函数应用到容器中的每一项，对这些项进行就地修改，即QtConcurrent::map()的序列被直接修改。虽然QtConcurrent::map()不通过QFuture返回任何结果（map函数的返回值、返回类型没有被使用）但仍然可以使用QFuture和QFutureWatcher监控map的状态。map函数有两个参数，第一个是序列(如QList)，第二个参数是一个函数。它的作用就是同时用第二个参数来计算第一个参数中的每一个元素，且结果直接覆盖到元素中。示例代码中m_list的值由原来的(1, 3, 5, 7, 9)变成了(2, 4, 6, 8, 10)，函数my_fun1被调用了5次，且根据打印处理的线程id可以判断这5次调用都是在不同的线程中执行的，而且都和主进程的线程id不同：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">void my_fun1(int &amp;value)</span><br><span class="line">&#123;</span><br><span class="line">  qDebug() &lt;&lt; &quot;run my_fun1 thread id:&quot; &lt;&lt; QThread::currentThreadId();</span><br><span class="line">  value += 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void MainWindow::onMapBtnClicked()</span><br><span class="line">&#123;</span><br><span class="line">  QList&lt;int&gt; m_list;</span><br><span class="line">  m_list &lt;&lt; 1 &lt;&lt; 3 &lt;&lt; 5 &lt;&lt; 7 &lt;&lt; 9;</span><br><span class="line"></span><br><span class="line">  QFuture&lt;void&gt; future = QtConcurrent::map(m_list, my_fun1);</span><br><span class="line">  future.waitForFinished();</span><br><span class="line">  qDebug() &lt;&lt; &quot;m_list: &quot;&lt;&lt; m_list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="QtConcurrent-mapped"><a href="#QtConcurrent-mapped" class="headerlink" title="QtConcurrent::mapped()"></a>QtConcurrent::mapped()</h3><p>  QtConcurrent::mapped()函数与QtConcurrent::map()函数类似，区别在于QtConcurrent::mapped()函数接受一个输入序列和一个map函数，返回一个包含修改内容的新序列（即把计算结果放到了新的容器中），适用于进行数据处理后需要整理为新的数据结构的情况。</p>
 <ul>
-<li><p>配置介绍</p>
-<p>查看MPV的帮助信息可在终端执行”mpv –help”， 查看MPV可配置信息可在终端执行”mpv –list-options”，查看快捷键列表可在终端执行”mpv —input-keylist”。MPV参数调用需要加”–”，如果参数是使用配置文件中的参数，则配置文件中无需在参数前加”–”。MPV的配置文件目录为：~/.config/mpv/，本文介绍的播放器定制将不使用配置文件，这里只简要介绍下mpv.conf和input.conf这两个配置文件的格式，mpv.conf 是主配置文件，里面包含一些基本的配置，input.conf 按键配置文件，包含播放过程中一些操作快捷键的设置。</p>
-<p>mpv.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Disable the On Screen Controller (OSC).</span><br><span class="line">osc=no</span><br><span class="line"># Keep the player window on top of all other windows.</span><br><span class="line">ontop=yes</span><br><span class="line"># Enable hardware decoding if available. Often, this does not work with all</span><br><span class="line"># video outputs, but should work well with default settings on most systems.</span><br><span class="line"># If performance or energy usage is an issue, forcing the vdpau or vaapi VOs</span><br><span class="line"># may or may not help.</span><br><span class="line">hwdec=auto</span><br></pre></td></tr></table></figure>
-<p>input.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Mouse wheels, touchpad or other input devices that have axes</span><br><span class="line"># if the input devices supports precise scrolling it will also scale the</span><br><span class="line"># numeric value accordingly</span><br><span class="line">WHEEL_UP      seek 10</span><br><span class="line">WHEEL_DOWN    seek -10</span><br><span class="line">WHEEL_LEFT    add volume -2</span><br><span class="line">WHEEL_RIGHT   add volume 2</span><br><span class="line">## Seek units are in seconds, but note that these are limited by keyframes</span><br><span class="line">RIGHT seek  5</span><br><span class="line">LEFT  seek -5</span><br><span class="line">UP    seek  60</span><br><span class="line">DOWN seek -60</span><br></pre></td></tr></table></figure>
-<p>下面详细介绍几个比较重要的配置项</p>
+<li><p>从如下的示例代码的运行结果中我们可以看到原容器的值没有发生改变，原容器的值为 (2, 4, 6, 8, 10)，修改后的新容器的值为(1, 3, 5, 7, 9)，函数my_fun2被调用了5次，且根据打印处理的线程id可以判断这5次调用都是在不同的线程中执行的，而且都和主进程的线程id不同：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int my_func2(int value)</span><br><span class="line">&#123;</span><br><span class="line">  qDebug() &lt;&lt; &quot;run my_func2 thread id:&quot; &lt;&lt; QThread::currentThreadId();</span><br><span class="line">  return value - 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void MainWindow::onMappedBtnClicked()</span><br><span class="line">&#123;</span><br><span class="line">  QList&lt;int&gt; m_list;</span><br><span class="line">  m_list &lt;&lt; 2 &lt;&lt; 4 &lt;&lt; 6 &lt;&lt; 8 &lt;&lt; 10;</span><br><span class="line"></span><br><span class="line">  QFuture&lt;int&gt; future = QtConcurrent::mapped(m_list, my_func2);</span><br><span class="line">  future.waitForFinished();</span><br><span class="line">  qDebug()&lt;&lt;&quot;m_list: &quot; &lt;&lt; m_list;</span><br><span class="line">  qDebug()&lt;&lt;&quot;new list: &quot; &lt;&lt; future.results();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下面再介绍一段稍微复杂点的关于QtConcurrent::mapped()的代码片段，在加载多张照片的过程中，体现如何进行线程执行的进度、取消/暂停/恢复等。点击示例代码中的“打开”按钮时，调用槽函数onOpenBtnClicked()，默认打开图片目录进行图片选择。然后根据图片创建对应数量QLabel去显示缩放的图片，为了体现出一个耗时处理进度，我在代码图片缩放处理的过程中特意添加了sleep()，并添加了一个进度条。图片选择完成后，使用mapped()进行并行计算，并添加至QFutureWatcher中，让其使用信号和槽监视QFuture。当QFutureWatcher的progressRangeChanged()的信号触发时，进度条的范围会发生改变，而progressValueChanged()信号触发时，会更新进度条的值。如果加载的图片较多，可以通过点击“取消”按钮，这时会调用QFutureWatcher的cancel()槽函数来取消计算。“暂停/恢复”则调用togglePaused()槽函数，用于切换异步计算的暂停状态（如果计算当前已暂停，调用此函数将进行恢复；如果计算正在运行，则会暂停）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">void MainWindow::onOpenBtnClicked()</span><br><span class="line">&#123;</span><br><span class="line">  if (m_watcher-&gt;isRunning()) &#123;</span><br><span class="line">      m_watcher-&gt;cancel();</span><br><span class="line">      m_watcher-&gt;waitForFinished();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  QStringList files = QFileDialog::getOpenFileNames(this, tr(&quot;Select Images&quot;),</span><br><span class="line">                          QStandardPaths::writableLocation(QStandardPaths::PicturesLocation), &quot;*.jpg *.png&quot;);</span><br><span class="line"></span><br><span class="line">  if (files.isEmpty())</span><br><span class="line">      return;</span><br><span class="line"></span><br><span class="line">  qDeleteAll(m_labels);</span><br><span class="line">  m_labels.clear();</span><br><span class="line"></span><br><span class="line">  int dim = qSqrt(qreal(files.count())) + 1;</span><br><span class="line">  for (int i = 0; i &lt; dim; ++i) &#123;</span><br><span class="line">      for (int j = 0; j &lt; dim; ++j) &#123;</span><br><span class="line">          QLabel *imageLabel = new QLabel;</span><br><span class="line">          imageLabel-&gt;setFixedSize(imageSize,imageSize);</span><br><span class="line">          m_imagesLayout-&gt;addWidget(imageLabel,i,j);</span><br><span class="line">          m_labels.append(imageLabel);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  std::function&lt;QImage(const QString&amp;)&gt; image_scale = [imageSize](const QString &amp;imageName) &#123;</span><br><span class="line">      //在线程中执行，所以线程id与主进程的不一样</span><br><span class="line">      static int count = 0;</span><br><span class="line">      qDebug() &lt;&lt; &quot;run image_scale thread id:&quot; &lt;&lt; QThread::currentThreadId();</span><br><span class="line">      QImage image(imageName);</span><br><span class="line">      count += 3;</span><br><span class="line">      sleep(count);</span><br><span class="line">      return image.scaled(QSize(imageSize, imageSize), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  auto future = QtConcurrent::mapped(files, image_scale);</span><br><span class="line">  m_watcher-&gt;setFuture(future);</span><br><span class="line"></span><br><span class="line">  m_openBtn-&gt;setEnabled(false);</span><br><span class="line">  m_cancelBtn-&gt;setEnabled(true);</span><br><span class="line">  m_pauseBtn-&gt;setEnabled(true);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>当然，上面出现的image_scale()函数也可以写成如下格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">QImage image_scale(const QString &amp;imageName)</span><br><span class="line">&#123;</span><br><span class="line">  //在线程中执行，所以线程id与主进程的不一样</span><br><span class="line">  static int count = 0;</span><br><span class="line">  qDebug() &lt;&lt; &quot;run image_scale thread id:&quot; &lt;&lt; QThread::currentThreadId();</span><br><span class="line">  QImage image(imageName);</span><br><span class="line">  count += 3;</span><br><span class="line">  sleep(count);</span><br><span class="line"></span><br><span class="line">  return image.scaled(QSize(imageSize, imageSize), Qt::IgnoreAspectRatio, Qt::SmoothTransformation);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="QtConcurrent-mappedReduced"><a href="#QtConcurrent-mappedReduced" class="headerlink" title="QtConcurrent::mappedReduced()"></a>QtConcurrent::mappedReduced()</h3><p>  QtConcurrent::mappedReduced()功能类似于mapped()，但它不是返回具有新结果的序列，它比mapped()多一个参数，这个参数也是个函数，它会将修改过的每一项再传入这个比mapped()多的参数函数中进行简化，将多个结果按某种要求简化成一个。mappedReduced函数遵循如下格式： V function(T &amp;result, const U &amp;intermediate)， 其中result就是最后的结果，intermediate就是mapped出来的结果。</p>
 <ul>
-<li><p>quiet</p>
-<p>这个参数会阻止状态行信息的显示，即使得控制台消息尽量少输出。使用Qt嵌入MPV时，需要使用noquiet而不是quiet，否则Qt程序无法获得MPV的状态信息，致使Qt程序无法将MPV的状态准确的展示给用户，如播放进度、出错信息等。当然，如果你的机器性能差，那还是建议你直接使用mpv，且参数使用quiet，而不是像本文介绍的这样对MPV进行UI封装。MPV使用noquiet的格式为：mpv –no-quiet。</p>
+<li><p>从如下示例代码的运行结果中我们可以看到result的值为30,即将每个新值加起来的总和，函数my_sum(即称为reduce的函数)将由map函数返回的每个结果调用一次，并且应该合并中间体到结果变量。QtConcurrent::mappedReduced()可以保证保证一次只有一个线程调用reduce，所以没有必要用一个mutex锁定结果变量。QtConcurrent::ReduceOptions枚举提供了一种方法来控制reduction完成的顺序。如果使用了QtConcurrent::UnorderedReduce（默认），顺序是不确定的；而QtConcurrent::OrderedReduce确保reduction按照原始序列的顺序完成。示例中函数my_fun3()被调用了5次，且根据打印处理的线程id可以判断这5次调用都是在不同的线程中执行的，而且都和主进程的线程id不同，另外函数my_sum()也被调用了5次，但这五次的线程id一样，且和上面第一次执行函数my_func3的线程id一致。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">int my_func3(int value)</span><br><span class="line">&#123;</span><br><span class="line">  qDebug() &lt;&lt; &quot;run my_func3 thread id:&quot; &lt;&lt; QThread::currentThreadId();</span><br><span class="line">  return value * 2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void my_sum(int &amp;result, const int &amp;intermediate)</span><br><span class="line">&#123;</span><br><span class="line">  qDebug() &lt;&lt; &quot;run my_sum thread id:&quot; &lt;&lt; QThread::currentThreadId();</span><br><span class="line">  result += intermediate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void MainWindow::onMappedReducedBtnClicked()</span><br><span class="line">&#123;</span><br><span class="line">  QList&lt;int&gt; m_list;</span><br><span class="line">  m_list&lt;&lt; 1 &lt;&lt; 2 &lt;&lt; 3 &lt;&lt; 4 &lt;&lt; 5;</span><br><span class="line"></span><br><span class="line">  QFuture&lt;int&gt; future = QtConcurrent::mappedReduced(m_list, my_func3, my_sum);</span><br><span class="line">  future.waitForFinished();</span><br><span class="line"></span><br><span class="line">  qDebug() &lt;&lt; &quot;result:&quot; &lt;&lt; future.result();//30</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>config</p>
-<p>可让Qt程序将一些基本的配置通过从MPV命令获取各参数支持可选值，并设置一个默认值，且可通过图形展示给用户去选择。所以此处使用no-config，即不从MPV的配置文件读取参数。mpv使用no-config的格式为：mpv –no-config。</p>
-</li>
-<li><p>input-file</p>
-<p>这里将不使用MPV的input.conf配置文件，而是通过标准输入stdin给MPV发送命令，命令后面带上换行”\n”写入stdin即可。另外，在直接使用MPV的过程中，–no-input-default-bindings将使得MPV无法响应按键的事件，而–input-default-bindings参数默认为yes，则可以让MPV响应按键事件。MPV使用input-file的格式为：mpv –input-file=/dev/stdin。</p>
-</li>
-<li><p>term-status-msg</p>
-<p>该参数可以让MPV输出一些视频信息，可以通过 –term-status-msg 参数给它一个输出格式，如：”–term-status-msg=STATUS: ${=time-pos} / ${=duration:${=length:0}} P: ${=pause} B: ${=paused-for-cache} I: ${=core-idle} VB: ${=video-bitrate:0} AB: ${=audio-bitrate:0}”</p>
-</li>
-<li><p>vo</p>
-<p>通过命令“mpv –vo help”可查看MPV支持的视频驱动列表，Qt图形程序可以将列表展示出来供用户选择，并将选择的vo加入MPV的参数列表中，加入方式为：mpv –vo xxx，如：mpv –vo=xv。</p>
-</li>
-<li><p>ao</p>
-<p>通过命令“mpv –ao help”可查看mpv支持的音频驱动列表，Qt图形程序可以将列表展示出来供用户选择，并将选择的ao加入mpv的参数列表中，加入方式为：mpv –ao xxx，如：mpv –ao=pulse。</p>
-</li>
-<li><p>hwdec</p>
-<p>hwdec为硬件解码配置，其可用配置列表和GPU有关，这里暂分析其中5种配置：no（软解），auto（自动尝试使用第一种可用的硬解方式），vdpau（用于vdpau和opengl的显示输出，即此时需要保证vo参数为gpu或者vdpau），vaapi（用于vaapi和opengl的视频输出，即此时需要保证vo参数为gpu或者vdapi，仅支持Intel GPU）和vaapi-copy（将视频拷贝回系统内存中，仅支持Intel GPU）。参数使用格式为：–hwdec=vaapi-copy。<br>hwdec具体参数见文档：<a href="https://mpv.io/manual/stable/。" target="_blank" rel="noopener">https://mpv.io/manual/stable/。</a></p>
-</li>
-<li><p>vd-lavc-threads</p>
-<p>硬件解码线程数目，仅适用于MPEG-1/2和H.264，取值范围为0 - any，默认为0。使用格式如下：–vd-lavc-threads=4。</p>
-</li>
-</ul>
-</li>
-</ul>
+<li><p>下面接着使用QtConcurrent::mappedReduced()来比较使用多线程和单线程处理的效率，示例代码片段的作用是统计用户主目录下所有的.cpp和.h文件中的单词数目，比较使用主线程计算和使用多线程并行计算的耗时，如果你的.cpp和.h文件数目够多，可以通过打印看出两者耗时的明显差距，并且在计算很多文件的过程中，使用主线程计算将会导致界面卡顿，而使用多线程将不会影响界面的event事件。</p>
 <ul>
-<li><p>MPV支持的音/视频、字幕和播放列表格式的大部分列表</p>
-<p>MPV支持的视频格式：<br>avi 、vfw、divx、mpg、mpeg、m1v、m2v、mpv、dv、3gp、mov、mp4、m4v、mqv、dat、vcd、ogg、ogm、ogv、ogx、asf、wmv、bin、iso、vob、mkv、nsv、ram、flv、rm、swf、ts、rmvb、dvr-ms、m2t、m2ts、mts、rec、wtv、f4v、hdmov、webm、vp8、bik、smk、m4b、wtv、part</p>
-<p>MPV支持的音频格式：<br>mp3、ogg、oga、wav、wma、aac、ac3、dts、ra、ape、flac、thd、mka、m4a、opus</p>
-<p>MPV支持的字幕格式：<br>srt、sub、ssa、ass、idx、txt、smi、rt、utf、aqt、vtt</p>
-<p>MPV支持的列表格式：<br>m3u、m3u8、pls、xspf</p>
-</li>
-<li><p>Qt对MPV的控制</p>
-<p>前面提及过Qt的QProcess类，这里描述下该类是如果设置MPV的参数和启动MPV的，即如何使用给标准输入控制MPV。MPV自动从标准输入中读取信息并执行，该类指令信息都需要以“\n”结尾。管道的读端描述符stdinChannelpipe[0]复制给了标准输入，即标准输入的描述符也为stdinChannelpipe[0]，隐藏按照标准输入的描述符去读信息就是到stdinChannelpipe所对应的管道中读取信息。QProcess的start()函数将开启进程，第一个参数即为mpv二进制，第二个参数为给mpv的参数列表，执行start()函数后，将完成内核中管道以及通信环境的建立。QProcess的成员函数write()向stdinChannelpipe[1]端写入信息，比如想让mpv退出，则通过write函数写入“quit \n”即可（write()函数将向stdinChannelpipe[1]端写入命令）。参考代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">QString mpvCmd = &quot;/usr/bin/mpv&quot;;		</span><br><span class="line">QStringList args;</span><br><span class="line">args &lt;&lt; &quot;-- no-quiet&quot;;</span><br><span class="line">args &lt;&lt; &quot;--wid=100663330&quot;;</span><br><span class="line">args &lt;&lt; xxx.avi;</span><br><span class="line">process-&gt;start(mpvCmd, args);//启动播放</span><br><span class="line">waitForStarted();</span><br><span class="line">QString cmd = &quot;set pause yes&quot;;</span><br><span class="line">process-&gt;write(cmd.toLocal8Bit() + &quot;\n&quot;);//设置暂停</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Qt获取MPV的信息</p>
-<p>使用QProcess的融合模式，从标准输出和标准容错得到mpv 的信息。绑定QProcess的信号readyReadStandardOutput，当该信号出发时，再通过QProcess的readAllStandardOutput()函数获取信息（当然，这里也可以while循环来判断是否可以读取一行数据：while(process-&gt;canReadLine())，如果可以，则读取一行：QString line(process-&gt;readLine());），readAllStandardOutput获取的数据类型为QByteArray，对数据进行解析时通过“\n” 和“\r” 切分后一行一行解析，通过对每行的QByteArray数据进行详细解析可以得出MPV的状态信息，并将一些状态在Qt的图形程序上动态展示处理，比如MPV播放成功，则根据播放成功的信息将Qt图形的播放按钮设置为可暂停状态，此时点击该按钮给MPV发送的指令应该是暂停而非启动。另外，可以绑定QProcess的信号finished(int, QProcess::ExitStatus)，当该信号被触发时，通过判断QProcess的bytesAvailable()值，如果&gt;0，则通过QProcess的readAllStandardOutput()函数获取信息。</p>
-<p>获取MPV的信息进行解析的难点是对繁杂冗余的信息进行过滤，针对关键字定位信息表示的意思。这里可以使用Qt的对获取的QRegExp来进行匹配。</p>
-<p>下述正则表达式可用于分析出正在启动中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QRegExp rx_playing;</span><br><span class="line">rx_playing.setPattern(&quot;^Playing:.*|^\\[ytdl_hook\\].*&quot;);</span><br></pre></td></tr></table></figure>
-<p>下述正则表达式可可解析出暂停、缓存中等各种状态信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QRegExp rx_av;</span><br><span class="line">rx_av.setPattern(&quot;^STATUS: ([0-9\\.-]+) / ([0-9\\.-]+) P: (yes|no) B: (yes|no) I: (yes|no) VB: ([0-9\\.-]+) AB: ([0-9\\.-]+)&quot;);</span><br></pre></td></tr></table></figure>
+<li>使用单线程计算</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">WordCount countWordsWithSingleThread(const QStringList &amp;files)</span><br><span class="line">&#123;</span><br><span class="line">  WordCount wordCount;</span><br><span class="line">  for (const QString &amp;file : files) &#123;</span><br><span class="line">      QFile f(file);</span><br><span class="line">      f.open(QIODevice::ReadOnly);</span><br><span class="line">      QTextStream textStream(&amp;f);</span><br><span class="line">      while (!textStream.atEnd()) &#123;</span><br><span class="line">          const auto words =  textStream.readLine().split(&apos; &apos;);</span><br><span class="line">          for (const QString &amp;word : words)</span><br><span class="line">              wordCount[word] += 1;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return wordCount;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用多线程并行计算</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">WordCount countWordsWithMultiThreads(const QString &amp;file)</span><br><span class="line">&#123;</span><br><span class="line">  WordCount wordCount;</span><br><span class="line"></span><br><span class="line">  QFile f(file);</span><br><span class="line">  f.open(QIODevice::ReadOnly);</span><br><span class="line">  QTextStream textStream(&amp;f);</span><br><span class="line"></span><br><span class="line">  while (!textStream.atEnd()) &#123;</span><br><span class="line">      const auto words =  textStream.readLine().split(&apos; &apos;);</span><br><span class="line">      for (const QString &amp;word : words)</span><br><span class="line">          wordCount[word] += 1;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return wordCount;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void reduceWordCounts(WordCount &amp;result, const WordCount &amp;w)</span><br><span class="line">&#123;</span><br><span class="line">  QMapIterator&lt;QString, int&gt; i(w);</span><br><span class="line">  while (i.hasNext()) &#123;</span><br><span class="line">      i.next();</span><br><span class="line">      result[i.key()] += i.value();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void MainWindow::onMappedReducedBtn2Clicked()</span><br><span class="line">&#123;</span><br><span class="line">  QStringList files = findAllFiles(&quot;/home/lixiang/work&quot;, QStringList() &lt;&lt; &quot;*.cpp&quot; &lt;&lt; &quot;*.h&quot;);</span><br><span class="line"></span><br><span class="line">  // Single thread</span><br><span class="line">  QTime time1;</span><br><span class="line">  time1.start();</span><br><span class="line">  WordCount total1 = countWordsWithSingleThread(files);</span><br><span class="line">  qDebug() &lt;&lt; &quot;Single thread find&quot; &lt;&lt; total1.size() &lt;&lt; &quot;words, Using &quot; &lt;&lt; time1.elapsed() / 1000.0 &lt;&lt; &quot;seconds&quot;;</span><br><span class="line"></span><br><span class="line">  // Multi thread</span><br><span class="line">  QTime time2;</span><br><span class="line">  time2.start();</span><br><span class="line">  WordCount total2 = QtConcurrent::mappedReduced(files, countWordsWithMultiThreads, reduceWordCounts);</span><br><span class="line">  qDebug() &lt;&lt; &quot;Multi thread find &quot; &lt;&lt; total2.size() &lt;&lt; &quot;words, Using &quot; &lt;&lt; time2.elapsed() / 1000.0 &lt;&lt; &quot;seconds&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://github.com/ukui/kylin-video/" target="_blank" rel="noopener">麒麟影音</a></p>
-<p><a href="https://mpv.io/manual/master/#configuration-files" target="_blank" rel="noopener">mpv配置</a></p>
-<p><a href="https://mpv.io/manual/stable/" target="_blank" rel="noopener">mpv主页</a></p>
-<p><a href="https://github.com/mpv-player/mpv/blob/master/etc/mpv.conf" target="_blank" rel="noopener">mpv.conf</a></p>
-<p><a href="https://github.com/mpv-player/mpv/blob/master/etc/input.conf" target="_blank" rel="noopener">input.conf</a></p>
 
       
     </div>
@@ -569,7 +529,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/" title="使用mpv编写自己的播放器">https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/</a>
+    <a href="https://eightplus.github.io/2019/11/15/2019-11-15-qtconcurrent-map/" title="Qt多线程之QtConcurrent::map()">https://eightplus.github.io/2019/11/15/2019-11-15-qtconcurrent-map/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -598,8 +558,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/14/2019-08-14-install-anbox/" rel="next" title="安装Anbox">
-                <i class="fa fa-chevron-left"></i> 安装Anbox
+              <a href="/2019/11/13/2019-11-13-qtconcurrent-run/" rel="next" title="Qt多线程之QtConcurrent::run()">
+                <i class="fa fa-chevron-left"></i> Qt多线程之QtConcurrent::run()
               </a>
             
           </div>
@@ -607,10 +567,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/27/2019-08-27-dbus-glib/" rel="prev" title="Dbus-glib">
-                Dbus-glib <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -791,7 +747,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发前准备工作"><span class="nav-text">开发前准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要点分析"><span class="nav-text">要点分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译和运行"><span class="nav-text">示例源码的编译和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码分析要点"><span class="nav-text">示例代码分析要点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#QtConcurrent-map"><span class="nav-text">QtConcurrent::map()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QtConcurrent-mapped"><span class="nav-text">QtConcurrent::mapped()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#QtConcurrent-mappedReduced"><span class="nav-text">QtConcurrent::mappedReduced()</span></a></li></ol></li></ol></div>
             
 
           </div>
