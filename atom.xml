@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2019-11-15T08:10:20.597Z</updated>
+  <updated>2019-12-26T14:19:36.822Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Desktop Notification 消息框</title>
+    <link href="https://eightplus.github.io/2019/12/26/2019-12-26-notification/"/>
+    <id>https://eightplus.github.io/2019/12/26/2019-12-26-notification/</id>
+    <published>2019-12-26T13:42:11.000Z</published>
+    <updated>2019-12-26T14:19:36.822Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在Ubuntu系统上，我们经常可以看到如下图所示的消息框(Desktop Notification)，比如电池电量提醒和邮件消息提醒，通过调用org.freedesktop.Notifications这个DBUS服务提供的接口即可在桌面上弹出该消息
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>Qt多线程之QtConcurrent::map()</title>
@@ -473,33 +497,6 @@
     
     
       <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo</title>
-    <link href="https://eightplus.github.io/2018/07/10/2018-07-10-hexo/"/>
-    <id>https://eightplus.github.io/2018/07/10/2018-07-10-hexo/</id>
-    <published>2018-07-10T08:25:16.000Z</published>
-    <updated>2018-07-31T09:54:19.214Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在github上。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;依赖包和工具安装&quot;&gt;&lt;a href=&quot;#依赖包和工具安装&quot; class=&quot;h
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Hexo" scheme="https://eightplus.github.io/tags/Hexo/"/>
     
   </entry>
   
