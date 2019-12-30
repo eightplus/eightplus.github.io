@@ -8,6 +8,7 @@ tags:
 ---
 
 > 在Ubuntu系统上，我们经常可以看到如下图所示的消息框(Desktop Notification)，比如电池电量提醒和邮件消息提醒，通过调用org.freedesktop.Notifications这个DBUS服务提供的接口即可在桌面上弹出该消息框。消息框请求是异步的，通常构造消息框请求并发送后，用户就可以不再关心后续的信息，如果有特殊需要则可以自定义处理org.freedesktop.Notifications发送的信号。notification的介绍文档见：[https://developer.gnome.org/notification-spec/](https://developer.gnome.org/notification-spec/)
+![](2019-12-26-notification/01.png)
 
 ---
 
@@ -33,7 +34,7 @@ $ ./notification
   | Replaces ID 	     | 可选的消息ID，服务器通过id控制消息框的渲染，通常不用关注
   | Icon 	             | 显示在气泡框上的图标
   | Summary 	         | 标题，只能显示一行，叫title应该更合适
-  | Body 	             | 消息体，支持部分HTML标签；<b></b>；<i></i>；<u></u>；<a></a>；<img src=... alt=...>
+  | Body 	             | 消息体，支持部分HTML标签；`<b></b>`；`<i></i>`；`<u></u>`；`<a></a>`；`<img src=... alt=...>`
   | Actions 	         | 显示一些按钮或者菜单（QAction），不过这一功能通常未被实现
   | Hints 	           | 为消息体提供的额外数据，比如显示在屏幕的位置（x，y坐标）
   | Expiration Timeout |气泡框显示的时长，单位毫秒；指定为-1时行为取决于实现；为0时气泡框将一直显示在桌面上直到用户点击
