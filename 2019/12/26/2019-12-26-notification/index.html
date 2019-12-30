@@ -106,12 +106,12 @@
 <meta property="og:site_name" content="Eight Plus">
 <meta property="og:description" content="在Ubuntu系统上，我们经常可以看到如下图所示的消息框(Desktop Notification)，比如电池电量提醒和邮件消息提醒，通过调用org.freedesktop.Notifications这个DBUS服务提供的接口即可在桌面上弹出该消息框。消息框请求是异步的，通常构造消息框请求并发送后，用户就可以不再关心后续的信息，如果有特殊需要则可以自定义处理org.freedesktop.Not">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://eightplus.github.io/2019/12/26/2019-12-26-notification/...">
-<meta property="og:updated_time" content="2019-12-26T14:19:36.822Z">
+<meta property="og:image" content="https://eightplus.github.io/2019/12/26/2019-12-26-notification/01.png">
+<meta property="og:updated_time" content="2019-12-30T02:03:07.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Desktop Notification 消息框">
 <meta name="twitter:description" content="在Ubuntu系统上，我们经常可以看到如下图所示的消息框(Desktop Notification)，比如电池电量提醒和邮件消息提醒，通过调用org.freedesktop.Notifications这个DBUS服务提供的接口即可在桌面上弹出该消息框。消息框请求是异步的，通常构造消息框请求并发送后，用户就可以不再关心后续的信息，如果有特殊需要则可以自定义处理org.freedesktop.Not">
-<meta name="twitter:image" content="https://eightplus.github.io/2019/12/26/2019-12-26-notification/...">
+<meta name="twitter:image" content="https://eightplus.github.io/2019/12/26/2019-12-26-notification/01.png">
 
 
 
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  800字
+                  811字
                 </span>
               
 
@@ -438,7 +438,7 @@
 
       
         <blockquote>
-<p>在Ubuntu系统上，我们经常可以看到如下图所示的消息框(Desktop Notification)，比如电池电量提醒和邮件消息提醒，通过调用org.freedesktop.Notifications这个DBUS服务提供的接口即可在桌面上弹出该消息框。消息框请求是异步的，通常构造消息框请求并发送后，用户就可以不再关心后续的信息，如果有特殊需要则可以自定义处理org.freedesktop.Notifications发送的信号。notification的介绍文档见：<a href="https://developer.gnome.org/notification-spec/" target="_blank" rel="noopener">https://developer.gnome.org/notification-spec/</a></p>
+<p>在Ubuntu系统上，我们经常可以看到如下图所示的消息框(Desktop Notification)，比如电池电量提醒和邮件消息提醒，通过调用org.freedesktop.Notifications这个DBUS服务提供的接口即可在桌面上弹出该消息框。消息框请求是异步的，通常构造消息框请求并发送后，用户就可以不再关心后续的信息，如果有特殊需要则可以自定义处理org.freedesktop.Notifications发送的信号。notification的介绍文档见：<a href="https://developer.gnome.org/notification-spec/" target="_blank" rel="noopener">https://developer.gnome.org/notification-spec/</a><br><img src="/2019/12/26/2019-12-26-notification/01.png" alt=""></p>
 </blockquote>
 <hr>
 <h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
@@ -473,7 +473,7 @@
 </tr>
 <tr>
 <td>Body</td>
-<td>消息体，支持部分HTML标签；<b></b>；<i></i>；<u></u>；<a></a>；<img src="/2019/12/26/2019-12-26-notification/..." alt="..."></td>
+<td>消息体，支持部分HTML标签；<code>&lt;b&gt;&lt;/b&gt;</code>；<code>&lt;i&gt;&lt;/i&gt;</code>；<code>&lt;u&gt;&lt;/u&gt;</code>；<code>&lt;a&gt;&lt;/a&gt;</code>；<code>&lt;img src=... alt=...&gt;</code></td>
 </tr>
 <tr>
 <td>Actions</td>
