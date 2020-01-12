@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="前面两篇文章，我们介绍了QThread多线程的使用方法，今天开始介绍QtConcurrent，QtConcurrent是一个名字空间, 包含了众多的高级API, 方便用户编写多线程程序，且不需要使用低级线程原语(如:互斥、读写锁、等待条件或信号量)。QtConcurrent返回一个QFuture对象（QFuture类没有继承QObject，该类代表了一个异步调用的结果，它介于QtConcurre">
+<meta name="description" content="鼠标点击穿透，即所有鼠标键盘操作全部会穿透窗口到下方窗口。在Linux下，Qt的Qt::WA_TransparentForMouseEvents属性可以对子部件实现鼠标穿透，但是对整个窗口不行，要想在Linux下对Qt的整个窗口设置鼠标穿透，这时候可以用到X11中x11shape的XShapeCombineRectangles()库函数，很多窗口挂件都是这样做的，如osd桌面歌词程序等等。示例代">
 <meta name="keywords" content="Qt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Qt多线程之QtConcurrent::run()">
-<meta property="og:url" content="https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/index.html">
+<meta property="og:title" content="鼠标点击穿透">
+<meta property="og:url" content="https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="前面两篇文章，我们介绍了QThread多线程的使用方法，今天开始介绍QtConcurrent，QtConcurrent是一个名字空间, 包含了众多的高级API, 方便用户编写多线程程序，且不需要使用低级线程原语(如:互斥、读写锁、等待条件或信号量)。QtConcurrent返回一个QFuture对象（QFuture类没有继承QObject，该类代表了一个异步调用的结果，它介于QtConcurre">
+<meta property="og:description" content="鼠标点击穿透，即所有鼠标键盘操作全部会穿透窗口到下方窗口。在Linux下，Qt的Qt::WA_TransparentForMouseEvents属性可以对子部件实现鼠标穿透，但是对整个窗口不行，要想在Linux下对Qt的整个窗口设置鼠标穿透，这时候可以用到X11中x11shape的XShapeCombineRectangles()库函数，很多窗口挂件都是这样做的，如osd桌面歌词程序等等。示例代">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-13T12:27:23.802Z">
+<meta property="og:updated_time" content="2020-01-12T05:44:23.889Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qt多线程之QtConcurrent::run()">
-<meta name="twitter:description" content="前面两篇文章，我们介绍了QThread多线程的使用方法，今天开始介绍QtConcurrent，QtConcurrent是一个名字空间, 包含了众多的高级API, 方便用户编写多线程程序，且不需要使用低级线程原语(如:互斥、读写锁、等待条件或信号量)。QtConcurrent返回一个QFuture对象（QFuture类没有继承QObject，该类代表了一个异步调用的结果，它介于QtConcurre">
+<meta name="twitter:title" content="鼠标点击穿透">
+<meta name="twitter:description" content="鼠标点击穿透，即所有鼠标键盘操作全部会穿透窗口到下方窗口。在Linux下，Qt的Qt::WA_TransparentForMouseEvents属性可以对子部件实现鼠标穿透，但是对整个窗口不行，要想在Linux下对Qt的整个窗口设置鼠标穿透，这时候可以用到X11中x11shape的XShapeCombineRectangles()库函数，很多窗口挂件都是这样做的，如osd桌面歌词程序等等。示例代">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/">
+  <link rel="canonical" href="https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/">
 
 
 
 
 
-  <title>Qt多线程之QtConcurrent::run() | Eight Plus</title>
+  <title>鼠标点击穿透 | Eight Plus</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李翔">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Qt多线程之QtConcurrent::run()</h1>
+          <h1 class="post-title" itemprop="name headline">鼠标点击穿透</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-13T20:14:36+08:00">
-                2019-11-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-12T12:39:05+08:00">
+                2020-01-12
               </time>
             
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  924字
+                  586字
                 </span>
               
 
@@ -436,18 +436,28 @@
 
       
         <blockquote>
-<p>前面两篇文章，我们介绍了QThread多线程的使用方法，今天开始介绍QtConcurrent，QtConcurrent是一个名字空间, 包含了众多的高级API, 方便用户编写多线程程序，且不需要使用低级线程原语(如:互斥、读写锁、等待条件或信号量)。QtConcurrent返回一个QFuture对象（QFuture类没有继承QObject，该类代表了一个异步调用的结果，它介于QtConcurrent和QFutureWatcher之间进行工作），这个对象可以用来查询任务当前的执行进度、暂停、恢复、取消任务以及获得运算结果，但并非所有的QFuture对象都支持暂停或取消的操作，如本篇文章将要介绍的由<code>QtConcurrent::run()</code>返回的QFuture对象则不能取消，而由QtConcurrent::mappedReduced()返回的对象则是是可以执行取消的。QFutureWatcher通过信号槽来跟异步调用实现交互，即可以通过信号槽来监视线程的完成情况（QFuture的进度）, 并获取线程的返回值。QFuture让线程可以通过某个后期产生的结果来实现同步，这个结果可以是任何拥有默认构造函数和拷贝构造函数的类型，如果这个结果在调用其result(), resultAt(), 或者results()方法时还没有准备好，QFuture将会一直等，直到结果准备好为止。在编写代码时，可以通过isResultReadyAt()方法来检测结果是否准备好，可以用绑定信号resultReadyAt来获取线程的结果。对于QFuture对象需要准备多个结果的情况，调用resultCount()方法可以返回连续结果的数量即我们可以从0到resultCount()进行遍历操作。</p>
+<p>鼠标点击穿透，即所有鼠标键盘操作全部会穿透窗口到下方窗口。在Linux下，Qt的Qt::WA_TransparentForMouseEvents属性可以对子部件实现鼠标穿透，但是对整个窗口不行，要想在Linux下对Qt的整个窗口设置鼠标穿透，这时候可以用到X11中x11shape的XShapeCombineRectangles()库函数，很多窗口挂件都是这样做的，如osd桌面歌词程序等等。示例代码编写了一个简单的桌面水印，在桌面的右下方显示了一张图片和一段文字描述，在设置了鼠标点击穿透的情况下用鼠标点击该水印，是可以直接穿透该水印的。</p>
 </blockquote>
 <hr>
 <h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
-<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/thread/qtconcurrent-run-demo" target="_blank" rel="noopener">qtconcurrent-run</a></li>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/inputpass" target="_blank" rel="noopener">inputpass</a></li>
 </ul>
-<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools</code></p>
-<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./qtconcurrent-run-demo</span><br></pre></td></tr></table></figure>
-<h2 id="示例代码分析要点"><a href="#示例代码分析要点" class="headerlink" title="示例代码分析要点"></a>示例代码分析要点</h2><p>  示例代码中模拟耗时操作的doLongTimeWork()函数有两种写法，如下面代码所示，QFuture&lt;QList<cityinfo>&gt;表示返回异步调用的结果，类型为QList<cityinfo>，而QFuture<void>比较特殊，它表示不返回异步调用的结果。任何QFuture<t>对象都可以赋值或者拷贝给QFuture<void>对象，QFuture<void>对于结果数据不需要而只需要状态或者进度信息的情况比较有用。</void></void></t></void></cityinfo></cityinfo></p>
-<p>  写法一：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void Worker::doLongTimeWork()</span><br><span class="line">&#123;</span><br><span class="line">    QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt; *watcher = new QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt;(/*this*/);</span><br><span class="line">    QFuture&lt;QList&lt;CityInfo&gt;&gt; future = QtConcurrent::run(this, &amp;Worker::loadDataFromFile);//开始异步调用，QtConcurrent::run()用于在另外的线程运行一个函数</span><br><span class="line">    connect(watcher, &amp;QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt;::finished, this, &amp;Worker::onInitFinished);</span><br><span class="line">    connect(watcher, &amp;QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt;::resultReadyAt, this, &amp;Worker::onResultReadyAt);</span><br><span class="line">    watcher-&gt;setFuture(future);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  写法二：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void Worker::doLongTimeWork()</span><br><span class="line">&#123;</span><br><span class="line">    QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt; *watcher = new QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt;(/*this*/);</span><br><span class="line">    QFuture&lt;QList&lt;CityInfo&gt;&gt; future = QtConcurrent::run(load_data_from_file);//开始异步调用，QtConcurrent::run()用于在另外的线程运行一个函数</span><br><span class="line">    connect(watcher, &amp;QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt;::finished, this, &amp;Worker::onInitFinished);</span><br><span class="line">    connect(watcher, &amp;QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt;::resultReadyAt, this, &amp;Worker::onResultReadyAt);</span><br><span class="line">    watcher-&gt;setFuture(future);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>  通过QFutureWatcher的resultReadyAt信号绑定槽函数的onResultReadyAt，我们可以知道线程已经将什么样的结果已经准备好了，而通过QFutureWatcher的finished信号，我们可以知道线程执行完毕了，并可以通过wather来获取线程的结果，如下两个函数：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">void Worker::onResultReadyAt(int index)</span><br><span class="line">&#123;</span><br><span class="line">    QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt; *watcher = static_cast&lt;QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt; *&gt;(sender());</span><br><span class="line">    if (!watcher)</span><br><span class="line">        return;</span><br><span class="line"></span><br><span class="line">    QList&lt;CityInfo&gt; info_list = watcher-&gt;resultAt(index);</span><br><span class="line">    qDebug() &lt;&lt; &quot;length: &quot;&lt;&lt; info_list.length() &lt;&lt; &quot;, index: &quot; &lt;&lt; index &lt;&lt; &quot;, region:&quot; &lt;&lt; info_list.at(0).region;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Worker::onInitFinished()</span><br><span class="line">&#123;</span><br><span class="line">    static int count = 0;</span><br><span class="line">    qDebug() &lt;&lt; &quot;Worker::onInitFinished&quot;;</span><br><span class="line">    QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt; *watcher = static_cast&lt;QFutureWatcher&lt;QList&lt;CityInfo&gt;&gt; *&gt;(sender());</span><br><span class="line">    if (!watcher)</span><br><span class="line">        return;</span><br><span class="line"></span><br><span class="line">    m_cityInfos = watcher-&gt;result();</span><br><span class="line">    for (const auto &amp;info : m_cityInfos)</span><br><span class="line">    &#123;</span><br><span class="line">        //qDebug() &lt;&lt; &quot;region:&quot; &lt;&lt;  info.region;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    watcher-&gt;deleteLater();</span><br><span class="line"></span><br><span class="line">    emit scanFinished(count++);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools libqt5x11extras5-dev libx11-dev libxext-dev</code></p>
+<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./inputpass</span><br></pre></td></tr></table></figure>
+<h2 id="XShapeCombineRectangles库函数参数分析"><a href="#XShapeCombineRectangles库函数参数分析" class="headerlink" title="XShapeCombineRectangles库函数参数分析"></a>XShapeCombineRectangles库函数参数分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void XShapeCombineRectangles (</span><br><span class="line">  Display *dpy,</span><br><span class="line">  XID dest,</span><br><span class="line">  int destKind,</span><br><span class="line">  int xOff,</span><br><span class="line">  int yOff,</span><br><span class="line">  XRectangle *rects,</span><br><span class="line">  int n_rects,</span><br><span class="line">  int op,</span><br><span class="line">  int ordering);</span><br></pre></td></tr></table></figure>
+<p>在设置鼠标穿透的时候给函数传的第六个参数为NULL（参数为XRectangle*类型），那整个窗口都将被穿透，第七个参数就是控制设置穿透的，为0时表示设置鼠标穿透，为1时表示取消鼠标穿透，当取消设置鼠标穿透的时候，必须设置区域，即第六个参数不再为NULL(当第6个参数XRectangle的x，y，width和height都为0,且第七个参数设置为1时，也表示设置为鼠标穿透)。</p>
+<h2 id="示例代码分析要点"><a href="#示例代码分析要点" class="headerlink" title="示例代码分析要点"></a>示例代码分析要点</h2><ol>
+<li><p>在Qt的.pro文件中，需要注意如下三行，即链接x11和xext库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">QT       += x11extras</span><br><span class="line">CONFIG += link_pkgconfig</span><br><span class="line">PKGCONFIG += x11 xext</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置鼠标穿透</p>
+<p>头文件 X11/extensions/shape.h 来自于libxext-dev包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QtX11Extras/QX11Info&gt;</span><br><span class="line">#include &lt;X11/extensions/shape.h&gt;</span><br><span class="line"></span><br><span class="line">void Utils::passInputEvent(int wid)</span><br><span class="line">&#123;</span><br><span class="line">    XRectangle *reponseArea = new XRectangle;</span><br><span class="line">    reponseArea-&gt;x = 0;</span><br><span class="line">    reponseArea-&gt;y = 0;</span><br><span class="line">    reponseArea-&gt;width = 0;</span><br><span class="line">    reponseArea-&gt;height = 0;</span><br><span class="line"></span><br><span class="line">    //XShapeCombineRectangles(QX11Info::display(), wid, ShapeInput, 0, 0, reponseArea ,1 ,ShapeSet, YXBanded);</span><br><span class="line">    XShapeCombineRectangles(QX11Info::display(), wid, ShapeInput, 0, 0, NULL, 0, ShapeSet, YXBanded);</span><br><span class="line"></span><br><span class="line">    delete reponseArea;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取消鼠标穿透</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">void Utils::unPassInputEvent(int wid, QSize size)</span><br><span class="line">&#123;</span><br><span class="line">    XRectangle *reponseArea = new XRectangle;</span><br><span class="line">    reponseArea-&gt;x = 0;</span><br><span class="line">    reponseArea-&gt;y = 0;</span><br><span class="line">    reponseArea-&gt;width = size.width();</span><br><span class="line">    reponseArea-&gt;height = size.height();</span><br><span class="line"></span><br><span class="line">    XShapeCombineRectangles(QX11Info::display(), wid, ShapeInput, 0, 0, reponseArea ,1 ,ShapeSet, YXBanded);</span><br><span class="line"></span><br><span class="line">    delete reponseArea;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -505,7 +515,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/" title="Qt多线程之QtConcurrent::run()">https://eightplus.github.io/2019/11/13/2019-11-13-qtconcurrent-run/</a>
+    <a href="https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/" title="鼠标点击穿透">https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -534,8 +544,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/11/2019-11-11-qthread-object/" rel="next" title="Qt多线程之子类化QObject">
-                <i class="fa fa-chevron-left"></i> Qt多线程之子类化QObject
+              <a href="/2019/12/26/2019-12-26-notification/" rel="next" title="Desktop Notification 消息框">
+                <i class="fa fa-chevron-left"></i> Desktop Notification 消息框
               </a>
             
           </div>
@@ -543,10 +553,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/15/2019-11-15-qtconcurrent-map/" rel="prev" title="Qt多线程之QtConcurrent::map()">
-                Qt多线程之QtConcurrent::map() <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -727,7 +733,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译和运行"><span class="nav-text">示例源码的编译和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码分析要点"><span class="nav-text">示例代码分析要点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译和运行"><span class="nav-text">示例源码的编译和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XShapeCombineRectangles库函数参数分析"><span class="nav-text">XShapeCombineRectangles库函数参数分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码分析要点"><span class="nav-text">示例代码分析要点</span></a></li></ol></div>
             
 
           </div>

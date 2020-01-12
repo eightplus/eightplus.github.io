@@ -8,14 +8,7 @@
 
     <url>
         <loc>https://eightplus.github.io/categories/%E5%B7%A5%E5%85%B7/</loc>
-        <lastmod>2018-08-11T01:56:56.719Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://eightplus.github.io/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/</loc>
-        <lastmod>2019-08-15T08:10:34.276Z</lastmod>
+        <lastmod>2018-08-02T01:37:44.162Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -28,8 +21,15 @@
     </url>
 
     <url>
+        <loc>https://eightplus.github.io/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2019-11-14T01:56:25.667Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/</loc>
-        <lastmod>2019-11-11T08:44:36.171Z</lastmod>
+        <lastmod>2020-01-12T05:44:23.889Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
