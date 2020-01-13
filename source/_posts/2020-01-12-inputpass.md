@@ -4,7 +4,7 @@ date:       2020-01-12 12:39:05
 author:     "lixiang"
 categories: Linux 编程
 tags:
-    - Qt
+    - Qt X11
 ---
 
 > 鼠标点击穿透，即所有鼠标键盘操作全部会穿透窗口到下方窗口。在Linux下，Qt的Qt::WA_TransparentForMouseEvents属性可以对子部件实现鼠标穿透，但是对整个窗口不行，要想在Linux下对Qt的整个窗口设置鼠标穿透，这时候可以用到X11中x11shape的XShapeCombineRectangles()库函数，很多窗口挂件都是这样做的，如osd桌面歌词程序等等。示例代码编写了一个简单的桌面水印，在桌面的右下方显示了一张图片和一段文字描述，在设置了鼠标点击穿透的情况下用鼠标点击该水印，是可以直接穿透该水印的。
