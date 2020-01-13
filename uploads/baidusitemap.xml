@@ -4,14 +4,34 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/</loc>
+    <lastmod>2020-01-13T14:10:31.833Z</lastmod>
+    <data>
+        <display>
+        <title>X11进行窗口状态设置</title>
+        <pubTime>2020-01-13T13:49:40.000Z</pubTime>
+        
+        <tag>Qt X11</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/</loc>
-    <lastmod>2020-01-12T05:44:23.889Z</lastmod>
+    <lastmod>2020-01-13T13:51:25.537Z</lastmod>
     <data>
         <display>
         <title>鼠标点击穿透</title>
         <pubTime>2020-01-12T04:39:05.000Z</pubTime>
         
-        <tag>Qt</tag>
+        <tag>Qt X11</tag>
          
          
            

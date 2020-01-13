@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2020-01-12T05:44:23.889Z</updated>
+  <updated>2020-01-13T14:10:31.833Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>X11进行窗口状态设置</title>
+    <link href="https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/"/>
+    <id>https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/</id>
+    <published>2020-01-13T13:49:40.000Z</published>
+    <updated>2020-01-13T14:10:31.833Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;在Qt的编程中，我们可以很方便的使用QWidget的一些属性和槽函数来进行窗口状态设置，比如&lt;code&gt;setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint)&lt;/code&gt;可以设置窗口置顶，
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt X11" scheme="https://eightplus.github.io/tags/Qt-X11/"/>
+    
+  </entry>
+  
+  <entry>
     <title>鼠标点击穿透</title>
     <link href="https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/"/>
     <id>https://eightplus.github.io/2020/01/12/2020-01-12-inputpass/</id>
     <published>2020-01-12T04:39:05.000Z</published>
-    <updated>2020-01-12T05:44:23.889Z</updated>
+    <updated>2020-01-13T13:51:25.537Z</updated>
     
     <summary type="html">
     
@@ -36,7 +60,7 @@
       <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+      <category term="Qt X11" scheme="https://eightplus.github.io/tags/Qt-X11/"/>
     
   </entry>
   
@@ -465,30 +489,6 @@
         &lt;h2 id=&quot;HelloWorld&quot;&gt;&lt;a href=&quot;#HelloWorld&quot; class=&quot;headerlink&quot; title=&quot;HelloWorld&quot;&gt;&lt;/a&gt;HelloWorld&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;程序目录结构如下：&lt;/p&gt;
 &lt;figure class=&quot;
-      
-    
-    </summary>
-    
-      <category term="安卓开发" scheme="https://eightplus.github.io/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Android源码中编写C程序测试Linux内核驱动程序</title>
-    <link href="https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/"/>
-    <id>https://eightplus.github.io/2018/08/06/2018-08-06-test-android-kernel-driver-program/</id>
-    <published>2018-08-06T14:33:11.000Z</published>
-    <updated>2019-11-14T01:55:26.627Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;在mydev的Linux内核驱动程序中，创建三个不同的文件节点来供用户空间访问，分别是传统的设备文件/dev/mydev、proc系统文件/proc/mydev和devfs系统属性文件/sys/class/mydev/mydev/val。这里通过编
       
     
     </summary>

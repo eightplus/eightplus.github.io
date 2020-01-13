@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Qt,">
+  <meta name="keywords" content="Qt X11,">
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此">
-<meta name="keywords" content="Qt">
+<meta name="description" content="在Qt的编程中，我们可以很方便的使用QWidget的一些属性和槽函数来进行窗口状态设置，比如setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint)可以设置窗口置顶，showMinimized()设置窗口最小化，showMaximized()设置窗口最大化，showFullScreen()设置窗口全屏，showNormal()恢复窗口的正常">
+<meta name="keywords" content="Qt X11">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用mpv编写自己的播放器">
-<meta property="og:url" content="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/index.html">
+<meta property="og:title" content="X11进行窗口状态设置">
+<meta property="og:url" content="https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此">
+<meta property="og:description" content="在Qt的编程中，我们可以很方便的使用QWidget的一些属性和槽函数来进行窗口状态设置，比如setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint)可以设置窗口置顶，showMinimized()设置窗口最小化，showMaximized()设置窗口最大化，showFullScreen()设置窗口全屏，showNormal()恢复窗口的正常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-19T07:49:44.292Z">
+<meta property="og:updated_time" content="2020-01-13T14:10:31.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用mpv编写自己的播放器">
-<meta name="twitter:description" content="MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此">
+<meta name="twitter:title" content="X11进行窗口状态设置">
+<meta name="twitter:description" content="在Qt的编程中，我们可以很方便的使用QWidget的一些属性和槽函数来进行窗口状态设置，比如setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint)可以设置窗口置顶，showMinimized()设置窗口最小化，showMaximized()设置窗口最大化，showFullScreen()设置窗口全屏，showNormal()恢复窗口的正常">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/">
+  <link rel="canonical" href="https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/">
 
 
 
 
 
-  <title>使用mpv编写自己的播放器 | Eight Plus</title>
+  <title>X11进行窗口状态设置 | Eight Plus</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李翔">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用mpv编写自己的播放器</h1>
+          <h1 class="post-title" itemprop="name headline">X11进行窗口状态设置</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-19T15:32:08+08:00">
-                2019-08-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-13T21:49:40+08:00">
+                2020-01-13
               </time>
             
 
@@ -374,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux-Qt-开发/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux Qt 开发</span>
+                  <a href="/categories/Linux-编程/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux 编程</span>
                   </a>
                 </span>
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,552字
+                  1,407字
                 </span>
               
 
@@ -436,82 +436,41 @@
 
       
         <blockquote>
-<p>MPV 是一个基于 MPlayer 和 MPlayer2 的多平台开源播放器，其在Linux上拥有广泛的输出设备支持，内置ffmpeg解码器，支持绝大部分的视频和音频格式，支持本地播放和网络播放，支持ass特效字幕，GPU 解码能力十分出色。虽然MPV功能强大，但默认情况下，MPV无GUI图形界面，用户需要通过命令行或者手动修改其配置文件达到配置MPV的目的，这样就给普通用户带来了诸多不便。为此，本文将介绍如何在Ubuntu系统上使用Qt编写带UI图形的MPV播放器，使用户对快速定制具有图形界面的MPV播放器有一个大致的了解。<br></p>
+<p>在Qt的编程中，我们可以很方便的使用QWidget的一些属性和槽函数来进行窗口状态设置，比如<code>setWindowFlags(windowFlags() | Qt::WindowStaysOnTopHint)</code>可以设置窗口置顶，<code>showMinimized()</code>设置窗口最小化，<code>showMaximized()</code>设置窗口最大化，<code>showFullScreen()</code>设置窗口全屏，<code>showNormal()</code>恢复窗口的正常大小状态。但是在Linux不同的桌面环境和窗口管理器下，这些属性设置和槽函数的使用，往往会出现一些问题或者设置无效。我曾经遇到Qt4编写的代码在mate桌面环境下，不管窗口管理器是marco还是mutter，程序启动的时候设置置顶有效，但是程序运行过程中动态切换到置顶无效。我的测试代码将窗口隐藏后开启一个定时器想隔段时间后再自动弹出该窗口，并让该窗口处于激活状态，结果不行，而同一段代码使用Qt5编译运行，则正常。后来我用libwnck-dev中x11的接口解决了该问题（<code>libwnck/window-action-menu.c:wnck_window_make_above (window)--&gt;libwnck/window.c:_wnck_change_state</code>）。上篇文章介绍了使用x11库函数来设置和取消鼠标点击穿透，本篇文章将介绍如何使用x11的库函数来设置窗口状态。</p>
 </blockquote>
+<p>如下是我当时测试让隐藏的主界面重新显示并处于激活状态的代码：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//for marco window manager</span><br><span class="line">this-&gt;setWindowState(Qt::WindowActive);</span><br><span class="line">this-&gt;activateWindow();</span><br><span class="line">this-&gt;show();</span><br><span class="line">this-&gt;raise();</span><br><span class="line"></span><br><span class="line">//for mutter window manager</span><br><span class="line">this-&gt;hide();</span><br><span class="line">this-&gt;setWindowState(Qt::WindowActive);</span><br><span class="line">this-&gt;activateWindow();</span><br><span class="line">this-&gt;show();</span><br><span class="line">this-&gt;raise();</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
-<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/mympvplayer" target="_blank" rel="noopener">mympvplayer</a></li>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/Qt/windowstate" target="_blank" rel="noopener">windowstate</a></li>
 </ul>
-<h2 id="开发前准备工作"><a href="#开发前准备工作" class="headerlink" title="开发前准备工作"></a>开发前准备工作</h2><ul>
-<li><p>Ubuntu上MPV的安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo install mpv</span><br></pre></td></tr></table></figure>
+<h2 id="开发库的安装"><a href="#开发库的安装" class="headerlink" title="开发库的安装"></a>开发库的安装</h2><p><code>$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools libqt5x11extras5-dev libx11-dev libxext-dev</code></p>
+<h2 id="示例源码的编译和运行"><a href="#示例源码的编译和运行" class="headerlink" title="示例源码的编译和运行"></a>示例源码的编译和运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ qmake</span><br><span class="line">$ make</span><br><span class="line">$ ./windowstate</span><br></pre></td></tr></table></figure>
+<h2 id="示例代码分析要点"><a href="#示例代码分析要点" class="headerlink" title="示例代码分析要点"></a>示例代码分析要点</h2><ol>
+<li><p>在Qt的.pro文件中，需要注意如下三行，即链接x11和xext库。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">QT       += x11extras</span><br><span class="line">CONFIG += link_pkgconfig</span><br><span class="line">PKGCONFIG += x11 xext</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编程开发依赖包安装：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo install qtbase5-dev qt5-qmake qtscript5-dev qttools5-dev-tools</span><br></pre></td></tr></table></figure>
+<li><p>获取当前桌面属性值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QtX11Extras/QX11Info&gt;</span><br><span class="line">#include &lt;X11/extensions/shape.h&gt;</span><br><span class="line">#include &lt;X11/Xatom.h&gt;</span><br><span class="line">#include &lt;X11/Xlib.h&gt;</span><br><span class="line"></span><br><span class="line">unsigned char *getWindowProperty(Display *display, Window win, const char *prop)</span><br><span class="line">&#123;</span><br><span class="line">    Atom reqAtom = XInternAtom(display, prop, true);</span><br><span class="line">    if (reqAtom == None) &#123;</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    int retCheck = None;</span><br><span class="line">    Atom retType = None;</span><br><span class="line">    int retFormat = 0;</span><br><span class="line">    unsigned long retItems = 0UL;</span><br><span class="line">    unsigned long retMoreBytes = 0UL;</span><br><span class="line">    unsigned char* retValue = NULL;</span><br><span class="line"></span><br><span class="line">    retCheck = XGetWindowProperty(display, win, reqAtom, 0L, 0L, false, AnyPropertyType,</span><br><span class="line">        &amp;retType, &amp;retFormat, &amp;retItems, &amp;retMoreBytes, &amp;retValue);</span><br><span class="line"></span><br><span class="line">    if (retValue != NULL) &#123;</span><br><span class="line">        XFree(retValue);</span><br><span class="line">        retValue = NULL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (retCheck != Success || retType == None || retMoreBytes == 0) &#123;</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    retCheck = None;</span><br><span class="line">    retFormat = 0;</span><br><span class="line">    retItems = 0UL;</span><br><span class="line"></span><br><span class="line">    // Convert the byte length into 32bit multiples.</span><br><span class="line">    if (retMoreBytes % 4 != 0)</span><br><span class="line">        retMoreBytes += 4 - retMoreBytes % 4;</span><br><span class="line">    retMoreBytes /= 4;</span><br><span class="line"></span><br><span class="line">    // Request the actual property value with correct length and type.</span><br><span class="line">    retCheck = XGetWindowProperty(display, win, reqAtom, 0L, retMoreBytes, false, retType,</span><br><span class="line">        &amp;retType, &amp;retFormat, &amp;retItems, &amp;retMoreBytes, &amp;retValue);</span><br><span class="line"></span><br><span class="line">    if (retCheck != Success || retMoreBytes != 0) &#123;</span><br><span class="line">        if (retValue != NULL)</span><br><span class="line">            XFree(retValue);</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return retValue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h2 id="要点分析"><a href="#要点分析" class="headerlink" title="要点分析"></a>要点分析</h2><p>  为了实现一个既可以在Qt程序中控制MPV，又可以让Qt程序得到MPV的输出信息的播放器，这里重点介绍Qt的QProcess类。QProcess类可用来调用外部程序，并与外部程序进行通信。其把外部程序的进程当作一个有序的I/O设备，通过对通过I/O设备的读写来完成进程间的通信，即：write()函数实现对进程标准输入的写操作，通过read()，readLine()和getChar()函数实现对标准输出的读操作。在正常渠道模式下，QProcess的无名管道stdinChannelpipe，stdoutChannelpipe和stderrChannelpipe分别与标准输入、标准输出和标准容错进行绑定，实现与外部程序的通信；而在融合模式下，没有容错管道，此时，标准容错端和标准输出端将共同挂接到子进程的stdoutChannelpipe的写端来实现内外进程的通信，即标准输出和标准容错绑定到同一个管道的写端。本文介绍通过QProcess类调用MPV，并设置一系列播放参数，如视频驱动、音频驱动、软解/硬解、缓存等。至于Qt图形和MPV视频窗口的关联，则是使用“–wid widget-&gt;winId()”进行绑定，通过winId()可以获得一个数字，其中widget是一个QWidget对象，这样将界面上一个窗口的句柄给了MPV，即视频输出定位到了widget窗体部件中（wid为MPV指定了输入窗口，-wid参数只在X11、directX和OpenGL中适用）。本文推荐使用融合模式，代码为：setProcessChannelMode(QProcess::MergedChannels)。</p>
-<ul>
-<li><p>配置介绍</p>
-<p>查看MPV的帮助信息可在终端执行”mpv –help”， 查看MPV可配置信息可在终端执行”mpv –list-options”，查看快捷键列表可在终端执行”mpv —input-keylist”。MPV参数调用需要加”–”，如果参数是使用配置文件中的参数，则配置文件中无需在参数前加”–”。MPV的配置文件目录为：~/.config/mpv/，本文介绍的播放器定制将不使用配置文件，这里只简要介绍下mpv.conf和input.conf这两个配置文件的格式，mpv.conf 是主配置文件，里面包含一些基本的配置，input.conf 按键配置文件，包含播放过程中一些操作快捷键的设置。</p>
-<p>mpv.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Disable the On Screen Controller (OSC).</span><br><span class="line">osc=no</span><br><span class="line"># Keep the player window on top of all other windows.</span><br><span class="line">ontop=yes</span><br><span class="line"># Enable hardware decoding if available. Often, this does not work with all</span><br><span class="line"># video outputs, but should work well with default settings on most systems.</span><br><span class="line"># If performance or energy usage is an issue, forcing the vdpau or vaapi VOs</span><br><span class="line"># may or may not help.</span><br><span class="line">hwdec=auto</span><br></pre></td></tr></table></figure>
-<p>input.conf</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Mouse wheels, touchpad or other input devices that have axes</span><br><span class="line"># if the input devices supports precise scrolling it will also scale the</span><br><span class="line"># numeric value accordingly</span><br><span class="line">WHEEL_UP      seek 10</span><br><span class="line">WHEEL_DOWN    seek -10</span><br><span class="line">WHEEL_LEFT    add volume -2</span><br><span class="line">WHEEL_RIGHT   add volume 2</span><br><span class="line">## Seek units are in seconds, but note that these are limited by keyframes</span><br><span class="line">RIGHT seek  5</span><br><span class="line">LEFT  seek -5</span><br><span class="line">UP    seek  60</span><br><span class="line">DOWN seek -60</span><br></pre></td></tr></table></figure>
-<p>下面详细介绍几个比较重要的配置项</p>
-<ul>
-<li><p>quiet</p>
-<p>这个参数会阻止状态行信息的显示，即使得控制台消息尽量少输出。使用Qt嵌入MPV时，需要使用noquiet而不是quiet，否则Qt程序无法获得MPV的状态信息，致使Qt程序无法将MPV的状态准确的展示给用户，如播放进度、出错信息等。当然，如果你的机器性能差，那还是建议你直接使用mpv，且参数使用quiet，而不是像本文介绍的这样对MPV进行UI封装。MPV使用noquiet的格式为：mpv –no-quiet。</p>
+<li><p>设置窗口置顶/取消窗口置顶</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">void Utils::setStayOnTop(int wid, bool top)</span><br><span class="line">&#123;</span><br><span class="line">    const auto display = QX11Info::display();//Display *display = QX11Info::display();</span><br><span class="line"></span><br><span class="line">    const auto wmState = XInternAtom(display, &quot;_NET_WM_STATE&quot;, false);</span><br><span class="line">    const auto wmStateAbove = XInternAtom(display, &quot;_NET_WM_STATE_ABOVE&quot;, false);</span><br><span class="line">    const auto wmStateStaysOnTop = XInternAtom(display, &quot;_NET_WM_STATE_STAYS_ON_TOP&quot;, false);</span><br><span class="line"></span><br><span class="line">    XEvent xev;</span><br><span class="line">    memset(&amp;xev, 0, sizeof(xev));</span><br><span class="line">    xev.xclient.type = ClientMessage;</span><br><span class="line">    xev.xclient.display = display;</span><br><span class="line">    xev.xclient.window = wid;</span><br><span class="line">    xev.xclient.message_type = wmState;</span><br><span class="line">    xev.xclient.format = 32;</span><br><span class="line">    if (top)</span><br><span class="line">        xev.xclient.data.l[0] = 1;// add/set property</span><br><span class="line">    else</span><br><span class="line">        xev.xclient.data.l[0] = 0;// remove/unset property</span><br><span class="line">    xev.xclient.data.l[1] = wmStateAbove;</span><br><span class="line">    xev.xclient.data.l[2] = wmStateStaysOnTop;</span><br><span class="line">    xev.xclient.data.l[3] = 1;</span><br><span class="line"></span><br><span class="line">    XSendEvent(display,</span><br><span class="line">        QX11Info::appRootWindow(QX11Info::appScreen()),</span><br><span class="line">        false,</span><br><span class="line">        SubstructureRedirectMask | SubstructureNotifyMask,</span><br><span class="line">        &amp;xev);</span><br><span class="line"></span><br><span class="line">    XFlush(display);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>config</p>
-<p>可让Qt程序将一些基本的配置通过从MPV命令获取各参数支持可选值，并设置一个默认值，且可通过图形展示给用户去选择。所以此处使用no-config，即不从MPV的配置文件读取参数。mpv使用no-config的格式为：mpv –no-config。</p>
+<li><p>设置/取消窗口全屏</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">void Utils::showFullscreenWindow(int wid, bool fullscreen)</span><br><span class="line">&#123;</span><br><span class="line">    const auto display = QX11Info::display();//Display *display = QX11Info::display();</span><br><span class="line">    const auto screen = QX11Info::appScreen();</span><br><span class="line"></span><br><span class="line">    const Atom wmState = XInternAtom(display, &quot;_NET_WM_STATE&quot;, false);</span><br><span class="line">    const Atom wmfullscreenState = XInternAtom(display, &quot;_NET_WM_STATE_FULLSCREEN&quot;, false);</span><br><span class="line"></span><br><span class="line">    XEvent xev;</span><br><span class="line">    memset(&amp;xev, 0, sizeof(xev));</span><br><span class="line">    xev.xclient.type = ClientMessage;</span><br><span class="line">    xev.xclient.display = display;</span><br><span class="line">    xev.xclient.window = wid;</span><br><span class="line">    xev.xclient.message_type = wmState;</span><br><span class="line">    xev.xclient.format = 32;</span><br><span class="line">    if (fullscreen) &#123;</span><br><span class="line">        xev.xclient.data.l[0] = 1;//add/set property</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        xev.xclient.data.l[0] = 0;//remove/unset property</span><br><span class="line">    &#125;</span><br><span class="line">    xev.xclient.data.l[1] = wmfullscreenState;</span><br><span class="line">    xev.xclient.data.l[2] = 0;</span><br><span class="line">    xev.xclient.data.l[3] = 1;</span><br><span class="line"></span><br><span class="line">    XSendEvent(display,</span><br><span class="line">               QX11Info::appRootWindow(screen),</span><br><span class="line">               false,</span><br><span class="line">               SubstructureRedirectMask | SubstructureNotifyMask,</span><br><span class="line">               &amp;xev</span><br><span class="line">              );</span><br><span class="line">    XFlush(display);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>input-file</p>
-<p>这里将不使用MPV的input.conf配置文件，而是通过标准输入stdin给MPV发送命令，命令后面带上换行”\n”写入stdin即可。另外，在直接使用MPV的过程中，–no-input-default-bindings将使得MPV无法响应按键的事件，而–input-default-bindings参数默认为yes，则可以让MPV响应按键事件。MPV使用input-file的格式为：mpv –input-file=/dev/stdin。</p>
+<li><p>设置/取消窗口最大化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">void Utils::showMaximizedWindow(int wid, int state)</span><br><span class="line">&#123;</span><br><span class="line">  // state:</span><br><span class="line">  //      0: remove/unset property</span><br><span class="line">  //      1: add/set property</span><br><span class="line">  //      2: toggle property</span><br><span class="line">    const auto display = QX11Info::display();//Display *display = QX11Info::display();</span><br><span class="line">    const auto screen = QX11Info::appScreen();</span><br><span class="line"></span><br><span class="line">    const Atom wmState = XInternAtom(display, &quot;_NET_WM_STATE&quot;, false);</span><br><span class="line">    const Atom wmAddState = XInternAtom(display, &quot;_NET_WM_STATE_ADD&quot;, false);</span><br><span class="line">    const Atom wmVMaximizedState = XInternAtom(display, &quot;_NET_WM_STATE_MAXIMIZED_VERT&quot;, false);</span><br><span class="line">    const Atom wmHMaximizedState = XInternAtom(display, &quot;_NET_WM_STATE_MAXIMIZED_HORZ&quot;, false);</span><br><span class="line"></span><br><span class="line">    XEvent xev;</span><br><span class="line">    memset(&amp;xev, 0, sizeof(xev));</span><br><span class="line">    xev.xclient.type = ClientMessage;</span><br><span class="line">    xev.xclient.display = display;</span><br><span class="line">    xev.xclient.window = wid;</span><br><span class="line">    xev.xclient.message_type = wmState;</span><br><span class="line">    xev.xclient.format = 32;</span><br><span class="line">    xev.xclient.data.l[0] = state;//xev.xclient.data.l[0] = wmAddState;</span><br><span class="line">    xev.xclient.data.l[1] = wmVMaximizedState;</span><br><span class="line">    xev.xclient.data.l[2] = wmHMaximizedState;</span><br><span class="line">    xev.xclient.data.l[3] = 1;</span><br><span class="line"></span><br><span class="line">    XSendEvent(display,</span><br><span class="line">               QX11Info::appRootWindow(screen),</span><br><span class="line">               false,</span><br><span class="line">               SubstructureRedirectMask | SubstructureNotifyMask,</span><br><span class="line">               &amp;xev);</span><br><span class="line">    XFlush(display);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>term-status-msg</p>
-<p>该参数可以让MPV输出一些视频信息，可以通过 –term-status-msg 参数给它一个输出格式，如：”–term-status-msg=STATUS: ${=time-pos} / ${=duration:${=length:0}} P: ${=pause} B: ${=paused-for-cache} I: ${=core-idle} VB: ${=video-bitrate:0} AB: ${=audio-bitrate:0}”</p>
+<li><p>设置/取消窗口最小化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">void Utils::showMinimizedWindow(int wid, bool minimized)</span><br><span class="line">&#123;</span><br><span class="line">    const auto display = QX11Info::display();//Display *display = QX11Info::display();</span><br><span class="line">    const auto screen = QX11Info::appScreen();</span><br><span class="line"></span><br><span class="line">    const Atom wmState = XInternAtom(display, &quot;_NET_WM_STATE&quot;, false);</span><br><span class="line">    const Atom wmHiddenState = XInternAtom(display, &quot;_NET_WM_STATE_HIDDEN&quot;, false);</span><br><span class="line"></span><br><span class="line">    XEvent xev;</span><br><span class="line">    memset(&amp;xev, 0, sizeof(xev));</span><br><span class="line">    xev.xclient.type = ClientMessage;</span><br><span class="line">    xev.xclient.display = display;</span><br><span class="line">    xev.xclient.window = wid;</span><br><span class="line">    xev.xclient.message_type = wmState;</span><br><span class="line">    xev.xclient.format = 32;</span><br><span class="line">    if (minimized) &#123;</span><br><span class="line">        xev.xclient.data.l[0] = 1;//add/set property</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        xev.xclient.data.l[0] = 0;//remove/unset property</span><br><span class="line">    &#125;</span><br><span class="line">    xev.xclient.data.l[1] = wmHiddenState;</span><br><span class="line">    xev.xclient.data.l[2] = 0;</span><br><span class="line">    xev.xclient.data.l[3] = 1;</span><br><span class="line"></span><br><span class="line">    XSendEvent(display,</span><br><span class="line">               QX11Info::appRootWindow(screen),</span><br><span class="line">               false,</span><br><span class="line">               SubstructureRedirectMask | SubstructureNotifyMask,</span><br><span class="line">               &amp;xev</span><br><span class="line">              );</span><br><span class="line">    XIconifyWindow(display, wid, screen);</span><br><span class="line">    XFlush(display);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>vo</p>
-<p>通过命令“mpv –vo help”可查看MPV支持的视频驱动列表，Qt图形程序可以将列表展示出来供用户选择，并将选择的vo加入MPV的参数列表中，加入方式为：mpv –vo xxx，如：mpv –vo=xv。</p>
-</li>
-<li><p>ao</p>
-<p>通过命令“mpv –ao help”可查看mpv支持的音频驱动列表，Qt图形程序可以将列表展示出来供用户选择，并将选择的ao加入mpv的参数列表中，加入方式为：mpv –ao xxx，如：mpv –ao=pulse。</p>
-</li>
-<li><p>hwdec</p>
-<p>hwdec为硬件解码配置，其可用配置列表和GPU有关，这里暂分析其中5种配置：no（软解），auto（自动尝试使用第一种可用的硬解方式），vdpau（用于vdpau和opengl的显示输出，即此时需要保证vo参数为gpu或者vdpau），vaapi（用于vaapi和opengl的视频输出，即此时需要保证vo参数为gpu或者vdapi，仅支持Intel GPU）和vaapi-copy（将视频拷贝回系统内存中，仅支持Intel GPU）。参数使用格式为：–hwdec=vaapi-copy。<br>hwdec具体参数见文档：<a href="https://mpv.io/manual/stable/。" target="_blank" rel="noopener">https://mpv.io/manual/stable/。</a></p>
-</li>
-<li><p>vd-lavc-threads</p>
-<p>硬件解码线程数目，仅适用于MPEG-1/2和H.264，取值范围为0 - any，默认为0。使用格式如下：–vd-lavc-threads=4。</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>MPV支持的音/视频、字幕和播放列表格式的大部分列表</p>
-<p>MPV支持的视频格式：<br>avi 、vfw、divx、mpg、mpeg、m1v、m2v、mpv、dv、3gp、mov、mp4、m4v、mqv、dat、vcd、ogg、ogm、ogv、ogx、asf、wmv、bin、iso、vob、mkv、nsv、ram、flv、rm、swf、ts、rmvb、dvr-ms、m2t、m2ts、mts、rec、wtv、f4v、hdmov、webm、vp8、bik、smk、m4b、wtv、part</p>
-<p>MPV支持的音频格式：<br>mp3、ogg、oga、wav、wma、aac、ac3、dts、ra、ape、flac、thd、mka、m4a、opus</p>
-<p>MPV支持的字幕格式：<br>srt、sub、ssa、ass、idx、txt、smi、rt、utf、aqt、vtt</p>
-<p>MPV支持的列表格式：<br>m3u、m3u8、pls、xspf</p>
-</li>
-<li><p>Qt对MPV的控制</p>
-<p>前面提及过Qt的QProcess类，这里描述下该类是如果设置MPV的参数和启动MPV的，即如何使用给标准输入控制MPV。MPV自动从标准输入中读取信息并执行，该类指令信息都需要以“\n”结尾。管道的读端描述符stdinChannelpipe[0]复制给了标准输入，即标准输入的描述符也为stdinChannelpipe[0]，隐藏按照标准输入的描述符去读信息就是到stdinChannelpipe所对应的管道中读取信息。QProcess的start()函数将开启进程，第一个参数即为mpv二进制，第二个参数为给mpv的参数列表，执行start()函数后，将完成内核中管道以及通信环境的建立。QProcess的成员函数write()向stdinChannelpipe[1]端写入信息，比如想让mpv退出，则通过write函数写入“quit \n”即可（write()函数将向stdinChannelpipe[1]端写入命令）。参考代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">QString mpvCmd = &quot;/usr/bin/mpv&quot;;		</span><br><span class="line">QStringList args;</span><br><span class="line">args &lt;&lt; &quot;-- no-quiet&quot;;</span><br><span class="line">args &lt;&lt; &quot;--wid=100663330&quot;;</span><br><span class="line">args &lt;&lt; xxx.avi;</span><br><span class="line">process-&gt;start(mpvCmd, args);//启动播放</span><br><span class="line">waitForStarted();</span><br><span class="line">QString cmd = &quot;set pause yes&quot;;</span><br><span class="line">process-&gt;write(cmd.toLocal8Bit() + &quot;\n&quot;);//设置暂停</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Qt获取MPV的信息</p>
-<p>使用QProcess的融合模式，从标准输出和标准容错得到mpv 的信息。绑定QProcess的信号readyReadStandardOutput，当该信号出发时，再通过QProcess的readAllStandardOutput()函数获取信息（当然，这里也可以while循环来判断是否可以读取一行数据：while(process-&gt;canReadLine())，如果可以，则读取一行：QString line(process-&gt;readLine());），readAllStandardOutput获取的数据类型为QByteArray，对数据进行解析时通过“\n” 和“\r” 切分后一行一行解析，通过对每行的QByteArray数据进行详细解析可以得出MPV的状态信息，并将一些状态在Qt的图形程序上动态展示处理，比如MPV播放成功，则根据播放成功的信息将Qt图形的播放按钮设置为可暂停状态，此时点击该按钮给MPV发送的指令应该是暂停而非启动。另外，可以绑定QProcess的信号finished(int, QProcess::ExitStatus)，当该信号被触发时，通过判断QProcess的bytesAvailable()值，如果&gt;0，则通过QProcess的readAllStandardOutput()函数获取信息。</p>
-<p>获取MPV的信息进行解析的难点是对繁杂冗余的信息进行过滤，针对关键字定位信息表示的意思。这里可以使用Qt的对获取的QRegExp来进行匹配。</p>
-<p>下述正则表达式可用于分析出正在启动中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QRegExp rx_playing;</span><br><span class="line">rx_playing.setPattern(&quot;^Playing:.*|^\\[ytdl_hook\\].*&quot;);</span><br></pre></td></tr></table></figure>
-<p>下述正则表达式可可解析出暂停、缓存中等各种状态信息：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QRegExp rx_av;</span><br><span class="line">rx_av.setPattern(&quot;^STATUS: ([0-9\\.-]+) / ([0-9\\.-]+) P: (yes|no) B: (yes|no) I: (yes|no) VB: ([0-9\\.-]+) AB: ([0-9\\.-]+)&quot;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://github.com/ukui/kylin-video/" target="_blank" rel="noopener">麒麟影音</a></p>
-<p><a href="https://mpv.io/manual/master/#configuration-files" target="_blank" rel="noopener">mpv配置</a></p>
-<p><a href="https://mpv.io/manual/stable/" target="_blank" rel="noopener">mpv主页</a></p>
-<p><a href="https://github.com/mpv-player/mpv/blob/master/etc/mpv.conf" target="_blank" rel="noopener">mpv.conf</a></p>
-<p><a href="https://github.com/mpv-player/mpv/blob/master/etc/input.conf" target="_blank" rel="noopener">input.conf</a></p>
+</ol>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p>  <a href="https://tronche.com/gui/x/xlib/window-information/XInternAtom.html" target="_blank" rel="noopener">https://tronche.com/gui/x/xlib/window-information/XInternAtom.html</a></p>
+<p>  <a href="https://linux.die.net/man/3/xinternatom" target="_blank" rel="noopener">https://linux.die.net/man/3/xinternatom</a></p>
+<p>  <a href="https://tronche.com/gui/x/xlib/event-handling/XSendEvent.html" target="_blank" rel="noopener">https://tronche.com/gui/x/xlib/event-handling/XSendEvent.html</a></p>
+<p>  <a href="https://tronche.com/gui/x/xlib/events/structures.html" target="_blank" rel="noopener">https://tronche.com/gui/x/xlib/events/structures.html</a></p>
+<p>  <a href="https://tronche.com/gui/x/xlib/events/client-communication/client-message.html#XClientMessageEvent" target="_blank" rel="noopener">https://tronche.com/gui/x/xlib/events/client-communication/client-message.html#XClientMessageEvent</a></p>
+<p>  <a href="https://tronche.com/gui/x/xlib/window-information/properties-and-atoms.html" target="_blank" rel="noopener">https://tronche.com/gui/x/xlib/window-information/properties-and-atoms.html</a></p>
 
       
     </div>
@@ -569,7 +528,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/" title="使用mpv编写自己的播放器">https://eightplus.github.io/2019/08/19/2019-08-19-qt-mpv-player/</a>
+    <a href="https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/" title="X11进行窗口状态设置">https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -584,8 +543,8 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Qt/" rel="tag"><i class="fa fa-tag"></i>
- Qt</a>
+            <a href="/tags/Qt-X11/" rel="tag"><i class="fa fa-tag"></i>
+ Qt X11</a>
           
         </div>
       
@@ -598,8 +557,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/14/2019-08-14-install-anbox/" rel="next" title="安装Anbox">
-                <i class="fa fa-chevron-left"></i> 安装Anbox
+              <a href="/2020/01/12/2020-01-12-inputpass/" rel="next" title="鼠标点击穿透">
+                <i class="fa fa-chevron-left"></i> 鼠标点击穿透
               </a>
             
           </div>
@@ -607,10 +566,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/27/2019-08-27-dbus-glib/" rel="prev" title="Dbus-glib">
-                Dbus-glib <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -791,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发前准备工作"><span class="nav-text">开发前准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#要点分析"><span class="nav-text">要点分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发库的安装"><span class="nav-text">开发库的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码的编译和运行"><span class="nav-text">示例源码的编译和运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码分析要点"><span class="nav-text">示例代码分析要点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>
