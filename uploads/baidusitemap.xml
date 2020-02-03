@@ -3,6 +3,27 @@
 
 
     
+    
+  <url>
+    <loc>https://eightplus.github.io/2020/02/03/2020-02-03-Qt-notes/</loc>
+    <lastmod>2020-02-03T03:44:51.551Z</lastmod>
+    <data>
+        <display>
+        <title>Qt 笔记</title>
+        <pubTime>2020-02-03T03:06:18.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>https://eightplus.github.io/2020/01/13/2020-01-13-windowstate/</loc>
     <lastmod>2020-01-13T14:10:31.833Z</lastmod>
@@ -282,7 +303,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>https://eightplus.github.io/2019/10/22/2019-10-22-boost-python-cpp/</loc>

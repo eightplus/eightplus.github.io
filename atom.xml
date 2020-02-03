@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2020-01-13T14:10:31.833Z</updated>
+  <updated>2020-02-03T03:44:51.551Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Qt 笔记</title>
+    <link href="https://eightplus.github.io/2020/02/03/2020-02-03-Qt-notes/"/>
+    <id>https://eightplus.github.io/2020/02/03/2020-02-03-Qt-notes/</id>
+    <published>2020-02-03T03:06:18.000Z</published>
+    <updated>2020-02-03T03:44:51.551Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;好记性不如烂笔头，记录一些Qt学习过程中的笔记。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;1-遍历所有session-dbus的服务名和接口名的参考方法&quot;&gt;&lt;a href=&quot;#1-遍历所有session-dbus的服务名和接口
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>X11进行窗口状态设置</title>
@@ -464,31 +491,6 @@
       
         &lt;blockquote&gt;
 &lt;p&gt;在Binder库中，Service组件和Client组件分别使用模板类BnInterface和BpInterface来描述，前者称为Binder本地对象，后者称为Binder代理对象。Binder库中的Binder本地对象和Binder代理对象分别
-      
-    
-    </summary>
-    
-      <category term="安卓开发" scheme="https://eightplus.github.io/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android" scheme="https://eightplus.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Android源码中使用java编写自己的应用程序</title>
-    <link href="https://eightplus.github.io/2018/08/09/2018-08-09-android-java-app/"/>
-    <id>https://eightplus.github.io/2018/08/09/2018-08-09-android-java-app/</id>
-    <published>2018-08-09T13:49:29.000Z</published>
-    <updated>2019-11-14T01:56:22.775Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;HelloWorld&quot;&gt;&lt;a href=&quot;#HelloWorld&quot; class=&quot;headerlink&quot; title=&quot;HelloWorld&quot;&gt;&lt;/a&gt;HelloWorld&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;程序目录结构如下：&lt;/p&gt;
-&lt;figure class=&quot;
       
     
     </summary>
