@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2019/12/26/2019-12-26-notification/</loc>
+    <lastmod>2020-04-13T15:45:14.522Z</lastmod>
+    <data>
+        <display>
+        <title>Desktop Notification 消息框</title>
+        <pubTime>2019-12-26T13:42:11.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</loc>
+    <lastmod>2020-04-13T15:45:06.410Z</lastmod>
+    <data>
+        <display>
+        <title>Qt配置文件之QGSettings</title>
+        <pubTime>2019-11-07T08:05:18.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</loc>
+    <lastmod>2020-04-13T15:42:19.018Z</lastmod>
+    <data>
+        <display>
+        <title>GtkApplication 编程示例</title>
+        <pubTime>2020-04-13T15:26:52.000Z</pubTime>
+        
+        <tag>GTK</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2020/02/03/2020-02-03-Qt-notes/</loc>
     <lastmod>2020-02-08T04:53:01.524Z</lastmod>
     <data>
@@ -53,26 +113,6 @@
         <pubTime>2020-01-12T04:39:05.000Z</pubTime>
         
         <tag>Qt X11</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://eightplus.github.io/2019/12/26/2019-12-26-notification/</loc>
-    <lastmod>2019-12-30T02:03:07.828Z</lastmod>
-    <data>
-        <display>
-        <title>Desktop Notification 消息框</title>
-        <pubTime>2019-12-26T13:42:11.000Z</pubTime>
-        
-        <tag>Qt</tag>
          
          
            
@@ -251,26 +291,6 @@
         <display>
         <title>Qt多线程之子类化QThread</title>
         <pubTime>2019-11-10T07:28:40.000Z</pubTime>
-        
-        <tag>Qt</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</loc>
-    <lastmod>2019-11-10T07:55:51.447Z</lastmod>
-    <data>
-        <display>
-        <title>Qt配置文件之QGSettings</title>
-        <pubTime>2019-11-07T08:05:18.000Z</pubTime>
         
         <tag>Qt</tag>
          

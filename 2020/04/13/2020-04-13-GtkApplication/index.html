@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="Glib GObject,">
+  <meta name="keywords" content="GTK,">
 
 
 
@@ -98,18 +98,18 @@
 
 
 
-<meta name="description" content="Gobject，也称Glib对象系统，是一个程序库，它可以帮助我们使用C语言编写面向对象程序，其提供了一个通用的动态类型系统（GType）、一个基本类型的实现集（如整型、枚举等）、一个基本对象类型Gobject、一个信号系统以及一个可扩展的参数/变量体系。在 GObject世界里，类是两个结构体的组合，一个是实例结构体，另一个是类结构体。GOBJECT的继承需要实现实例结构体的继承和类结构体的继">
-<meta name="keywords" content="Glib GObject">
+<meta name="description" content="GtkApplication可以让我们的核心程序代码与main()函数分开，这样可以让main()简单化，里面只需要创建GtkApplication对象并运行它，而其他图形相关的操作则在GtkApplication发出的信号中完成。GtkApplication对象默认是一个单例，程序启动后的第一个实例为主实例，远程实例是除主实例外的其他运行实例。当用户偿试打开第二个GtkApplication对">
+<meta name="keywords" content="GTK">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GObject 编程入门">
-<meta property="og:url" content="https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/index.html">
+<meta property="og:title" content="GtkApplication 编程示例">
+<meta property="og:url" content="https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/index.html">
 <meta property="og:site_name" content="Eight Plus">
-<meta property="og:description" content="Gobject，也称Glib对象系统，是一个程序库，它可以帮助我们使用C语言编写面向对象程序，其提供了一个通用的动态类型系统（GType）、一个基本类型的实现集（如整型、枚举等）、一个基本对象类型Gobject、一个信号系统以及一个可扩展的参数/变量体系。在 GObject世界里，类是两个结构体的组合，一个是实例结构体，另一个是类结构体。GOBJECT的继承需要实现实例结构体的继承和类结构体的继">
+<meta property="og:description" content="GtkApplication可以让我们的核心程序代码与main()函数分开，这样可以让main()简单化，里面只需要创建GtkApplication对象并运行它，而其他图形相关的操作则在GtkApplication发出的信号中完成。GtkApplication对象默认是一个单例，程序启动后的第一个实例为主实例，远程实例是除主实例外的其他运行实例。当用户偿试打开第二个GtkApplication对">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-30T14:15:05.077Z">
+<meta property="og:updated_time" content="2020-04-13T15:42:19.018Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GObject 编程入门">
-<meta name="twitter:description" content="Gobject，也称Glib对象系统，是一个程序库，它可以帮助我们使用C语言编写面向对象程序，其提供了一个通用的动态类型系统（GType）、一个基本类型的实现集（如整型、枚举等）、一个基本对象类型Gobject、一个信号系统以及一个可扩展的参数/变量体系。在 GObject世界里，类是两个结构体的组合，一个是实例结构体，另一个是类结构体。GOBJECT的继承需要实现实例结构体的继承和类结构体的继">
+<meta name="twitter:title" content="GtkApplication 编程示例">
+<meta name="twitter:description" content="GtkApplication可以让我们的核心程序代码与main()函数分开，这样可以让main()简单化，里面只需要创建GtkApplication对象并运行它，而其他图形相关的操作则在GtkApplication发出的信号中完成。GtkApplication对象默认是一个单例，程序启动后的第一个实例为主实例，远程实例是除主实例外的其他运行实例。当用户偿试打开第二个GtkApplication对">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/">
+  <link rel="canonical" href="https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/">
 
 
 
 
 
-  <title>GObject 编程入门 | Eight Plus</title>
+  <title>GtkApplication 编程示例 | Eight Plus</title>
   
 
 
@@ -322,7 +322,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/">
+    <link itemprop="mainEntityOfPage" href="https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="李翔">
@@ -339,7 +339,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GObject 编程入门</h1>
+          <h1 class="post-title" itemprop="name headline">GtkApplication 编程示例</h1>
         
 
         <div class="post-meta">
@@ -351,8 +351,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-30T20:50:27+08:00">
-                2019-08-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-13T23:26:52+08:00">
+                2020-04-13
               </time>
             
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,820字
+                  1,196字
                 </span>
               
 
@@ -436,55 +436,46 @@
 
       
         <blockquote>
-<p>Gobject，也称Glib对象系统，是一个程序库，它可以帮助我们使用C语言编写面向对象程序，其提供了一个通用的动态类型系统（GType）、一个基本类型的实现集（如整型、枚举等）、一个基本对象类型Gobject、一个信号系统以及一个可扩展的参数/变量体系。在 GObject世界里，类是两个结构体的组合，一个是实例结构体，另一个是类结构体。GOBJECT的继承需要实现实例结构体的继承和类结构体的继承，Gobject对象的初始化可分为两个部分：类结构体初始化和实例结构体初始化。类结构体初始化函数只被调用一次，而实例结构体的初始化函数的调用次数等于对象实例化的次数。这意味着，所有对象共享的数据，可保存在类结构体中，而所有对象私有的数据，则保存在实例结构体中。</p>
+<p>GtkApplication可以让我们的核心程序代码与main()函数分开，这样可以让main()简单化，里面只需要创建GtkApplication对象并运行它，而其他图形相关的操作则在GtkApplication发出的信号中完成。GtkApplication对象默认是一个单例，程序启动后的第一个实例为主实例，远程实例是除主实例外的其他运行实例。当用户偿试打开第二个GtkApplication对象单例时，GtkApplication将发信号到主实例，主实例将再次收到activate或open信号，这种情况下，第二个实例将马上退出，不调用startup或shutdown，这种机制是提供一种实现GTK程序单实例的好办法。本地实例即当前实例，如果本地实例是主实例，那么函数调用GtkApplication实例产生的信号，会在本地中触发；如果本地实例是一个远程实例，那么函数调用产生的信号将被发送到主实例中，并在主实例那里被触发。例如，在主实例中，调用g_application_activate()，将在主实例中触发“activate”信号；如果在远程实例中调用它，则产生一个消息并发送到主实例，然后将在主实例中触发“activate”信号。</p>
 </blockquote>
 <hr>
 <h2 id="示例源码"><a href="#示例源码" class="headerlink" title="示例源码"></a>示例源码</h2><ul>
-<li><a href="https://github.com/eightplus/examples/tree/master/code/C/gobjectdemo" target="_blank" rel="noopener">gobjectdemo</a></li>
+<li><a href="https://github.com/eightplus/examples/tree/master/code/gtk/application-demo" target="_blank" rel="noopener">gtkapplication-demo</a></li>
 </ul>
-<h2 id="GObject编程要点简析"><a href="#GObject编程要点简析" class="headerlink" title="GObject编程要点简析"></a>GObject编程要点简析</h2><ul>
-<li><p>宏</p>
-<p>如果你浏览过使用 gobject 编写的软件源代码，你对下面出现的宏一定不会陌生。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#define MY_TYPE_DEMO (my_demo_get_type())</span><br><span class="line">#define MY_DEMO(object) G_TYPE_CHECK_INSTANCE_CAST((object), MY_TYPE_DEMO, MyDemo)</span><br><span class="line">#define MY_DEMO_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST((klass), MY_TYPE_DEMO, MyDemoClass))</span><br><span class="line">#define MY_IS_DEMO(object) G_TYPE_CHECK_INSTANCE_TYPE((object), MY_TYPE_DEMO))</span><br><span class="line">#define MY_IS_DEMO_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE((klass), MY_TYPE_DEMO))</span><br><span class="line">#define MY_DEMO_GET_CLASS(object) (G_TYPE_INSTANCE_GET_CLASS((object), MY_TYPE_DEMO, MyDemoClass))</span><br><span class="line"></span><br><span class="line">GType my_demo_get_type(void) G_GNUC_CONST;</span><br><span class="line">G_DEFINE_TYPE (MyDemo, my_demo, G_TYPE_OBJECT);</span><br></pre></td></tr></table></figure>
-<p>这里对上面的宏不作过多阐述，简要介绍下 MY_DEMO 和 G_DEFINE_TYPE。</p>
-<p>MY_DEMO(object)宏的作用是将一个基类指针类型转换为 MyDemo 类的指针类型，它需要 GObject 子类的设计者提供。</p>
-<p>my_demo_get_type将会使用宏G_DEFINE_TYPE去实现，其中的my通常表示命名空间，demo表示对象名字，get_type为固定字段(这里提到的my和demo字段都是我的示例代码使用的，你可以自定义)。G_DEFINE_TYPE 可以让 GObject 库的数据类型系统能够识别我们所定义的 MyDemo 类类型，它接受三个参数，第一个参数是类名，即 MyDemo，第二个参数则是类的成员函数名称的前缀，例如 my_demo_get_type 函数即为 MyDemo 类的一个成员函数，”my_demo”是它的前缀，第三个参数则指明 MyDemo 类类型的父类型为G_TYPE_OBJECT。G_DEFINE_TYPE中会调用一个 g_type_register_static_simple 的函数，这个函数的作用就是将用户自己定义的类型注册到系统中，G_DEFINE_TYPE还定义了2个函数（my_demo_init 和 my_demo_class_init），需要自己实现这两个函数，这两个函数是对象的初始化函数，相当于c++的构造函数，其中第一个函数在每个对象创建的时候都会被调用，第二个函数只有在第一次创建对象的时候被调用(比如在调用g_type_class_ref的时候，如果class没有初始化，就会调用my_demo_class_init)。当然这里也可以直接使用，而是使用的实现代码，见示例代码中被注释的那一大段代码。在gobject的手册中也有相关代码的示例，如下所示（<a href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#G-DEFINE-TYPE:CAPS" target="_blank" rel="noopener">G-DEFINE-TYPE</a>）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">static void     gtk_gadget_init       (GtkGadget      *self);</span><br><span class="line">static void     gtk_gadget_class_init (GtkGadgetClass *klass);</span><br><span class="line">static gpointer gtk_gadget_parent_class = NULL;</span><br><span class="line">static void     gtk_gadget_class_intern_init (gpointer klass)</span><br><span class="line">&#123;</span><br><span class="line">  gtk_gadget_parent_class = g_type_class_peek_parent (klass);</span><br><span class="line">  gtk_gadget_class_init ((GtkGadgetClass*) klass);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">GType</span><br><span class="line">gtk_gadget_get_type (void)</span><br><span class="line">&#123;</span><br><span class="line">  static volatile gsize g_define_type_id__volatile = 0;</span><br><span class="line">  if (g_once_init_enter (&amp;g_define_type_id__volatile))</span><br><span class="line">    &#123;</span><br><span class="line">      GType g_define_type_id =</span><br><span class="line">        g_type_register_static_simple (GTK_TYPE_WIDGET,</span><br><span class="line">                                       g_intern_static_string (&quot;GtkGadget&quot;),</span><br><span class="line">                                       sizeof (GtkGadgetClass),</span><br><span class="line">                                       (GClassInitFunc) gtk_gadget_class_intern_init,</span><br><span class="line">                                       sizeof (GtkGadget),</span><br><span class="line">                                       (GInstanceInitFunc) gtk_gadget_init,</span><br><span class="line">                                       0);</span><br><span class="line">      &#123;</span><br><span class="line">        const GInterfaceInfo g_implement_interface_info = &#123;</span><br><span class="line">          (GInterfaceInitFunc) gtk_gadget_gizmo_init</span><br><span class="line">        &#125;;</span><br><span class="line">        g_type_add_interface_static (g_define_type_id, TYPE_GIZMO, &amp;g_implement_interface_info);</span><br><span class="line">      &#125;</span><br><span class="line">      g_once_init_leave (&amp;g_define_type_id__volatile, g_define_type_id);</span><br><span class="line">    &#125;</span><br><span class="line">  return g_define_type_id__volatile;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>对象实例化</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gpointer</span><br><span class="line">g_object_new (GType object_type,</span><br><span class="line">              const gchar *first_property_name,</span><br><span class="line">              ...);</span><br></pre></td></tr></table></figure>
-<p>g_object_new进行对象的实例化，这个函数是个可变参数的函数, 第一个参数为一个宏，是需要创建的对象的类型，当使用 g_object_new 来创建对象的时候, 这个参数是必须的，而且这个函数所创建的对象必须是GObject的子对象，在我们定义自己的对象时, 必须要在glib系统中注册自己的类型。后面的参数都是 “属性名-属性值” 的配对，即从第二个参数开始, 表示的是 object 的属性, 它们都是成对出现的，如果没有属性需要在创建对象的时候设置, 则第二个参数设置成 NULL（<code>g_object_new(MY_TYPE_DEMO, NULL)</code>），如果有属性要设置, 那么最后一个参数也要设置成 NULL（<code>g_object_new(MY_TYPE_DEMO, &quot;name&quot;, &quot;kobe&quot;, &quot;age&quot;, 24, NULL)</code>）。</p>
-</li>
-<li><p>属性<br>如果想 让g_object_new 函数中通过 “属性名-属性值” 结构为 Gobject 子类对象的属性进行初始化，需要完成以下工作：</p>
-<ul>
-<li>实现xx_xx_set_property与xx_xx_get_property函数，如示例代码中的my_demo_set_property和my_demo_get_property，完成 g_object_new 函数 “属性名-属性值” 结构向Gobject子类属性的映射；</li>
-<li>在Gobject子类的类结构体初始化函数中，让Gobject基类的两个函数指针set_property与get_property分别指向xx_xx_set_property与xx_xx_get_property,如示例代码中的object_class-&gt;set_property = my_demo_set_property和object_class-&gt;get_property = my_demo_get_property;</li>
-<li><p>在Gobject子类的类结构体初始化函数中，为Gobject子类安装具体对象的私有属性，g_object_class_install_property 函数用于将 GParamSpec 类型变量所包含的数据插入到 GObject 子类中，该函数的第一个参数为 GObject 子类的类结构体，第二个参数是 GParamSpec 对应的属性 ID，GObject 子类的属性 ID 是 GObject 子类设计者定义的宏或枚举类型，不能为0，所以在使用枚举类型来定义 ID 时，为了避免 0 的使用，一般设计如下所示的一个枚举类型，其中PROP_0为0,不使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">enum</span><br><span class="line">&#123;</span><br><span class="line">    PROP_0,</span><br><span class="line">    PROP_NAME,</span><br><span class="line">    PROP_AGE,</span><br><span class="line">    N_PROPERTIES</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>g_object_class_install_property的第三个参数是要安装值向 GObject 子类中的 GParamSpec 类型的变量指针，示例代码中的如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">g_object_class_install_property(object_class,</span><br><span class="line">                            PROP_NAME,</span><br><span class="line">                            g_param_spec_string(&quot;name&quot;,</span><br><span class="line">                                              &quot;name&quot;,</span><br><span class="line">                                              &quot;Specify the name of demo&quot;,</span><br><span class="line">                                              &quot;Unknown&quot;,</span><br><span class="line">                                              G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY));</span><br><span class="line"></span><br><span class="line">g_object_class_install_property(object_class,</span><br><span class="line">                                PROP_AGE,</span><br><span class="line">                                g_param_spec_int64 (&quot;age&quot;,</span><br><span class="line">                                                 &quot;age&quot;,</span><br><span class="line">                                                 &quot;Specify age number&quot;,</span><br><span class="line">                                                 G_MININT64, G_MAXINT64, 0,</span><br><span class="line">                                                 G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY));</span><br></pre></td></tr></table></figure>
-<p>其中获取和设置属性的具体实现代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">static void my_demo_set_property(GObject *object, guint prop_id, const GValue *value, GParamSpec *pspec)</span><br><span class="line">&#123;</span><br><span class="line">    MyDemo *self;</span><br><span class="line"></span><br><span class="line">    g_return_if_fail(object != NULL);</span><br><span class="line"></span><br><span class="line">    self = MY_DEMO (object);</span><br><span class="line">    //self-&gt;priv = MY_DEMO_GET_PRIVATE(self);</span><br><span class="line"></span><br><span class="line">    switch (prop_id)</span><br><span class="line">    &#123;</span><br><span class="line">    case PROP_NAME:</span><br><span class="line">        self-&gt;priv-&gt;name = g_value_dup_string(value);</span><br><span class="line">        break;</span><br><span class="line">    case PROP_AGE:</span><br><span class="line">        self-&gt;priv-&gt;age = g_value_get_int64(value);</span><br><span class="line">        break;</span><br><span class="line">    default:</span><br><span class="line">        G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void my_demo_get_property(GObject *object, guint prop_id, GValue *value, GParamSpec *pspec)</span><br><span class="line">&#123;</span><br><span class="line">    MyDemo *self;</span><br><span class="line"></span><br><span class="line">    g_return_if_fail(object != NULL);</span><br><span class="line"></span><br><span class="line">    self = MY_DEMO(object);</span><br><span class="line"></span><br><span class="line">    switch (prop_id)</span><br><span class="line">    &#123;</span><br><span class="line">    case PROP_NAME:</span><br><span class="line">        g_value_set_string(value, self-&gt;priv-&gt;name);</span><br><span class="line">        break;</span><br><span class="line">    case PROP_AGE:</span><br><span class="line">        g_value_set_int64(value, self-&gt;priv-&gt;age);</span><br><span class="line">        break;</span><br><span class="line">    default:</span><br><span class="line">        G_OBJECT_WARN_INVALID_PROPERTY_ID(object, prop_id, pspec);</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当然，我们也可以通过g_object_get_property 和 g_object_set_property 获取和设置属性，如下所示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">GValue val = &#123;0&#125;;       </span><br><span class="line">g_value_init(val, G_TYPE_POINTER);</span><br><span class="line">g_object_get_property(G_OBJECT(demo), &quot;name&quot;, val);</span><br><span class="line">g_object_set_property(G_OBJECT(demo), &quot;name&quot;, val);</span><br><span class="line">g_value_unset(val);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>信号</p>
-<p>使用 GObject 信号机制，一般有三个步骤：</p>
-<ul>
-<li><p>信号注册 <a href="https://developer.gnome.org/gobject/stable/gobject-Signals.html#g-signal-new" target="_blank" rel="noopener">g_signal_new</a>，主要解决信号与数据类型的关联问题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int signal_id = g_signal_new(&quot;broadcast_msg&quot;,</span><br><span class="line">        my_demo_get_type(),/*G_OBJECT_CLASS_TYPE(kclass)*/</span><br><span class="line">        G_SIGNAL_RUN_LAST,</span><br><span class="line">        0,</span><br><span class="line">        NULL,</span><br><span class="line">        NULL,</span><br><span class="line">        g_cclosure_marshal_VOID__STRING,</span><br><span class="line">        G_TYPE_NONE,/*返回值，因为信号没有返回，所以为NONE*/</span><br><span class="line">        1,/*参数数目*/</span><br><span class="line">        G_TYPE_STRING/*参数类型*/</span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>信号连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void handler_receive_msg(GObject *sender, char *name, gpointer data)</span><br><span class="line">&#123;</span><br><span class="line">    MyDemo *demo = G_TYPE_CHECK_INSTANCE_CAST(sender, my_demo_get_type(), MyDemo);</span><br><span class="line">    printf(&quot;handler: [%s] from [%s: %ld]\n&quot;, name, demo-&gt;priv-&gt;name, demo-&gt;priv-&gt;age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">g_signal_connect(demos[i], &quot;broadcast_msg&quot;, G_CALLBACK(handler_receive_msg), NULL);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>信号发射</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g_signal_emit_by_name(demos[i], &quot;broadcast_msg&quot;, &quot;lixiang&quot;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
+<h2 id="知识点简析"><a href="#知识点简析" class="headerlink" title="知识点简析"></a>知识点简析</h2><h3 id="知识点1"><a href="#知识点1" class="headerlink" title="知识点1"></a>知识点1</h3><p>之前看到很多GTK程序都是使用如下流程实现的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc, char *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    GtkWidget *window;</span><br><span class="line">    gtk_init(&amp;argc, &amp;argv);</span><br><span class="line"></span><br><span class="line">    ......</span><br><span class="line"></span><br><span class="line">    gtk_main();</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里介绍的GtkApplication后，我们将使用如下流程：main函数里新建一个GtkApplication类app，并绑定startup和activate这两个回调函数，应用程序在app_startup_handler函数中编写，而app_activate_handler则处理窗口置顶，确保窗口在屏幕上并且对用户是可见的，main()函数里的是启动代码。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc, char **argv)</span><br><span class="line">&#123;</span><br><span class="line">    GtkApplication *app;</span><br><span class="line">    struct data_handle *handle;</span><br><span class="line">    gint status;</span><br><span class="line">    app = gtk_application_new(&quot;com.eightplus.application&quot;, G_APPLICATION_FLAGS_NONE);</span><br><span class="line">    handle = g_malloc(sizeof(struct data_handle));</span><br><span class="line"></span><br><span class="line">    g_signal_connect(app, &quot;startup&quot;, G_CALLBACK(app_startup_handler), handle);</span><br><span class="line">    g_signal_connect(app, &quot;activate&quot;, G_CALLBACK(app_activate_handler), handle);</span><br><span class="line"></span><br><span class="line">    status = g_application_run(G_APPLICATION(app), argc, argv);</span><br><span class="line">    g_object_unref(app);</span><br><span class="line">    g_free(handle);</span><br><span class="line"></span><br><span class="line">    return status;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>  GtkApplication运行时可能发出的信号如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>信号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startup</td>
+<td>当程序第一次启动时，startup信号就会被触发，可以对应用程序进行一些设置</td>
+</tr>
+<tr>
+<td>shutdown</td>
+<td>执行关闭任务，如保存文件到磁盘等</td>
+</tr>
+<tr>
+<td>activate</td>
+<td>程序启动时，显示应用程序默认的第一个窗口，特别是在桌面环境下首次打开应用程序的情况</td>
+</tr>
+<tr>
+<td>open</td>
+<td>打开文件，并在新窗口显示。使用应用程序从文件浏览器尝试打开文档的情况</td>
+</tr>
+</tbody>
+</table>
+<h3 id="知识点2"><a href="#知识点2" class="headerlink" title="知识点2"></a>知识点2</h3><p>采用GtkBuilder设计Gtk+界面，使用glade可以直接拖拽Gtk+图像控件(sudo apt intsall glade)，简单易用，省去了代码编写的麻烦，能有效地加快项目进度和提高程序的可维护性。不适用glade的情况下，我们一般创建窗口的方法如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">static void app_startup_handler(GApplication *app, gpointer data)</span><br><span class="line">&#123;</span><br><span class="line">    GtkWidget *window;</span><br><span class="line">    window = gtk_application_window_new(GTK_APPLICATION(app));</span><br><span class="line">    gtk_widget_show(window);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>而在使用glade后，我们的代码将变得更加简单，特别是窗口上需要加入很多图形控件的时候，你将会对glade表示出浓烈的喜欢。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">static void app_startup_handler(GApplication *app, gpointer data)</span><br><span class="line">&#123;</span><br><span class="line">    struct data_handle *handle = data;</span><br><span class="line">    handle-&gt;app = GTK_APPLICATION(app);</span><br><span class="line"></span><br><span class="line">    GtkWidget *main_window;</span><br><span class="line">    guint retval;</span><br><span class="line"></span><br><span class="line">    builder = gtk_builder_new();</span><br><span class="line">    retval = gtk_builder_add_from_file(builder, &quot;mainwindow.ui&quot;, &amp;error);</span><br><span class="line">    if (retval == 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    main_window = GTK_WIDGET(gtk_builder_get_object(builder, &quot;mainwindow&quot;));</span><br><span class="line">    gtk_application_add_window(app , GTK_WINDOW(main_window));</span><br><span class="line">    handle-&gt;gui = main_window;</span><br><span class="line"></span><br><span class="line">    gtk_window_set_title(GTK_WINDOW(main_window), &quot;Application Demo&quot;);//设置窗口标题</span><br><span class="line">    gtk_window_set_default_size(GTK_WINDOW(main_window), 500, 400);//设置窗口默认大小</span><br><span class="line">    gtk_window_set_position(GTK_WINDOW(main_window), GTK_WIN_POS_CENTER_ALWAYS);//控制窗口在屏幕上的初始位置(居中)</span><br><span class="line">    gtk_window_set_modal(GTK_WINDOW(main_window), TRUE);</span><br><span class="line">    gtk_widget_realize(main_window);</span><br><span class="line"></span><br><span class="line">    ......</span><br><span class="line"></span><br><span class="line">    gtk_widget_show_all(GTK_WIDGET(handle-&gt;gui));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="知识点3"><a href="#知识点3" class="headerlink" title="知识点3"></a>知识点3</h3><p>加上下面这行代码则可实现无边框窗口:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gtk_window_set_decorated(GTK_WINDOW(main_window), FALSE);</span><br></pre></td></tr></table></figure></p>
+<p>在无边框窗口下，界面没有了默认的标题栏，将会导致界面无法拖动，此时我们可以自己编写界面拖动功能函数，以下代码可供参考使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">static gboolean handle_drag(GtkWidget *widget, GdkEventButton *event, GdkWindowEdge edge)</span><br><span class="line">&#123;</span><br><span class="line">  if (event-&gt;button == 1) &#123;//左键单击</span><br><span class="line">      gtk_window_begin_move_drag(GTK_WINDOW(gtk_widget_get_toplevel(widget)), event-&gt;button, event-&gt;x_root, event-&gt;y_root, event-&gt;time);</span><br><span class="line">  &#125;</span><br><span class="line">  return FALSE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line">gtk_widget_add_events(main_window, GDK_BUTTON_PRESS_MASK);</span><br><span class="line">g_signal_connect(G_OBJECT(main_window), &quot;button-press-event&quot;, G_CALLBACK(handle_drag), NULL);</span><br></pre></td></tr></table></figure></p>
+<h3 id="知识点4"><a href="#知识点4" class="headerlink" title="知识点4"></a>知识点4</h3><p>css图形样式处理，参考代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">void set_gtk_css_style()</span><br><span class="line">&#123;</span><br><span class="line">    GtkCssProvider *provider = NULL;</span><br><span class="line">    GFile *file = NULL;</span><br><span class="line">    GError *css_error = NULL;</span><br><span class="line"></span><br><span class="line">    char cssPath[] = &quot;style.css&quot;;</span><br><span class="line">    file = g_file_new_for_path(cssPath);</span><br><span class="line">    if (file != NULL) &#123;</span><br><span class="line">        if (provider == NULL) &#123;</span><br><span class="line">            provider = gtk_css_provider_new();</span><br><span class="line">        &#125;</span><br><span class="line">        gtk_css_provider_load_from_file(provider, file, NULL);</span><br><span class="line">        gtk_style_context_add_provider_for_screen(screen, GTK_STYLE_PROVIDER(provider), GTK_STYLE_PROVIDER_PRIORITY_USER);</span><br><span class="line">        gtk_style_context_reset_widgets(screen);</span><br><span class="line">        gsize bytes_written, bytes_read;</span><br><span class="line">        gtk_css_provider_load_from_path(provider, g_filename_to_utf8(cssPath, strlen(cssPath), &amp;bytes_read, &amp;bytes_written, &amp;css_error), NULL);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (NULL != css_error) &#123;</span><br><span class="line">        g_clear_error(&amp;css_error);</span><br><span class="line">    &#125;</span><br><span class="line">    if (NULL != file) &#123;</span><br><span class="line">        g_object_unref(file);</span><br><span class="line">        file = NULL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -542,7 +533,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/" title="GObject 编程入门">https://eightplus.github.io/2019/08/30/2019-08-30-gobject-demo/</a>
+    <a href="https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/" title="GtkApplication 编程示例">https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -557,8 +548,8 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Glib-GObject/" rel="tag"><i class="fa fa-tag"></i>
- Glib GObject</a>
+            <a href="/tags/GTK/" rel="tag"><i class="fa fa-tag"></i>
+ GTK</a>
           
         </div>
       
@@ -571,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/27/2019-08-27-dbus-glib/" rel="next" title="Dbus-glib">
-                <i class="fa fa-chevron-left"></i> Dbus-glib
+              <a href="/2020/02/03/2020-02-03-Qt-notes/" rel="next" title="Qt 笔记">
+                <i class="fa fa-chevron-left"></i> Qt 笔记
               </a>
             
           </div>
@@ -580,10 +571,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/09/01/2019-09-01-gtk-plugins/" rel="prev" title="Gtk plugin 编程开发">
-                Gtk plugin 编程开发 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -764,7 +751,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GObject编程要点简析"><span class="nav-text">GObject编程要点简析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#示例源码"><span class="nav-text">示例源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识点简析"><span class="nav-text">知识点简析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点1"><span class="nav-text">知识点1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点2"><span class="nav-text">知识点2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点3"><span class="nav-text">知识点3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点4"><span class="nav-text">知识点4</span></a></li></ol></li></ol></div>
             
 
           </div>
