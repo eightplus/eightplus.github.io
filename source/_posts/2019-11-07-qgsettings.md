@@ -13,7 +13,7 @@ tags:
 
 ## 示例源码
   示例代码简要展示了如何使用QGSettings进行配置文件的读和写，以及监控配置文件中key的变化，并将其他途径导致的key的变化的value更新到代码中。
-- [qgsetting-demo](https://github.com/eightplus/examples/tree/master/code/Qt/setttings/qgsetting-demo)
+- [qgsetting-demo](https://github.com/eightplus/examples/tree/master/code/Qt/setttings/qgsettings-demo)
 
 ## 开发库的安装
 `$ sudo apt install qtbase5-dev qt5-qmake qtchooser qtscript5-dev qttools5-dev-tools qtbase5-dev-tools libgsettings-qt-dev`
