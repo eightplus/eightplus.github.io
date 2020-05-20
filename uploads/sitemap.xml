@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://eightplus.github.io/2020/05/05/2020-05-05-stdin/</loc>
+    
+    <lastmod>2020-05-20T07:02:25.756Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</loc>
+    
+    <lastmod>2020-05-06T07:27:50.975Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://eightplus.github.io/2019/12/26/2019-12-26-notification/</loc>
     
     <lastmod>2020-04-13T15:45:14.522Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://eightplus.github.io/2019/11/07/2019-11-07-qgsettings/</loc>
     
     <lastmod>2020-04-13T15:45:06.410Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</loc>
-    
-    <lastmod>2020-04-13T15:42:19.018Z</lastmod>
     
   </url>
   

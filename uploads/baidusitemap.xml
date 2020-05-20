@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://eightplus.github.io/2020/05/05/2020-05-05-stdin/</loc>
+    <lastmod>2020-05-20T07:02:25.756Z</lastmod>
+    <data>
+        <display>
+        <title>stdin 输入</title>
+        <pubTime>2020-05-05T13:38:59.000Z</pubTime>
+        
+        <tag>Qt C</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</loc>
+    <lastmod>2020-05-06T07:27:50.975Z</lastmod>
+    <data>
+        <display>
+        <title>GtkApplication 编程示例</title>
+        <pubTime>2020-04-13T15:26:52.000Z</pubTime>
+        
+        <tag>GTK</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://eightplus.github.io/2019/12/26/2019-12-26-notification/</loc>
     <lastmod>2020-04-13T15:45:14.522Z</lastmod>
     <data>
@@ -32,26 +72,6 @@
         <pubTime>2019-11-07T08:05:18.000Z</pubTime>
         
         <tag>Qt</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux 编程" url="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</loc>
-    <lastmod>2020-04-13T15:42:19.018Z</lastmod>
-    <data>
-        <display>
-        <title>GtkApplication 编程示例</title>
-        <pubTime>2020-04-13T15:26:52.000Z</pubTime>
-        
-        <tag>GTK</tag>
          
          
            

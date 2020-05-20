@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eightplus.github.io/"/>
-  <updated>2020-04-13T15:42:19.018Z</updated>
+  <updated>2020-05-20T07:02:25.756Z</updated>
   <id>https://eightplus.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>stdin 输入</title>
+    <link href="https://eightplus.github.io/2020/05/05/2020-05-05-stdin/"/>
+    <id>https://eightplus.github.io/2020/05/05/2020-05-05-stdin/</id>
+    <published>2020-05-05T13:38:59.000Z</published>
+    <updated>2020-05-20T07:02:25.756Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;使用 C 和 Qt 监控用户的终端输入(stdin)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;示例源码&quot;&gt;&lt;a href=&quot;#示例源码&quot; class=&quot;headerlink&quot; title=&quot;示例源码&quot;&gt;&lt;/a&gt;示例源码&lt;/h
+      
+    
+    </summary>
+    
+      <category term="Linux 编程" scheme="https://eightplus.github.io/categories/Linux-%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Qt C" scheme="https://eightplus.github.io/tags/Qt-C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>GtkApplication 编程示例</title>
     <link href="https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/"/>
     <id>https://eightplus.github.io/2020/04/13/2020-04-13-GtkApplication/</id>
     <published>2020-04-13T15:26:52.000Z</published>
-    <updated>2020-04-13T15:42:19.018Z</updated>
+    <updated>2020-05-06T07:27:50.975Z</updated>
     
     <summary type="html">
     
@@ -475,30 +502,6 @@
     
     
       <category term="Qt" scheme="https://eightplus.github.io/tags/Qt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装Anbox</title>
-    <link href="https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/"/>
-    <id>https://eightplus.github.io/2019/08/14/2019-08-14-install-anbox/</id>
-    <published>2019-08-14T13:44:03.000Z</published>
-    <updated>2019-11-14T01:56:25.667Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;Anbox是一种基于容器在常规GNU/Linux系统上启动完整Android系統的方法，如Ubuntu。&lt;br&gt;Anbox 使用 Linux 命名空间机制（user，pid，uts，net，mount，ipc），在容器中运行完整的 Android 
-      
-    
-    </summary>
-    
-      <category term="安卓开发" scheme="https://eightplus.github.io/categories/%E5%AE%89%E5%8D%93%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Android Anbox" scheme="https://eightplus.github.io/tags/Android-Anbox/"/>
     
   </entry>
   
