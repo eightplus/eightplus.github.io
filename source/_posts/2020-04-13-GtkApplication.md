@@ -15,6 +15,8 @@ tags:
 ## 示例源码
 - [gtkapplication-demo](https://github.com/eightplus/examples/tree/master/code/gtk/application-demo)
 
+![](2020-04-13-GtkApplication/01.png)
+
 ## 知识点简析
 
 ### 知识点1
